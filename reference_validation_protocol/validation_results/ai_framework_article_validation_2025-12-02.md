@@ -3,7 +3,7 @@
 **Protocol Version**: v0.3.0
 **Validation Date**: 2025-12-02
 **Validator**: Claude (Opus 4.5) + Crossref API
-**Document Validated**: articles/ai_framework_linkedin_article.md
+**Document Validated**: articles/20251202_01_v1_What_can_AI_do.md
 
 ---
 
@@ -16,7 +16,7 @@
   "timestamp": "2025-12-02T17:00:00Z",
   "validator": "Claude Opus 4.5",
   "tools_used": ["verify_citation.py", "Crossref API"],
-  "documents": ["articles/ai_framework_linkedin_article.md"]
+  "documents": ["articles/20251202_01_v1_What_can_AI_do.md"]
 }
 ```
 
