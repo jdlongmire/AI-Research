@@ -43,6 +43,7 @@ A curated collection of resources relevant to the AI Limitations and Opportuniti
 ## Tools & Methods
 
 - [Crossref API](https://www.crossref.org/documentation/retrieve-metadata/rest-api/) - DOI metadata retrieval
+- [YouTube to Transcript](https://youtubetotranscript.com/) - Extract transcripts from YouTube videos
 
 ---
 
