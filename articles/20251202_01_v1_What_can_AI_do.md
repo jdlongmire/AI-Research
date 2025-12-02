@@ -1,5 +1,7 @@
 # What Can AI Actually Do? A Framework for Understanding
 
+![What Can AI Actually Do?](figures/what-can-ai-do.png)
+
 The conversation about artificial intelligence has become strangely polarized. On one side, breathless predictions of artificial general intelligence arriving any moment. On the other, dismissals of AI as mere hype, destined to collapse under its own weight. Both camps are missing something fundamental.
 
 What if the question isn't whether AI is impressive or overhyped, but whether we understand what kind of thing it actually is?
