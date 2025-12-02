@@ -11,7 +11,9 @@
       "Bash(git pull:*)",
       "Bash(python reference_validation_protocol/verify_citation.py:*)",
       "WebSearch",
-      "WebFetch(domain:www.youtube.com)"
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:arxiv.org)",
+      "WebFetch(domain:scale.com)"
     ],
     "deny": [],
     "ask": []
