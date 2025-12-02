@@ -8,7 +8,8 @@
       "Bash(git remote add:*)",
       "Bash(git fetch:*)",
       "Bash(git push:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(python reference_validation_protocol/verify_citation.py:*)"
     ],
     "deny": [],
     "ask": []
