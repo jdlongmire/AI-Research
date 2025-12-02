@@ -6,7 +6,7 @@ Independent research, commentary, and analysis on artificial intelligence.
 
 This repository collects articles, research materials, and tools for understanding AI capabilities, limitations, and implications. The goal is rigorous, evidence-based analysis that avoids both hype and dismissal.
 
-## Current Focus
+## Special Focus
 
 **The Origination-Derivation Framework**
 
