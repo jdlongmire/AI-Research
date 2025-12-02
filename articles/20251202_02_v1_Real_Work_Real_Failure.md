@@ -6,24 +6,37 @@ A new study puts numbers to something many suspected: the gap between AI benchma
 
 ## The Study
 
-Researchers from the Center for AI Safety collected 240 real freelance projects—work that humans actually got paid for. Architecture design, video editing, game development, 3D modeling, data dashboards. Projects ranging from $9 to $22,000, totaling $144,000 in professional work.
+The **Remote Labor Index (RLI)**, developed by the Center for AI Safety and Scale AI, is the first benchmark designed to measure how well AI agents can perform paid, real-world work (Mazeika et al., 2025).
 
-They deployed the world's leading AI agents: GPT-5, Claude 4.5, Grok 4. Systems that passed the bar exam. Systems that aced medical licensing assessments.
+Researchers collected 240 freelance projects sourced directly from experienced professionals on Upwork—work that humans actually got paid for. Architecture design, video editing, game development, 3D modeling, data dashboards. Projects ranging from $9 to $22,500, totaling $143,991 in professional work. Mean human completion time: 28.9 hours per project.
 
-The result: **2.5% success rate.**
+They deployed six state-of-the-art AI agents: Manus, Grok 4, Claude Sonnet 4.5, GPT-5, ChatGPT Agent, and Gemini 2.5 Pro.
 
-Out of $144,000 worth of projects, AI agents earned $1,700. They failed 97% of the time.
+The results:
+
+| Agent | Success Rate | Earnings |
+|-------|--------------|----------|
+| Manus | 2.5% | $1,720 |
+| Grok 4 | 2.1% | - |
+| Claude Sonnet 4.5 | 2.1% | $1,280 |
+| GPT-5 | 1.7% | $1,180 |
+| ChatGPT Agent | 1.3% | - |
+| Gemini 2.5 Pro | 0.8% | - |
+
+The best agent failed **97.5% of the time.**
 
 ## The Failure Patterns
 
-When researchers examined why AI agents failed, they found consistent patterns:
+The study's failure analysis reveals systematic issues:
 
-- 8-second videos when projects required 8 minutes
-- Childlike stick figures for professional graphics
-- 3D buildings that looked completely different from every angle
-- Robotic voices that sounded terrible
+- **45.6%** had quality issues—work simply not at professional standard
+- **35.7%** submitted incomplete or malformed deliverables (truncated videos, missing files, empty directories)
+- **17.6%** produced corrupt, unusable, or empty files
+- **14.8%** failed to maintain visual or logical consistency across project files
 
-Nearly half of all AI attempts produced work so unprofessional it wouldn't pass a high school project review.
+As the researchers note: "Agents excel at creating from scratch from a simple prompt, but fail at complex editing or following a precise, multi-step brief. Their generative skill is high, but their ability to act as a reliable, detail-oriented professional is low."
+
+Dan Hendrycks, director of the Center for AI Safety, identified core limitations: "They don't have long-term memory storage and can't do continual learning from experiences. They can't pick up skills on the job like humans."
 
 ## What the Framework Explains
 
@@ -48,6 +61,14 @@ These tasks require more than deriving outputs from training patterns. They requ
 The systems tested had crushed every benchmark. Bar exams. Medical licensing. Standardized tests.
 
 But these benchmarks share a common feature: they have defined correct answers within established frameworks. They test whether a system can match the pattern of "what a correct answer looks like" within a closed domain.
+
+As the RLI researchers explain: "Current AI progress on research benchmarks, which often test isolated skills, provides limited insight into the trajectory of actual automation."
+
+This benchmark-reality gap appears across domains:
+- **Software development** (clear goals, verifiable output): 30.4% task completion
+- **Financial analysis**: 8.3% success
+- **Administrative work**: 0% success
+- **Lab to production**: 37% performance degradation (AWS research)
 
 Real work is open-ended. The "correct answer" for a freelance project isn't pre-defined. It emerges from understanding what the client needs, what counts as professional in that context, and how to navigate the inevitable gaps in specification.
 
@@ -82,7 +103,11 @@ The $144,000 freelancer test didn't reveal a temporary limitation. It revealed a
 
 ## References
 
-Center for AI Safety (2025). AI agent freelancer study. [Study details pending full publication]
+Mazeika, M. et al. (2025) 'Remote Labor Index: Measuring AI Automation of Remote Work', *arXiv preprint arXiv:2510.26787*. Available at: https://arxiv.org/abs/2510.26787
+
+Scale AI (2025) 'Remote Labor Index'. Available at: https://scale.com/leaderboard/rli
+
+Center for AI Safety and Scale AI (2025) 'The Remote Labor Index: Measuring the Automation of Work'. Available at: https://scale.com/blog/rli
 
 Source video: https://www.youtube.com/shorts/hE56XjBUl1g
 
