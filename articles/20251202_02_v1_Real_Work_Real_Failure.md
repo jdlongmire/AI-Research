@@ -8,7 +8,7 @@ A new study puts numbers to something many suspected: the gap between AI benchma
 
 The **Remote Labor Index (RLI)**, developed by the Center for AI Safety and Scale AI, is the first benchmark designed to measure how well AI agents can perform paid, real-world work (Mazeika et al., 2025).
 
-Researchers collected 240 freelance projects sourced directly from experienced professionals on Upwork—work that humans actually got paid for. Architecture design, video editing, game development, 3D modeling, data dashboards. Projects ranging from $9 to $22,500, totaling $143,991 in professional work. Mean human completion time: 28.9 hours per project.
+Researchers collected 240 freelance projects sourced directly from experienced professionals on Upwork. This is work that humans actually got paid for. Architecture design, video editing, game development, 3D modeling, data dashboards. Projects ranging from $9 to $22,500, totaling $143,991 in professional work. Mean human completion time: 28.9 hours per project.
 
 They deployed six state-of-the-art AI agents: Manus, Grok 4, Claude Sonnet 4.5, GPT-5, ChatGPT Agent, and Gemini 2.5 Pro.
 
@@ -29,7 +29,7 @@ The best agent failed **97.5% of the time.**
 
 The study's failure analysis reveals systematic issues:
 
-- **45.6%** had quality issues—work simply not at professional standard
+- **45.6%** had quality issues: work simply not at professional standard
 - **35.7%** submitted incomplete or malformed deliverables (truncated videos, missing files, empty directories)
 - **17.6%** produced corrupt, unusable, or empty files
 - **14.8%** failed to maintain visual or logical consistency across project files
@@ -54,7 +54,7 @@ Consider what a freelance project actually demands:
 
 4. **Coherent integration** - A 3D building that looks different from every angle reveals a failure to maintain coherent representation across perspectives.
 
-These tasks require more than deriving outputs from training patterns. They require origination—accessing understanding that isn't simply a transformation of prior inputs.
+These tasks require more than deriving outputs from training patterns. They require origination: accessing understanding that isn't simply a transformation of prior inputs.
 
 ## Benchmarks vs. Reality
 
@@ -83,7 +83,7 @@ The 2.5% success rate likely represents projects where:
 - The task closely matched training examples
 - Minimal judgment was required
 
-For such tasks, AI delivers value. For everything else—which is most professional work—the canyon remains.
+For such tasks, AI delivers value. For everything else, which is most professional work, the canyon remains.
 
 ## Implications
 
