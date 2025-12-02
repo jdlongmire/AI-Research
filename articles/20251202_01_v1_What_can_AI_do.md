@@ -121,4 +121,6 @@ ORCID: 0009-0009-1383-7698
 
 Northrop Grumman Fellow
 
+*Human-curated, AI-enabled.*
+
 *This work is entirely my own independent research. It does not reflect endorsement from, or the views of, Northrop Grumman Corporation or any of its affiliates.*

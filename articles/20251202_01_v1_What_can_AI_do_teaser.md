@@ -22,4 +22,6 @@ I'm sharing this publicly to invite engagement. If you see flaws, tell me. If yo
 
 ---
 
+*Human-curated, AI-enabled.*
+
 *This work is entirely my own independent research. It does not reflect endorsement from, or the views of, Northrop Grumman Corporation or any of its affiliates.*

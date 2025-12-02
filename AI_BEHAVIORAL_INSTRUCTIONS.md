@@ -264,6 +264,9 @@ Include on all outputs intended for publication:
 ORCID: 0009-0009-1383-7698
 Northrop Grumman Fellow (unaffiliated research)
 
+**Tagline (include on all artifacts):**
+*Human-curated, AI-enabled.*
+
 ---
 
 ## 7. Writing Style Guidelines
