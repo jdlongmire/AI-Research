@@ -1,0 +1,1 @@
+- for every session review the research program and AI behavioral instructions
