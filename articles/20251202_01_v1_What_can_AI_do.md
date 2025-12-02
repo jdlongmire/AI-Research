@@ -119,4 +119,4 @@ Xu, Z., Jain, S. and Kankanhalli, M. (2024) 'Hallucination is Inevitable: An Inn
 ORCID: 0009-0009-1383-7698
 Northrop Grumman Fellow
 
-*The views expressed here are my own and do not represent the position of Northrop Grumman Corporation.*
+*This work is entirely my own independent research. It does not reflect endorsement from, or the views of, Northrop Grumman Corporation or any of its affiliates.*

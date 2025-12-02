@@ -19,3 +19,7 @@ I'm sharing this publicly to invite engagement. If you see flaws, tell me. If yo
 📄 Read the full article: https://github.com/jdlongmire/AI-Research/blob/master/articles/20251202_01_v1_What_can_AI_do.md
 
 #AI #ArtificialIntelligence #Research #PhilosophyOfMind #LLM
+
+---
+
+*This work is entirely my own independent research. It does not reflect endorsement from, or the views of, Northrop Grumman Corporation or any of its affiliates.*
