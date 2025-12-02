@@ -1,6 +1,6 @@
 # Real Work, Real Failure: What the Freelancer Test Reveals About AI
 
-![AI Limitations](figures/what-can-ai-do.png)
+![Real Work, Real Failure](figures/real-work-real-failure.png)
 
 A new study puts numbers to something many suspected: the gap between AI benchmark performance and real-world competence isn't a gap. It's a canyon.
 
