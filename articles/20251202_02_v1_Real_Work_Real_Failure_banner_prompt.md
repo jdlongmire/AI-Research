@@ -6,20 +6,20 @@
 
 ## Prompt
 
-A conceptual illustration showing a wide canyon or chasm dividing two landscapes. On one side, a sleek digital realm with glowing benchmark scores, checkmarks, and "100%" displays floating in the air. On the other side, a messy real-world workspace with scattered papers, half-finished projects, broken files, and error symbols. A robotic arm reaches across the canyon but falls dramatically short of the other side. The gap between the two sides is labeled "97.5%". Clean, modern style with a muted color palette of blues, grays, and a stark red accent for the failure indicators. Professional editorial illustration style, suitable for LinkedIn or academic publication.
+A split-panel editorial illustration contrasting client requirements with AI deliverables. Left panel labeled "REQUIRED": a professional architectural rendering, an 8-minute video timeline, polished graphic design mockups, a coherent 3D building model. Right panel labeled "DELIVERED": a childlike stick figure drawing, an 8-second video snippet, corrupted file icons, a 3D building that looks completely different from three angles shown. Between the panels, a large "97.5% FAILURE" indicator. The contrast should be stark and sobering: professional expectations on the left, amateur or broken output on the right. Clean editorial style, muted blues and grays with red failure indicators.
 
 ---
 
 ## Alternative Prompts
 
-**Minimal version:**
-Split image: left side shows a perfect AI score display reading "A+" with clean geometric lines; right side shows chaotic scattered deliverables, corrupted files, and a "2.5%" indicator. A visible fracture runs down the middle. Professional, clean editorial style.
+**Side-by-side comparison:**
+A triptych showing three project types. Each has "Brief" on top and "Delivered" below. First: client brief shows "8-minute explainer video" / delivered shows a tiny 8-second progress bar. Second: brief shows "professional logo design" / delivered shows crude stick figures. Third: brief shows "3D architectural model" / delivered shows the same building looking like three completely different structures from different angles. Clean infographic style with a "2.5% Success Rate" caption.
 
-**Data-focused version:**
-An infographic-style illustration of a bar chart where the bars representing AI agent performance (Manus, GPT-5, Claude, etc.) barely rise above the baseline, reaching only 2.5% height while the "Human Professional Standard" bar towers at 100%. The tiny bars cast long shadows suggesting unfulfilled potential. Modern data visualization aesthetic.
+**The inspection table:**
+A quality control inspector's table viewed from above. On the left, a neat stack of professional project briefs with clear requirements. On the right, a rejection pile overflowing with: empty file folders, truncated videos, corrupted downloads, inconsistent 3D renders, amateur drawings. A stamp reading "WOULD NOT PASS HIGH SCHOOL REVIEW" sits prominently. 45.6% of the pile is marked "Quality Failure." Documentary photography style, desaturated.
 
-**Metaphor version:**
-A robot in business attire confidently walking toward a finish line, but the ground beneath it is actually a treadmill. Behind the robot, a trail of incomplete deliverables: truncated videos, stick-figure drawings, corrupted files. The finish line reads "Real Work". Clean illustration style with subtle humor.
+**The gap visualization:**
+Two monitors side by side. Left monitor displays "What the client paid $22,000 for" showing a polished professional deliverable. Right monitor displays "What AI delivered" showing an obviously incomplete, corrupted, or amateur version of the same project. A price tag reading "$0 earned" hangs from the right monitor. The left monitor glows with professional competence; the right flickers with error messages. Tech editorial illustration style.
 
 ---
 
