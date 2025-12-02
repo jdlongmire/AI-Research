@@ -97,7 +97,7 @@ def query_crossref(doi: str) -> Optional[CitationData]:
 
     # Crossref asks for a User-Agent with contact info
     headers = {
-        "User-Agent": "LRT-Citation-Verifier/1.0 (mailto:jdlongmire@outlook.com)",
+        "User-Agent": "Citation-Verifier/1.0 (mailto:jdlongmire@outlook.com)",
         "Accept": "application/json"
     }
 
