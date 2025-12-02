@@ -89,6 +89,8 @@ The goal is understanding, not advocacy. Getting this right matters for how we d
 
 Follow along as the work develops, and contribute if you can.
 
+**Research Repository:** https://github.com/jdlongmire/AI-Research
+
 ---
 
 ## References
