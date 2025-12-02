@@ -1,64 +1,49 @@
-# AI Limitations and Opportunities Research Program
+# AI Research
 
-A framework for understanding artificial intelligence through the origination-derivation distinction.
+Independent research, commentary, and analysis on artificial intelligence.
 
-## Overview
+## Purpose
 
-This research program investigates AI capabilities and limitations through a novel theoretical lens: the claim that human cognition has access to two coexistent primitive systems (Infinite Information Space and the three fundamental laws of logic) while AI systems are categorically derivative, operating downstream of human-generated data.
+This repository collects articles, research materials, and tools for understanding AI capabilities, limitations, and implications. The goal is rigorous, evidence-based analysis that avoids both hype and dismissal.
 
-**Central Question:** What are the fundamental capabilities and limitations of AI systems, and can these be understood through a principled framework grounded in the distinction between origination and derivation?
+## Current Focus
 
-## The Core Distinction
+**The Origination-Derivation Framework**
 
-| | Origination | Derivation |
-|---|-------------|------------|
-| **Process** | Retrieving configurations not derived from prior inputs | Transforming prior inputs according to learned patterns |
-| **Causal chain** | Includes something entering from outside prior experience | Runs inputs → processing → outputs with no external entry |
-| **Access** | Human cognition | AI systems |
+A theoretical lens for understanding AI limitations: the distinction between human origination (accessing configurations not derived from prior inputs) and AI derivation (transforming prior inputs according to learned patterns). This framework is being developed to explain documented AI phenomena including hallucination, reasoning failures, brittleness, and creativity constraints.
 
-This distinction is structural, not a claim about intelligence or consciousness.
+See [AI-Research-Program.md](AI-Research-Program.md) for the full theoretical program.
+
+## Recent Articles
+
+- [Real Work, Real Failure: What the Freelancer Test Reveals About AI](articles/20251202_02_v1_Real_Work_Real_Failure.md)
+- [What Can AI Actually Do? A Framework for Understanding](articles/20251202_01_v1_What_can_AI_do.md)
 
 ## Repository Structure
 
 ```
 AI-Research/
-├── articles/                    # Published articles and teasers
-├── research/                    # Research materials
-├── books/                       # Book-related content
+├── articles/                        # Published articles and teasers
+├── research/                        # Research materials
+├── resources/                       # Links, transcripts, references
+├── books/                           # Book-related content
 ├── reference_validation_protocol/   # Citation verification tools
-├── sessions/                    # Development session logs
-├── AI-Research-Program.md       # Full research program description
-└── AI_BEHAVIORAL_INSTRUCTIONS.md    # AI collaboration protocols
+└── sessions/                        # Development session logs
 ```
 
-## Recent Articles
+## Tools
 
-- [What Can AI Actually Do? A Framework for Understanding](articles/20251202_01_v1_What_can_AI_do.md)
-
-## Research Areas
-
-The program examines six categories of documented AI phenomena:
-
-1. **Hallucination** - Why elimination may be mathematically impossible
-2. **Reasoning Failures** - Structural limits on logical reasoning
-3. **Brittleness** - Out-of-distribution failure patterns
-4. **Stochastic Parrot Problem** - Statistical patterns without grounding
-5. **Scaling Limits** - Diminishing returns from scale alone
-6. **Creativity Ceilings** - Constraints on novelty generation
+- [Reference Validation Protocol](reference_validation_protocol/README.md) - Systematic citation verification using the Crossref API
 
 ## Engagement
 
-This is a research program in development. If you work in AI, philosophy of mind, cognitive science, or related fields, engagement is welcome.
+This is a research program in development. Commentary, critique, and collaboration are welcome.
 
 - See flaws in the reasoning? Open an issue.
 - Know relevant research? Point to it.
 - Interested in collaboration? Reach out.
 
 **Contact:** jdlongmire@outlook.com
-
-## Tools
-
-This repository includes a [Reference Validation Protocol](reference_validation_protocol/README.md) for systematic citation verification using the Crossref API.
 
 ---
 
