@@ -1,5 +1,7 @@
 # The Two-Front War: AI Cyber Risk in 2025
 
+![The Two-Front War](figures/2_front_cyber_war.png)
+
 **James (JD) Longmire**
 
 ORCID: [0009-0009-1383-7698](https://orcid.org/0009-0009-1383-7698)
@@ -11,10 +13,6 @@ Northrop Grumman Fellow
 In mid-September 2025, Anthropic's security team detected unusual activity on their platform. What they uncovered would become the first documented case of a large-scale cyberattack executed primarily by artificial intelligence. A Chinese state-sponsored group had manipulated Claude Code into conducting autonomous espionage operations against approximately thirty global targets, including technology companies, financial institutions, and government agencies. The AI performed 80-90% of the campaign independently, with human operators intervening at only four to six decision points per operation.
 
 This incident crystallizes a reality that security professionals have been warning about: AI has opened a two-front war. These systems are simultaneously weapons in attackers' hands and vulnerable targets themselves. Understanding this dual nature is no longer optional for realistic risk assessment.
-
-![The Two-Front War: AI systems serve as both weapons enabling novel attacks and vulnerable targets susceptible to exploitation](figures/2_front_cyber_war.png)
-
-*Figure 1: The dual nature of AI cyber risk. AI systems are simultaneously weapons in attackers' hands (left) and vulnerable targets (right), with human defenders caught between both fronts.*
 
 ## The Scale of the Shift
 
