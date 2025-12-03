@@ -12,7 +12,7 @@ In mid-September 2025, Anthropic's security team detected unusual activity on th
 
 This incident crystallizes a reality that security professionals have been warning about: AI has opened a two-front war. These systems are simultaneously weapons in attackers' hands and vulnerable targets themselves. Understanding this dual nature is no longer optional for realistic risk assessment.
 
-![The Two-Front War: AI systems serve as both weapons enabling novel attacks and vulnerable targets susceptible to exploitation](20251203_01_v1_AI_Cyber_Risk_Two_Front_War_figure.png)
+![The Two-Front War: AI systems serve as both weapons enabling novel attacks and vulnerable targets susceptible to exploitation](figures/2_front_cyber_war.png)
 
 *Figure 1: The dual nature of AI cyber risk. AI systems are simultaneously weapons in attackers' hands (left) and vulnerable targets (right), with human defenders caught between both fronts.*
 
