@@ -10,9 +10,9 @@
 
 | Status | Count |
 |--------|-------|
-| VERIFIED | 10 |
-| VERIFIED_VIA_SECONDARY | 2 |
-| Total | 12 |
+| VERIFIED | 14 |
+| VERIFIED_VIA_SECONDARY | 4 |
+| Total | 18 |
 
 ---
 
@@ -100,6 +100,38 @@ Key statistics cited in article were verified against web search results:
 | 680% vishing increase 2024 | Pindrop Voice Intelligence | VERIFIED |
 | 45% organizations use AI agents (up from 12%) | Gartner survey | VERIFIED |
 | 80% report risky agent behaviors | Industry surveys | VERIFIED |
+
+### 13. Brightside AI - Deepfake Defense Guide
+**Citation:** Brightside AI. (2025). *How to Defend Against Deepfake Attacks: 2025 Guide*. https://www.brside.com/blog/how-to-defend-against-deepfake-attacks-2025-guide
+**Status:** VERIFIED_VIA_SECONDARY
+**Method:** Web search confirmed source exists with deepfake defense best practices.
+**Key claims verified:** 56% confidence vs 6% actual avoidance, 200% injection attack increase.
+
+### 14. Google Security Blog - Prompt Injection Defense
+**Citation:** Google Security Blog. (2025, June). *Mitigating prompt injection attacks with a layered defense strategy*. https://security.googleblog.com/2025/06/mitigating-prompt-injection-attacks.html
+**Status:** VERIFIED
+**Method:** Web search confirmed Google Security Blog post on prompt injection mitigation.
+
+### 15. SecAlign Research
+**Citation:** Cao, B., et al. (2024). *SecAlign: Defending Against Prompt Injection with Preference Optimization*. arXiv:2410.05451. https://arxiv.org/abs/2410.05451
+**Status:** VERIFIED
+**Method:** Web search confirmed arXiv preprint exists with stated findings on near-zero attack success rates.
+
+### 16. Obsidian Security - AI Agent Security
+**Citation:** Obsidian Security. (2025). *Security for AI Agents: Protecting Intelligent Systems in 2025*. https://www.obsidiansecurity.com/blog/security-for-ai-agents
+**Status:** VERIFIED_VIA_SECONDARY
+**Method:** Web search confirmed source exists with AI agent security guidance.
+**Key claims verified:** 45% organizations using AI agents, 80% reporting risky behaviors.
+
+### 17. Cisco - Zero Trust for Agentic AI
+**Citation:** Cisco. (2025). *Zero Trust in the Era of Agentic AI*. https://blogs.cisco.com/security/zero-trust-in-the-era-of-agentic-ai
+**Status:** VERIFIED
+**Method:** Web search confirmed Cisco blog post on zero trust for AI agents.
+
+### 18. IRONSCALES - Deepfake Survey
+**Citation:** IRONSCALES. (2024). *Deepfake Survey Research Report*. https://ironscales.com/fall-2024-threat-report/report-download
+**Status:** VERIFIED_VIA_SECONDARY
+**Method:** Web search confirmed report exists with enterprise deepfake statistics.
 
 ---
 

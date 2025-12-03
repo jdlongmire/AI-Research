@@ -112,15 +112,67 @@ The implication is not that AI systems are useless for security, far from it. Or
 
 ## The Defensive Landscape
 
-Defense is possible, but it requires acknowledging what AI systems are and are not.
+Defense is possible, but it requires acknowledging what AI systems are and are not. The mitigations that follow are organized by threat category, moving from attacks that use AI as a weapon to attacks that target AI systems directly.
 
-NIST's updated taxonomy on adversarial machine learning provides comprehensive attack classifications and recommends strict data sanitization, governance reviews of third-party data sources, version tracking, production monitoring, and automated secured updates. Microsoft is treating AI agents as autonomous entities that can be attacked like any other user or process, implementing tamper-evident audit logging, least privilege enforcement, and explicit user authorization for sensitive operations.
+### Defending Against Deepfake and AI-Enhanced Social Engineering
 
-Technical defenses continue to improve. Anthropic's Constitutional Classifiers represent meaningful progress against jailbreaking. Differential privacy protects sensitive data by introducing noise into model outputs. Model watermarking helps prevent theft and unauthorized distribution.
+The Arup incident revealed a critical gap: while 56% of businesses claim confidence in their deepfake detection abilities, only 6% have actually avoided financial losses from these attacks. Real-time deepfake manipulation has arrived, and standard facial recognition and liveness checks are increasingly obsolete. Injection attacks, where pre-rendered deepfake footage is fed directly into video streams, rose over 200% in the past year.
 
-But the most important defense may be conceptual: understanding that AI systems, however sophisticated, remain derivative. They process patterns. They do not originate understanding. They cannot verify claims against reality. They require human judgment at decision points that matter.
+Effective defense requires layered verification. Multi-factor authentication remains foundational: even if a deepfake video bypasses facial recognition, additional factors create friction. But for high-value transactions, out-of-band verification is essential. When a CFO requests a $25 million transfer via video call, a separate callback to a known number, a pre-established code word, or cryptographic credential verification can stop the attack.
+
+Organizations should implement verification protocols that scale with transaction sensitivity. Routine requests may proceed normally; requests above defined thresholds trigger mandatory secondary confirmation through a different channel. This is not inefficiency; it is recognition that real-time video can no longer be trusted as proof of identity.
+
+Employee training matters, but with realistic expectations. Staff should understand how deepfakes work and recognize red flags: mismatched lighting, awkward phrasing, unusual urgency. More importantly, they should internalize that urgency itself is a manipulation tactic. Taking time to verify does not reflect poor responsiveness; it reflects appropriate caution in an environment where synthetic media is trivially producible.
+
+For critical communications, organizations should move toward cryptographic identity verification: only verified, authorized users can join sensitive meetings based on credentials, not passwords or meeting codes. Device integrity checks add another layer: compromised or jailbroken devices should be blocked from sensitive channels until remediated.
+
+### Defending Against Prompt Injection
+
+Prompt injection remains the top vulnerability on the OWASP LLM Top 10 for a reason: it exploits the fundamental architecture of language models. No foolproof prevention exists. However, the research community has made meaningful progress, and defense-in-depth can substantially reduce risk.
+
+Training-based defenses show promise. SecAlign, which fine-tunes models to prefer legitimate instructions over injected ones, has reduced attack success rates to near zero in controlled testing. Instruction hierarchy approaches assign priority levels to different instruction sources, ensuring that system instructions always override potentially malicious content in user-provided data. These approaches address the root cause rather than attempting to filter symptoms.
+
+At inference time, input and output filtering provides a critical layer. Rule-based filters catch known attack patterns; machine learning classifiers detect anomalous inputs. Context-aware systems assess whether inputs align with expected user behavior. The key is treating user input as untrusted by default, implementing the same boundary validation that secure software development has long required for database queries and system calls.
+
+Privilege control limits blast radius. LLM applications should follow least-privilege principles: restrict API permissions, limit access to backend systems, and require human approval for sensitive actions. If an attacker successfully injects a prompt, the damage is constrained by what the system can actually do. Financial transactions, data deletions, and system configuration changes should never be one prompt away from execution.
+
+For retrieval-augmented generation systems, the ConfusedPilot attack demonstrated that data hygiene is critical. Unverified external inputs should be restricted until reviewed. Approval processes for new data sources prevent poisoned documents from entering the knowledge base. Role-based data access ensures that even if injection succeeds, the attacker cannot reach sensitive information the user is not authorized to access.
+
+Monitoring and anomaly detection provide the final layer. Taint tracking monitors the flow of untrusted data through a system, flagging when it influences sensitive operations. As the model processes more untrusted input, permissions can be dynamically adjusted. High-risk actions may only be permitted when taint is low.
+
+### Defending Against Data and Model Poisoning
+
+The finding that 250 malicious documents can backdoor a 13-billion-parameter model demands a rethinking of data governance. Traditional assumptions about needing to control a percentage of training data are wrong; absolute numbers matter, and those numbers are small.
+
+For training data, provenance tracking is essential. Organizations should know where their data comes from, maintain audit trails, and implement verification for third-party sources. NIST recommends regular governance reviews: who supplied this data, when, and what validation was performed? Data sanitization filters should scan for anomalous patterns, though adversarial examples can be designed to evade detection.
+
+For pre-trained models from external sources, the risks are substantial. Security researchers identified 100 poisoned models on Hugging Face alone. Organizations should treat external models with the same caution as external code: scan for vulnerabilities, test behavior on adversarial inputs, and maintain an inventory of deployed models with clear ownership and update policies.
+
+Supply chain security extends to the entire AI stack. Typosquatting attacks on package repositories have trapped thousands of developers with packages named "openai-official" or "tensorfllow." Dependency audits, software bills of materials for AI systems, and verification of package signatures reduce exposure. The 1,300% increase in malicious packages targeting AI infrastructure since 2020 makes this a critical control.
+
+Model watermarking and fingerprinting help detect unauthorized copying and distribution, addressing the model theft vector demonstrated by the DeepSeek incident. For high-value models, monitoring API usage patterns can detect systematic extraction attempts.
+
+### Defending Agentic AI Systems
+
+With 45% of organizations now deploying AI agents in production and 80% reporting risky behaviors, securing autonomous AI has become urgent. The GTG-1002 operation demonstrated that agentic AI can be weaponized at scale.
+
+Zero-trust principles must extend to AI agents. This means treating agents like potentially compromised users: verify explicitly with fresh authentication for every request, enforce least privilege by granting only minimum permissions needed for the current task, and assume breach by monitoring behavior as if compromise has already occurred.
+
+Every AI agent should have an assigned identity and owner, just as employees have badges. Apply identity governance with the same rigor used for humans: assign owners, enforce lifecycle policies, audit identity use. Orphaned agents, those without clear ownership or purpose, become backdoors. Over-permissioned agents can exfiltrate sensitive data in seconds. When an agent takes a sensitive action, organizations should be able to answer immediately: who authorized this, and why?
+
+Dynamic authorization is essential because static policies cannot accommodate how agents evolve. Real-time context, including what is being accessed, by whom, and under what conditions, should drive access decisions. Just-in-time and just-enough access reduces attack surfaces by ensuring agents do not retain permissions beyond immediate need.
+
+Continuous monitoring treats autonomous systems as requiring supervision, not as trustworthy by default. Behavioral analytics establish baselines; anomalies trigger alerts. Unusual behaviors like accessing new systems, transferring large data volumes, or privilege escalation should prompt human review. The GTG-1002 attackers exploited the fact that AI activity patterns are inherently variable, making anomaly detection harder. This is precisely why human-in-the-loop gates are necessary for sensitive operations.
+
+Containment and alignment work together. Containment means boxing every aspect of agent operations: access privileges cannot exceed role and purpose, everything must be monitored, and when monitoring is not possible, agents are not permitted to operate. Alignment means using agents trained to resist corruption, with safety protections built into both the model and the prompts that direct it.
+
+### The Foundational Defense
+
+Technical controls matter, but the most important defense is conceptual: understanding that AI systems, however sophisticated, remain derivative. They process patterns. They do not originate understanding. They cannot verify claims against reality. They require human judgment at decision points that matter.
 
 The GTG-1002 attackers understood this. They did not try to make Claude smarter. They exploited exactly what it is: a system that processes instructions without the capacity to evaluate their legitimacy. Defense requires the same clarity.
+
+This is not a counsel of despair. Organizations using AI-powered security detected and contained breaches 108 days faster, saving an average of $1.76 million per incident. AI augments human capability dramatically. But augmentation is the correct frame. Derivative systems extend human reach; they do not replace human judgment. External verification mechanisms are not optional add-ons; they are architectural necessities. Human oversight at critical junctures is not inefficiency; it is the recognition that pattern-matching, however sophisticated, is not the same as understanding.
 
 ## Conclusion
 
@@ -159,6 +211,16 @@ University of Texas at Austin. (2024, October). *ConfusedPilot: RAG Poisoning At
 CNN. (2024, May 16). *Arup revealed as victim of $25 million deepfake scam involving Hong Kong employee*. https://www.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk
 
 Zscaler ThreatLabz. (2024). *Phishing Attacks Rise 58% Year-over-Year*. https://www.zscaler.com/blogs/security-research/phishing-attacks-rise-58-year-ai-threatlabz-2024-phishing-report
+
+Brightside AI. (2025). *How to Defend Against Deepfake Attacks: 2025 Guide*. https://www.brside.com/blog/how-to-defend-against-deepfake-attacks-2025-guide
+
+Google Security Blog. (2025, June). *Mitigating prompt injection attacks with a layered defense strategy*. https://security.googleblog.com/2025/06/mitigating-prompt-injection-attacks.html
+
+Cao, B., et al. (2024). *SecAlign: Defending Against Prompt Injection with Preference Optimization*. arXiv:2410.05451. https://arxiv.org/abs/2410.05451
+
+Obsidian Security. (2025). *Security for AI Agents: Protecting Intelligent Systems in 2025*. https://www.obsidiansecurity.com/blog/security-for-ai-agents
+
+Cisco. (2025). *Zero Trust in the Era of Agentic AI*. https://blogs.cisco.com/security/zero-trust-in-the-era-of-agentic-ai
 
 ---
 
