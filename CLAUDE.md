@@ -1,1 +1,2 @@
 - for every session review the research program and AI behavioral instructions
+- when closing a session, ensure local and remote repos are fully synced (git status to check for uncommitted changes)
