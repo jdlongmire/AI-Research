@@ -42,12 +42,10 @@ The people most vulnerable to the human Dunning-Kruger effect are *most amplifie
 
 The paper proposes a deployment framework called **HCAE (Human-Curated, AI-Enabled)** that stratifies AI use by the epistemic authority of the human in the loop:
 
-| Tier | Who Validates | Appropriate Use |
-|------|---------------|-----------------|
-| UCAE | End user (no domain expertise) | Drafting, brainstorming only |
-| PCAE | Trained professional | Routine domain work with review |
-| ECAE | Domain expert | High-stakes analysis |
-| SCAE | Expert + formal verification | Reusable artifacts, critical systems |
+- **UCAE** (User-Curated): End user with no domain expertise → Drafting, brainstorming only
+- **PCAE** (Professional-Curated): Trained professional → Routine domain work with review
+- **ECAE** (Expert-Curated): Domain expert → High-stakes analysis
+- **SCAE** (Synthesis-Curated): Expert + formal verification → Reusable artifacts, critical systems
 
 The key insight: "human in the loop" is not undifferentiated. Placing the *wrong* human in the loop doesn't mitigate AIDK—it enables IDKE.
 
