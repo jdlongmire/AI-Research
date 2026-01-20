@@ -973,6 +973,30 @@ There is no attacker to remove. The threat *is* the architecture.
 | **MAPT-4** | Systemic Infection | AI-AI propagation. Errors compound. Human error laundered into automated pipelines. |
 | **MAPT-5** | Critical Infrastructure | Irreversible consequences. Autonomous action. Catastrophic potential. |
 
+## HCAE-MAPT Alignment
+
+The HCAE deployment framework maps directly to MAPT threat mitigation. Epistemic authority determines containment level:
+
+| Tier | Validator | Epistemic Capability | Primary Risk | Permitted Use Cases | AIDK/IDKE Mitigation Level |
+|------|-----------|---------------------|--------------|---------------------|----------------------------|
+| UCAE | End user | Stylistic/intuitive only | Confidence laundering (maximal) | Drafting, brainstorming, low-stakes expression | Low |
+| PCAE | Trained professional | Plausibility checking under constraints | Silent edge-case failure | Routine domain work with review | Medium |
+| ECAE | Domain expert | Independent truth evaluation | Fatigue, over-delegation | High-stakes analysis, decision support | High |
+| SCAE | Expert + formal system (proof assistant, compiler, verifier) | Proof/constraint enforcement | Minimal | Reusable artifacts, chained outputs, critical infrastructure | Highest |
+
+**MAPT-HCAE Mapping:**
+- MAPT-1 (Contained) → ECAE or SCAE deployment
+- MAPT-2 (Active Exploitation) → PCAE without adequate review; UCAE in medium-stakes
+- MAPT-3 (Undetected Compromise) → UCAE in high-stakes; PCAE without checkpoints
+- MAPT-4 (Systemic Infection) → Any tier feeding AI-AI pipelines without SCAE validation
+- MAPT-5 (Critical Infrastructure) → Any autonomous deployment below SCAE
+
+**Deployment rules:**
+- Never deploy high-AIDK systems to high-HDK users in high-stakes contexts
+- Require SCAE for any chaining, agentic behavior, or autonomous action
+- Constrain domains to well-represented training territory
+- Explicitly communicate structural limits to users before interaction
+
 ## MAPT Mitigation Framework
 
 Borrowing from APT defense doctrine:
