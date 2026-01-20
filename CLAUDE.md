@@ -1,2 +1,4 @@
 - for every session review the research program and AI behavioral instructions
-- when closing a session, ensure local and remote repos are fully synced (git status to check for uncommitted changes)
+- when closing a session:
+  - update README.md if new content was added
+  - ensure local and remote repos are fully synced (git status to check for uncommitted changes)
