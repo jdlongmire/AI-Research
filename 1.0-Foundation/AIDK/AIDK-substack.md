@@ -2,7 +2,7 @@
 
 You've probably noticed it. You ask ChatGPT, Claude, or Gemini a question, and it answers with the same confident tone whether it's explaining basic arithmetic or fabricating a Supreme Court case that never existed. That unwavering fluency isn't a bug—it's a structural feature of how these systems work.
 
-I've spent the past year developing a framework to understand this phenomenon: the **AI Dunning-Kruger Effect (AIDK)**.
+I've spent considerable cycles developing a framework to understand this phenomenon: the **AI Dunning-Kruger Effect (AIDK)**.
 
 ## The Human Version vs. The AI Version
 
