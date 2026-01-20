@@ -48,7 +48,7 @@ These categories differ in kind, not degree. No amount of derivation produces or
 This distinction is not a contingent limitation awaiting technical solution. It reflects the logical structure of the relationship between symbol systems and their referents.
 
 ![Origination-Derivation Boundary](figures/AIDK-F2.png)
-*Figure 2. The categorical boundary between origination-level capacities (judgment, goal formation, truth evaluation, error correction, normativity) and derivation-level computation (token manipulation, statistical inference, pattern completion, optimization). Scaling within derivation cannot cross this boundary.*
+*Figure 1. The categorical boundary between origination-level capacities (judgment, goal formation, truth evaluation, error correction, normativity) and derivation-level computation (token manipulation, statistical inference, pattern completion, optimization). Scaling within derivation cannot cross this boundary.*
 
 ## 3. The Foundational Error: Semiotics as Thought
 
@@ -272,7 +272,7 @@ The critical gap: the model cannot distinguish between:
 Fluent ≠ valid. Probable next token ≠ sound inference. The architecture has no representation of logical necessity—only probability distributions over tokens.
 
 ![Deductions as Semantic Norms vs. Statistical Patterns](figures/AIDK-F6.png)
-*Figure 6. Human deduction is governed by logical necessity (identity, non-contradiction, excluded middle); LLM outputs follow statistical likelihood. The difference explains why reasoning can be mirrored without being instantiated.*
+*Figure 2. Human deduction is governed by logical necessity (identity, non-contradiction, excluded middle); LLM outputs follow statistical likelihood. The difference explains why reasoning can be mirrored without being instantiated.*
 
 ---
 
@@ -285,7 +285,7 @@ Human cognition is empirically thought-first and symbol-second. Infants acquire 
 Large language models invert this developmental pipeline. They begin with symbols derived from human-produced text and operate exclusively over statistical relations between those symbols. There is no pre-symbolic grasp of concepts, no encounter with reality, and no normative constraint beyond probabilistic likelihood. This inversion explains why scaling improves fluency without improving epistemic grounding.
 
 ![Developmental Paths: Human Cognition vs. LLM Processing](figures/AIDK-F1.png)
-*Figure 1. The human developmental trajectory—reality to thought to symbols (grounded in reality)—contrasted with the inverted LLM trajectory, which begins and ends with symbols (closed symbolic loop). Surface resemblance creates pareidolia and projection. The absence of a reality-facing constraint explains why LLMs can simulate reasoning while lacking error awareness.*
+*Figure 3. The human developmental trajectory—reality to thought to symbols (grounded in reality)—contrasted with the inverted LLM trajectory, which begins and ends with symbols (closed symbolic loop). Surface resemblance creates pareidolia and projection. The absence of a reality-facing constraint explains why LLMs can simulate reasoning while lacking error awareness.*
 
 ---
 
@@ -425,7 +425,7 @@ The Dunning-Kruger effect in humans describes how individuals with low competenc
 AIDK is not a training failure to be optimized away. It is an architectural condition arising from the system's categorical separation from reality.
 
 ![Human vs. AI Dunning-Kruger Profiles](figures/AIDK-F3.png)
-*Figure 3. Human confidence is corrigible through feedback and error—the classic Dunning-Kruger curve shows overconfidence at low competence, a dip, then calibrated confidence. AI confidence remains flat and fluent regardless of competence, defining AIDK as structurally invariant.*
+*Figure 4. Human confidence is corrigible through feedback and error—the classic Dunning-Kruger curve shows overconfidence at low competence, a dip, then calibrated confidence. AI confidence remains flat and fluent regardless of competence, defining AIDK as structurally invariant.*
 
 ## 17. AIDK vs. Human Dunning-Kruger
 
@@ -506,7 +506,7 @@ The people *most vulnerable* to HDK are *most amplified* by AIDK.
 **Persistence:** IDKE effects persist beyond the interaction. The user carries inflated confidence into subsequent decisions and actions. The epistemic damage propagates.
 
 ![Interactive Dunning-Kruger Effect](figures/AIDK-F4.png)
-*Figure 4. The IDKE feedback loop: Human Uncertainty → AI Fluent Output → Perceived Authority → Increased Human Confidence → Decreased Verification → Increased Reliance → back to Human Uncertainty. The cycle can be interrupted only by external epistemic authority.*
+*Figure 5. The IDKE feedback loop: Human Uncertainty → AI Fluent Output → Perceived Authority → Increased Human Confidence → Decreased Verification → Increased Reliance → back to Human Uncertainty. The cycle can be interrupted only by external epistemic authority.*
 
 ## 20. AIDK Risk Stratification
 
@@ -706,7 +706,7 @@ HCAE explicitly rejects the undifferentiated notion of "human-in-the-loop." Not 
 **Synthesis-Curated, AI-Enabled (SCAE):** Expert judgment is combined with a formal validation system such as a proof assistant, compiler, or test harness. AI proposes candidate solutions; validation systems enforce non-negotiable constraints. Trust is replaced by proof. This is the only tier in which AI outputs can be safely chained or reused.
 
 ![Human-Constrained AI Evaluation Ladder](figures/AIDK-F5.png)
-*Figure 5. The HCAE Epistemic Authority Ladder. At the highest tier (SCAE), synthesis combines expert judgment with formal validation systems, replacing trust with proof. Safety and reliability scale with epistemic authority, not model capability.*
+*Figure 6. The HCAE Epistemic Authority Ladder. At the highest tier (SCAE), synthesis combines expert judgment with formal validation systems, replacing trust with proof. Safety and reliability scale with epistemic authority, not model capability.*
 
 ### HCAE Tiers, Risk, and Permitted Use
 
