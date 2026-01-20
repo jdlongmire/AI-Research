@@ -8,6 +8,9 @@
 **ORCID:** 0009-0009-1383-7698
 **Correspondence:** jdlongmire@outlook.com
 
+**Development Model:** ECAE (Expert-Curated, AI-Enabled)
+**AI Contributors:** Claude, Grok, ChatGPT, Perplexity, Gemini
+
 ---
 
 ## Abstract
