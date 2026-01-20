@@ -17,7 +17,9 @@
       "WebFetch(domain:www.anthropic.com)",
       "WebFetch(domain:genai.owasp.org)",
       "WebFetch(domain:www.microsoft.com)",
-      "WebFetch(domain:www.weforum.org)"
+      "WebFetch(domain:www.weforum.org)",
+      "Bash(where:*)",
+      "Bash(pandoc:*)"
     ],
     "deny": [],
     "ask": []
