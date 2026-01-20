@@ -19,7 +19,8 @@
       "WebFetch(domain:www.microsoft.com)",
       "WebFetch(domain:www.weforum.org)",
       "Bash(where:*)",
-      "Bash(pandoc:*)"
+      "Bash(pandoc:*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []
