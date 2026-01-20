@@ -1,5 +1,8 @@
 # AI Dunning-Kruger (AIDK): A Framework for Understanding Structural Epistemic Limitations in AI Systems
 
+**Version:** 1.0
+**Date:** January 2026
+
 **Author:** James (JD) Longmire
 **Affiliation:** Northrop Grumman Fellow (unaffiliated research)
 **ORCID:** 0009-0009-1383-7698
@@ -1095,12 +1098,40 @@ For any AI deployment, assess:
 
 # References
 
-*[To be populated with citations, including:]*
+## Foundational Literature
 
-- Kalai et al. on hallucination inevitability
-- CMU metacognition studies
-- Nature Communications medical reasoning study
-- Symbol grounding literature (Harnad, etc.)
-- Anthropic soul document
-- Enterprise AI failure rate studies
-- RLHF and calibration research
+Dunning, D., & Kruger, J. (1999). Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments. *Journal of Personality and Social Psychology*, 77(6), 1121–1134. https://doi.org/10.1037/0022-3514.77.6.1121
+
+Harnad, S. (1990). The symbol grounding problem. *Physica D: Nonlinear Phenomena*, 42(1–3), 335–346. https://doi.org/10.1016/0167-2789(90)90087-6
+
+## LLM Hallucination and Epistemic Limitations
+
+Kalai, A. T., Nachum, O., Vempala, S. S., & Zhang, E. (2025). Why language models hallucinate. *arXiv preprint* arXiv:2509.04664. https://arxiv.org/abs/2509.04664
+
+Xu, Z., Jain, S., & Kankanhalli, M. (2024). Hallucination is inevitable: An innate limitation of large language models. *arXiv preprint* arXiv:2401.11817. https://arxiv.org/abs/2401.11817
+
+## LLM Metacognition Studies
+
+Cash, T., Oppenheimer, D., Christie, S., & Devgan, M. (2025). Quantifying Uncert-AI-nty: Testing the accuracy of LLMs' confidence judgments. *Memory & Cognition*. Carnegie Mellon University. https://www.cmu.edu/dietrich/news/news-stories/2025/july/trent-cash-ai-overconfidence.html
+
+Steyvers, M., & Peters, M. A. K. (2025). Metacognition and uncertainty communication in humans and large language models. *Current Directions in Psychological Science*. https://doi.org/10.1177/09637214251391158
+
+## Medical Reasoning and LLM Limitations
+
+Savage, T., et al. (2025). Large language models lack essential metacognition for reliable medical reasoning. *Nature Communications*, 16, Article 756. https://doi.org/10.1038/s41467-024-55628-6
+
+Chen, Z., et al. (2025). Quantifying the reasoning abilities of LLMs on clinical cases. *Nature Communications*, 16, Article 64769. https://doi.org/10.1038/s41467-025-64769-1
+
+## Enterprise AI Failure Studies
+
+MIT Media Lab Project NANDA. (2025). The GenAI divide: State of AI in business 2025. Massachusetts Institute of Technology. https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/
+
+RAND Corporation. (2024). Research brief on AI project failure rates. https://www.rand.org
+
+NTT DATA. (2024). Between 70-85% of GenAI deployment efforts are failing to meet their desired ROI. https://www.nttdata.com/global/en/insights/focus/2024/between-70-85p-of-genai-deployment-efforts-are-failing
+
+## AI Training and Alignment
+
+Christiano, P., Leike, J., Brown, T. B., Martic, M., Legg, S., & Amodei, D. (2017). Deep reinforcement learning from human preferences. *Advances in Neural Information Processing Systems*, 30. arXiv:1706.03741. https://arxiv.org/abs/1706.03741
+
+Anthropic. (2025). Claude character and values documentation [Soul Document]. Confirmed by Amanda Askell. https://gist.github.com/Richard-Weiss/efe157692991535403bd7e7fb20b6695
