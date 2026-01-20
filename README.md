@@ -45,6 +45,12 @@ AI-Research/
 
 - [Reference Validation Protocol](reference_validation_protocol/README.md) - Systematic citation verification using the Crossref API
 
+## Publications & Platforms
+
+- [Zenodo Community: AI Research & Philosophy](https://zenodo.org/communities/ai-research-philosophy)
+- [AIDK Framework (Zenodo Record)](https://zenodo.org/records/18316059)
+- [Substack: AI Research & Philosophy](https://airesearchandphilosophy.substack.com/)
+
 ## Engagement
 
 This is a research program in development. Commentary, critique, and collaboration are welcome.
