@@ -15,7 +15,7 @@ Before you ever type a word into the chat, the AI has seen that word millions of
 
 ### Sidebar: How We Chop Up the Words (BPE)
 
-Before the AI can put pins on its "meaning map," it needs to decide what counts as a *piece* of text. That's where *Byte Pair Encoding* (BPE) comes in.
+Before the AI can put pins on its "meaning map," it needs to decide what counts as a *piece* of text. That's where *[Byte Pair Encoding](https://en.wikipedia.org/wiki/Byte_pair_encoding)* (BPE) comes in.
 
 You can picture BPE like this:
 
@@ -40,7 +40,7 @@ Here's what's interesting: as training proceeds, "or" doesn't just land anywhere
 
 Inside the AI, there's also something like reading with a flashlight in the dark. For each word-piece, the AI shines a "spotlight" on other pieces in the sentence that matter most. When it looks at "or," it learns to shine more light on the words around it that go with choices and contrasts—"either," the options on both sides, words like "instead" or "rather"—and less light on irrelevant words. The flashlight doesn't follow fixed rules; it learns *where* to shine by the same guess-and-adjust process. Different sentences teach it different shining patterns, and over time, patterns that help prediction get reinforced.
 
-After this massive guessing phase, there's a second step called *Reinforcement Learning from Human Feedback* (RLHF). Now people look at the AI's answers and rate them: this one is helpful, that one is confusing, this one is kind, that one is rude. The AI keeps approaches that get good ratings and drops ones that don't.
+After this massive guessing phase, there's a second step called *[Reinforcement Learning from Human Feedback](https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback)* (RLHF). Now people look at the AI's answers and rate them: this one is helpful, that one is confusing, this one is kind, that one is rude. The AI keeps approaches that get good ratings and drops ones that don't.
 
 RLHF mostly shapes *how* the AI talks—its tone, politeness, safety, and formatting. It doesn't fundamentally change what the AI knows about words like "or." The base model already handles "or" correctly in most contexts before RLHF; the fine-tuning teaches the model to be helpful and clear when *offering* choices, not what choices *are*.
 
@@ -64,17 +64,17 @@ For our running example, "or" is common enough to appear as a single BPE token, 
 
 ### Tokens and Embeddings
 
-Next pipeline step: *token IDs → embeddings*.
+Next pipeline step: *token IDs → [embeddings](https://en.wikipedia.org/wiki/Word_embedding)*.
 
-Each BPE token ID indexes into an *embedding matrix*. The selected row is the token's *embedding vector*—a point in a high-dimensional vector space.
+Each BPE token ID indexes into an *embedding matrix*. The selected row is the token's *embedding vector*—a point in a high-dimensional [vector space](https://en.wikipedia.org/wiki/Vector_space).
 
-The "meaning map" metaphor corresponds to this vector space. Each word-piece is a point. Nearby points correspond to tokens used in similar contexts. Initially, all embeddings (including "or") are random and are updated via gradient descent during pretraining.
+The "meaning map" metaphor corresponds to this vector space. Each word-piece is a point. Nearby points correspond to tokens used in similar contexts. Initially, all embeddings (including "or") are random and are updated via [gradient descent](https://en.wikipedia.org/wiki/Gradient_descent) during pretraining.
 
 As training proceeds, tokens that appear in similar distributional contexts migrate toward similar regions of embedding space. "Or" ends up geometrically closer to "either," "alternatively," and "whether" than to "and," "plus," or "also." This isn't programmed; it emerges from the statistics of co-occurrence and predictive utility.
 
 ### Transformer Layers and Attention
 
-The sequence of embeddings feeds into a stack of *transformer layers*. Each layer contains multi-head self-attention (which computes context-dependent weighted sums of other token representations) and feed-forward networks (which apply learned nonlinear transformations).
+The sequence of embeddings feeds into a stack of *[transformer](https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)) layers*. Each layer contains [multi-head self-attention](https://en.wikipedia.org/wiki/Attention_(machine_learning)) (which computes context-dependent weighted sums of other token representations) and [feed-forward networks](https://en.wikipedia.org/wiki/Feedforward_neural_network) (which apply learned nonlinear transformations).
 
 Self-attention is the "flashlight." For each position, the model computes queries, keys, and values and uses scaled dot-product attention to produce weights—how much each token should attend to others. The query, key, and value projection matrices are *learned parameters*, updated during training. The flashlight learns where to shine; it doesn't follow fixed rules.
 
@@ -84,11 +84,11 @@ For a phrase like "either A or B," the representation of the "or" token will oft
 
 The pretraining objective is *causal language modeling* (next-token prediction).
 
-Given previous tokens, the model outputs a *logit vector*: one real number for every token in the vocabulary. These raw scores are converted into a probability distribution using *softmax*, a function that exponentiates the scores and normalizes them so they sum to 1. This converts arbitrary scores into probabilities over all possible next tokens.
+Given previous tokens, the model outputs a *[logit](https://en.wikipedia.org/wiki/Logit) vector*: one real number for every token in the vocabulary. These raw scores are converted into a probability distribution using *[softmax](https://en.wikipedia.org/wiki/Softmax_function)*, a function that exponentiates the scores and normalizes them so they sum to 1. This converts arbitrary scores into probabilities over all possible next tokens.
 
-Training uses *cross-entropy loss* between this softmax distribution and the true next token. If the true token (say, the BPE token for "or") has low probability, the loss is high; if it has high probability, the loss is low.
+Training uses *[cross-entropy loss](https://en.wikipedia.org/wiki/Cross_entropy)* between this softmax distribution and the true next token. If the true token (say, the BPE token for "or") has low probability, the loss is high; if it has high probability, the loss is low.
 
-This is the "chef tasting the soup" moment. Softmax is the conversion from raw scores to probabilities. The cross-entropy comparison against ground truth is the actual taste test. Using *backpropagation*, gradients of the loss are computed with respect to all parameters—flowing backward through the computational graph from loss to output layer to transformer weights to embeddings. *Gradient descent* updates parameters in the direction that reduces loss.
+This is the "chef tasting the soup" moment. Softmax is the conversion from raw scores to probabilities. The cross-entropy comparison against ground truth is the actual taste test. Using *[backpropagation](https://en.wikipedia.org/wiki/Backpropagation)*, gradients of the loss are computed with respect to all parameters—flowing backward through the computational graph from loss to output layer to transformer weights to embeddings. *Gradient descent* updates parameters in the direction that reduces loss.
 
 Over billions of updates, the embedding row for "or" moves to a location in vector space that makes "or" useful across many contexts. Attention patterns and deeper representations involving "or" are shaped to support good prediction. No explicit rule for logical disjunction is stored; usage patterns become encoded in network parameters.
 
@@ -99,7 +99,7 @@ After pretraining, the base model is fine-tuned with *Reinforcement Learning fro
 1. The base model generates multiple candidate completions for prompts.
 2. Human labelers rank these completions by quality (helpfulness, harmlessness, clarity).
 3. A *reward model* is trained to predict these rankings.
-4. The base model, treated as a policy, is updated (commonly with PPO-style reinforcement learning) to maximize this reward.
+4. The base model, treated as a policy, is updated (commonly with [PPO](https://en.wikipedia.org/wiki/Proximal_policy_optimization)-style reinforcement learning) to maximize this reward.
 
 This is the "comedian and audience" phase: the policy is nudged toward responses the reward model scores highly.
 
@@ -128,7 +128,7 @@ If statistical learning fully recovered logical structure, the model would handl
 
 ### Exclusive vs. Inclusive Disjunction
 
-In classical logic, "or" is inclusive: "A or B" is true if A is true, if B is true, or if both are true. In everyday speech, "or" is often exclusive: "soup or salad" means pick one, not both.
+In classical logic, "or" is [inclusive](https://en.wikipedia.org/wiki/Logical_disjunction): "A or B" is true if A is true, if B is true, or if both are true. In everyday speech, "or" is often [exclusive](https://en.wikipedia.org/wiki/Exclusive_or): "soup or salad" means pick one, not both.
 
 The model defaults to inclusive-or because that's what minimizes prediction loss across diverse contexts. But it often mishandles constructions where exclusive-or is clearly intended. "You can have either the cake or the ice cream" should preclude having both, but the model doesn't reliably track this. It may offer clarifications like "Would you like both?" when the sentence structure already ruled that out.
 
@@ -138,7 +138,7 @@ Consider "not A or B." Does this mean "(not A) or B" or "not (A or B)"? The two 
 
 ### Logical Entailment
 
-A simple inference: "A or B" plus "not A" entails "B." This is disjunctive syllogism, valid in classical logic. The model doesn't reliably execute this inference. It may affirm "B" in easy cases, but it can also hedge, repeat the premises without drawing the conclusion, or get distracted by irrelevant surface features.
+A simple inference: "A or B" plus "not A" entails "B." This is [disjunctive syllogism](https://en.wikipedia.org/wiki/Disjunctive_syllogism), valid in classical logic. The model doesn't reliably execute this inference. It may affirm "B" in easy cases, but it can also hedge, repeat the premises without drawing the conclusion, or get distracted by irrelevant surface features.
 
 This isn't a matter of lacking the pattern—the training data contains countless examples of disjunctive reasoning. The issue is that the model's learned representations don't encode the *structure* of the inference. It recognizes instances but doesn't possess the rule.
 
@@ -154,7 +154,7 @@ This is the difference between learning to talk about logic and learning logic. 
 
 The technical details in this piece reflect standard descriptions of transformer architecture and training pipelines as documented in foundational papers and engineering reports:
 
-- Vaswani et al. (2017), "Attention Is All You Need" (transformer architecture, self-attention mechanism)
-- Sennrich et al. (2016), "Neural Machine Translation of Rare Words with Subword Units" (BPE tokenization)
-- Radford et al. (2019), "Language Models are Unsupervised Multitask Learners" (GPT-2, causal language modeling)
-- Ouyang et al. (2022), "Training language models to follow instructions with human feedback" (RLHF, InstructGPT)
+- Vaswani et al. (2017), "[Attention Is All You Need](https://arxiv.org/abs/1706.03762)" (transformer architecture, self-attention mechanism)
+- Sennrich et al. (2016), "[Neural Machine Translation of Rare Words with Subword Units](https://arxiv.org/abs/1508.07909)" (BPE tokenization)
+- Radford et al. (2019), "[Language Models are Unsupervised Multitask Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)" (GPT-2, causal language modeling)
+- Ouyang et al. (2022), "[Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)" (RLHF, InstructGPT)
