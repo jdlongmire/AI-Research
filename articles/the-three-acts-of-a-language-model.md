@@ -33,7 +33,7 @@ But there's a problem. Right now, each word only knows *its own* address. "Cat" 
 
 This is where the magic happens. The objects on stage start paying attention to each other.
 
-Remember the flashlight metaphor from the previous piece? Each word shines a spotlight on the other words, asking: "Who here matters to me?" The word "sat" shines light on "cat" because it wants to know *who* sat. It shines light on "on" because it wants to know *where*. It shines less light on "the" because "the" doesn't tell it much.
+Remember the flashlight metaphor from [the previous piece](https://open.substack.com/pub/airesearchandphilosophy/p/how-a-computer-learns-words)? Each word shines a spotlight on the other words, asking: "Who here matters to me?" The word "sat" shines light on "cat" because it wants to know *who* sat. It shines light on "on" because it wants to know *where*. It shines less light on "the" because "the" doesn't tell it much.
 
 After this round of looking around, each object *updates its position*. Not on the physical stage—they stay in the same order. But their addresses shift. "Cat" started at its generic warehouse address, the same address it would have in any sentence. But after looking at "sat," "on," and "mat," the address for "cat" moves slightly. It's no longer just generic-cat. It's *cat-that-sat-on-something*.
 
@@ -85,7 +85,7 @@ Now the same three acts, with the actual math and architecture.
 
 ### Act One: Embedding
 
-**Token embedding.** After [tokenization](https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization) (see [BPE](https://en.wikipedia.org/wiki/Byte_pair_encoding) in the previous piece), you have a sequence of token IDs—just integers. If your vocabulary has 50,000 tokens, each ID is a number between 0 and 49,999. The sentence "The cat sat" might become the IDs [464, 3797, 3332].
+**Token embedding.** After [tokenization](https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization) (see [BPE](https://en.wikipedia.org/wiki/Byte_pair_encoding) in [the previous piece](https://open.substack.com/pub/airesearchandphilosophy/p/how-a-computer-learns-words)), you have a sequence of token IDs—just integers. If your vocabulary has 50,000 tokens, each ID is a number between 0 and 49,999. The sentence "The cat sat" might become the IDs [464, 3797, 3332].
 
 But integers aren't useful for computation. The number 3797 isn't "closer" to 3798 than to 12 in any meaningful sense—they're just labels. The model needs vectors: lists of numbers that can be added, multiplied, and compared geometrically.
 
