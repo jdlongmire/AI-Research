@@ -132,96 +132,29 @@ This is not a proof. It is a framework. If it is correct, then the pattern we ob
 
 ## Technical Time
 
-The narrative above told a story. Now the same ground, with more precision.
+The narrative above told a story. Now the same ground, sketched with slightly more precision. The details of how Turing machines work, how neural networks learn, and how transformers attend will occupy later chapters. For now, the key point is architectural continuity.
 
-### Computation and Symbol Manipulation
+### The Thread That Runs Through
 
-A Turing machine is defined by:
-- A finite set of states
-- A finite alphabet of symbols
-- A transition function: given a state and a symbol, specify a new symbol to write, a direction to move, and a new state to enter
-- A tape (infinite in both directions) containing symbols
-- A read/write head positioned on the tape
+Leibniz proposed encoding knowledge as symbols and manipulating those symbols by rules to derive new knowledge. He imagined a calculus of reason: symbol in, rule applied, symbol out.
 
-The machine operates deterministically. Given an initial tape configuration and starting state, the sequence of operations is fully determined by the transition function. The machine halts if it enters a designated halt state; otherwise it runs forever.
+Turing, two and a half centuries later, made this precise. He defined a theoretical machine that reads symbols, follows rules, and writes symbols. Then he proved something remarkable: any computation that can be precisely described can be performed by such a machine. This is the foundation of computer science. Every digital device you've ever used, from mainframes to smartphones, implements the same basic architecture. Symbols in, rules applied, symbols out.
 
-The Church-Turing thesis asserts that any function computable by an "effective procedure" (intuitively: an algorithm that a human could execute given enough time and paper) is computable by some Turing machine. This is not a theorem; it cannot be proven because "effective procedure" is not a formal concept. But it has withstood every attempt at counterexample, and it is the foundation of computability theory.
+Neural networks add a twist: instead of humans writing the rules, the system learns them from examples. Show the network millions of input-output pairs, and it adjusts its internal parameters until it can produce the right outputs for given inputs. The rules are no longer hand-coded. They're discovered.
 
-Digital computers are not Turing machines (they have finite memory), but they are Turing-equivalent for any computation that fits in memory. The programs they run are equivalent to transition functions. The architecture is symbol manipulation.
+But discovered rules are still rules. A trained neural network is a fixed function. Input goes in, computation happens, output comes out. The function may be too complex for humans to interpret, but it is still a function. The architecture hasn't changed. The scale has.
 
-### Neural Networks as Function Approximators
+Large language models are neural networks trained to predict text. They process words (or pieces of words) as numbers, transform those numbers through many layers of learned operations, and produce probabilities for what word comes next. The details are intricate, and we'll spend several chapters on them. The point for now is simpler: the model manipulates tokens according to learned patterns. It does not reach out to verify claims against the world. It does not form beliefs it holds to be true. It processes symbols.
 
-A feedforward neural network computes a function f: ℝⁿ → ℝᵐ. The input is a vector of n real numbers. The output is a vector of m real numbers.
+### What Changes, What Doesn't
 
-The function is composed of layers. Each layer applies:
-1. A linear transformation: multiply by a weight matrix, add a bias vector
-2. A nonlinear activation function (e.g., ReLU, sigmoid, tanh)
+What changes across this history is capability. The systems do more, faster, with less human specification. They recognize images, translate languages, write code, hold conversations. Each generation crosses thresholds that seemed to require intelligence.
 
-The composition of many such layers can approximate any continuous function to arbitrary precision, given enough parameters. This is the universal approximation theorem.
+What doesn't change is the architecture. Symbols in, transformations applied, symbols out. The transformations are learned rather than programmed. The scale is vast. But the machine still does what Lovelace observed in 1843: it performs whatever we (or the training process) have ordered it to perform. It does not originate.
 
-The parameters (weights and biases) are learned by gradient descent. Define a loss function that measures how far the network's outputs are from desired outputs. Compute the gradient of the loss with respect to all parameters. Adjust parameters in the direction that reduces loss. Repeat.
+The gap between fluent output and genuine understanding is structural. The model optimizes for predicting text. Patterns that help prediction are learned; patterns that don't are not. Truth-tracking is instrumentally useful (true statements appear in training data), but the model has no mechanism for distinguishing "this pattern appears in training data" from "this pattern is true."
 
-This is still symbol manipulation, but with two differences from classical AI:
-1. The "rules" (parameters) are learned from data rather than hand-coded
-2. The computation involves continuous-valued operations (matrix multiplication, nonlinear functions) rather than discrete symbol rewriting
-
-The second difference is superficial. Digital computers represent continuous values as floating-point numbers with finite precision. The computation remains discrete at the hardware level.
-
-The first difference is substantive but does not change the architecture. A trained neural network is a fixed function. Once training is complete, the parameters are frozen. Input goes in, deterministic computation occurs, output comes out. The function may be too complex for humans to interpret, but it is still a function.
-
-### Large Language Models
-
-A large language model (LLM) is a neural network trained to predict the next token in a sequence.
-
-**Tokenization:** Text is converted to a sequence of tokens (subword units). A vocabulary of 50,000–100,000 tokens is typical. Each token is represented as a one-hot vector (all zeros except for a single one at the token's index) or, more commonly, looked up in an embedding matrix to produce a dense vector.
-
-**Architecture:** Modern LLMs use the transformer architecture. Key components:
-- Embedding layer: tokens → vectors
-- Positional encoding: inject information about token position
-- Transformer blocks (repeated many times):
-  - Multi-head self-attention: each position attends to all positions, learning which tokens are relevant to which
-  - Feed-forward network: position-wise nonlinear transformation
-  - Residual connections and layer normalization
-- Output layer: final hidden states → logits over vocabulary
-
-**Training objective:** Given a sequence of tokens t₁, t₂, ..., tₙ, predict tₙ₊₁. The model outputs a probability distribution over the vocabulary. The loss is cross-entropy between this distribution and the true next token. Training uses stochastic gradient descent on massive corpora (hundreds of billions to trillions of tokens).
-
-**Inference:** Given a prompt, the model generates text by:
-1. Encoding the prompt through the network
-2. Sampling a next token from the output distribution
-3. Appending the sampled token to the prompt
-4. Repeating until a stop condition
-
-The generation is autoregressive: each new token conditions on all previous tokens.
-
-### What the Architecture Does and Doesn't Provide
-
-The architecture provides:
-- Fluent text generation that respects statistical patterns in training data
-- Context-sensitive responses (attention allows the model to "look at" relevant parts of the input)
-- Emergent capabilities at scale (in-context learning, chain-of-thought reasoning, apparent common sense)
-
-The architecture does not provide:
-- Access to ground truth (the model cannot verify claims against the world)
-- Genuine understanding of meaning (the model processes tokens; humans interpret tokens as meaningful)
-- Reliable self-knowledge (the model's outputs about its own states are just more text generation)
-- Consistency across contexts (different prompts can elicit contradictory outputs)
-
-The gap between fluent output and genuine understanding is structural. The model optimizes for next-token prediction. Patterns that help predict next tokens are learned; patterns that don't are not. Truth-tracking is instrumentally useful (true statements appear in training data), but the model has no mechanism for distinguishing "this pattern appears in training data" from "this pattern is true."
-
-### Historical Continuity
-
-The continuity from Leibniz to GPT-4 is architectural, not superficial.
-
-Leibniz proposed: encode knowledge as symbols, manipulate symbols by rules, derive new knowledge.
-
-Turing formalized: any effective procedure is symbol manipulation by a finite automaton.
-
-Neural networks implement: learn the rules from data rather than hand-coding them.
-
-Large language models extend: learn rules for language by predicting text at massive scale.
-
-At each stage, the capability increases enormously. At each stage, the architecture remains symbol manipulation. The question of whether this architecture can produce understanding—and what "understanding" would even mean in this context—remains open. But the burden is on those who claim the gap has closed to explain how symbol manipulation, however sophisticated, becomes something more.
+This is not a claim that the gap can never be closed. It is an observation that the gap has not been closed yet, and that closing it would require something beyond scaling the current architecture. What that something might be, and whether it is even coherent to imagine, are questions for later chapters.
 
 ---
 
