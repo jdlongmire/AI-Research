@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <style>
+      .title { font-family: 'Georgia', serif; font-size: 18px; font-weight: bold; fill: #222; }
+      .step-title { font-family: 'Georgia', serif; font-size: 12px; font-weight: bold; }
+      .step-content { font-family: 'Georgia', serif; font-size: 10px; fill: #444; }
+      .step-num { font-family: 'Georgia', serif; font-size: 14px; font-weight: bold; fill: #fff; }
+      .zone-label { font-family: 'Georgia', serif; font-size: 11px; font-weight: bold; fill: #666; }
+      .zone-desc { font-family: 'Georgia', serif; font-size: 9px; fill: #888; font-style: italic; }
+      .caption { font-family: 'Georgia', serif; font-size: 11px; fill: #555; font-style: italic; }
+      .guarantee { font-family: 'Georgia', serif; font-size: 10px; fill: #2E7D32; font-weight: bold; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="500" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="title">Figure 4. SCAE Architecture Pattern</text>
+  
+  <!-- HUMAN ZONE (left) -->
+  <rect x="40" y="80" width="200" height="340" fill="#e5eef5" stroke="#2E5090" stroke-width="1.5" stroke-dasharray="6,3" rx="8"/>
+  <text x="140" y="105" text-anchor="middle" class="zone-label" fill="#2E5090">HUMAN ZONE</text>
+  <text x="140" y="120" text-anchor="middle" class="zone-desc">Origination &amp; Judgment</text>
+  
+  <!-- AI + FORMAL ZONE (center) -->
+  <rect x="280" y="80" width="340" height="340" fill="#fdf8f0" stroke="#8B4513" stroke-width="1.5" stroke-dasharray="6,3" rx="8"/>
+  <text x="450" y="105" text-anchor="middle" class="zone-label" fill="#8B4513">AI + FORMAL ZONE</text>
+  <text x="450" y="120" text-anchor="middle" class="zone-desc">Derivation under Constraint</text>
+  
+  <!-- HUMAN ZONE (right) -->
+  <rect x="660" y="80" width="200" height="340" fill="#e5eef5" stroke="#2E5090" stroke-width="1.5" stroke-dasharray="6,3" rx="8"/>
+  <text x="760" y="105" text-anchor="middle" class="zone-label" fill="#2E5090">HUMAN ZONE</text>
+  <text x="760" y="120" text-anchor="middle" class="zone-desc">Interpretation &amp; Judgment</text>
+  
+  <!-- STEP 1: Human Formalization -->
+  <rect x="60" y="150" width="160" height="110" fill="#fff" stroke="#2E5090" stroke-width="2" rx="6"/>
+  <circle cx="80" cy="170" r="14" fill="#2E5090"/>
+  <text x="80" y="175" text-anchor="middle" class="step-num">1</text>
+  <text x="140" y="170" text-anchor="middle" class="step-title" fill="#2E5090">Formalization</text>
+  <text x="140" y="192" text-anchor="middle" class="step-content">Expert translates problem</text>
+  <text x="140" y="207" text-anchor="middle" class="step-content">into formal specification</text>
+  <text x="140" y="227" text-anchor="middle" class="step-content" font-style="italic">(Requires deep domain</text>
+  <text x="140" y="242" text-anchor="middle" class="step-content" font-style="italic">+ formal methods expertise)</text>
+  
+  <!-- Arrow 1→2 -->
+  <line x1="220" y1="205" x2="295" y2="205" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- STEP 2: AI-Guided Search -->
+  <rect x="300" y="150" width="160" height="110" fill="#fff" stroke="#8B4513" stroke-width="2" rx="6"/>
+  <circle cx="320" cy="170" r="14" fill="#8B4513"/>
+  <text x="320" y="175" text-anchor="middle" class="step-num">2</text>
+  <text x="390" y="170" text-anchor="middle" class="step-title" fill="#8B4513">AI-Guided Search</text>
+  <text x="380" y="192" text-anchor="middle" class="step-content">AI generates candidate</text>
+  <text x="380" y="207" text-anchor="middle" class="step-content">solutions, explores space</text>
+  <text x="380" y="227" text-anchor="middle" class="step-content" font-style="italic">(Pattern matching at scale;</text>
+  <text x="380" y="242" text-anchor="middle" class="step-content" font-style="italic">no truth access)</text>
+  
+  <!-- Arrow 2→3 -->
+  <line x1="380" y1="260" x2="380" y2="290" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- STEP 3: Mechanical Verification -->
+  <rect x="300" y="295" width="160" height="110" fill="#fff" stroke="#2E7D32" stroke-width="2" rx="6"/>
+  <circle cx="320" cy="315" r="14" fill="#2E7D32"/>
+  <text x="320" y="320" text-anchor="middle" class="step-num">3</text>
+  <text x="395" y="315" text-anchor="middle" class="step-title" fill="#2E7D32">Verification</text>
+  <text x="380" y="337" text-anchor="middle" class="step-content">Formal system checks</text>
+  <text x="380" y="352" text-anchor="middle" class="step-content">validity against specification</text>
+  <text x="380" y="372" text-anchor="middle" class="guarantee">✓ Guarantee within scope</text>
+  <text x="380" y="390" text-anchor="middle" class="step-content" font-style="italic">(Syntactic, not semantic)</text>
+  
+  <!-- Arrow 3→4 -->
+  <line x1="460" y1="350" x2="655" y2="350" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- STEP 4: Expert Interpretation -->
+  <rect x="680" y="295" width="160" height="110" fill="#fff" stroke="#2E5090" stroke-width="2" rx="6"/>
+  <circle cx="700" cy="315" r="14" fill="#2E5090"/>
+  <text x="700" y="320" text-anchor="middle" class="step-num">4</text>
+  <text x="770" y="315" text-anchor="middle" class="step-title" fill="#2E5090">Interpretation</text>
+  <text x="760" y="337" text-anchor="middle" class="step-content">Expert reviews for</text>
+  <text x="760" y="352" text-anchor="middle" class="step-content">significance and fit</text>
+  <text x="760" y="372" text-anchor="middle" class="step-content" font-style="italic">(Validates formalization</text>
+  <text x="760" y="390" text-anchor="middle" class="step-content" font-style="italic">captured intent)</text>
+  
+  <!-- KEY INSIGHT BOX -->
+  <rect x="490" y="150" width="120" height="105" fill="#f0f7f0" stroke="#2E7D32" stroke-width="1.5" rx="6"/>
+  <text x="550" y="172" text-anchor="middle" class="step-title" fill="#2E7D32">Key Insight</text>
+  <line x1="500" y1="182" x2="600" y2="182" stroke="#2E7D32" stroke-width="1" opacity="0.4"/>
+  <text x="550" y="200" text-anchor="middle" class="step-content">Humans bookend</text>
+  <text x="550" y="215" text-anchor="middle" class="step-content">the process</text>
+  <text x="550" y="235" text-anchor="middle" class="step-content">AI operates in</text>
+  <text x="550" y="250" text-anchor="middle" class="step-content">the middle</text>
+  
+  <!-- SCOPE WARNING -->
+  <rect x="60" y="295" width="160" height="75" fill="#fef8f8" stroke="#8B0000" stroke-width="1.5" rx="6"/>
+  <text x="140" y="318" text-anchor="middle" class="step-title" fill="#8B0000">Scope Boundary</text>
+  <line x1="75" y1="328" x2="205" y2="328" stroke="#8B0000" stroke-width="1" opacity="0.4"/>
+  <text x="140" y="345" text-anchor="middle" class="step-content">Guarantee extends only</text>
+  <text x="140" y="360" text-anchor="middle" class="step-content">as far as formal coverage</text>
+  
+  <!-- Bottom labels -->
+  <text x="140" y="425" text-anchor="middle" class="zone-desc">Bottleneck: human</text>
+  <text x="140" y="438" text-anchor="middle" class="zone-desc">formalization capacity</text>
+  
+  <text x="450" y="425" text-anchor="middle" class="zone-desc">Speed: AI search + verification</text>
+  <text x="450" y="438" text-anchor="middle" class="zone-desc">far exceeds human capacity</text>
+  
+  <text x="760" y="425" text-anchor="middle" class="zone-desc">Value: human judgment on</text>
+  <text x="760" y="438" text-anchor="middle" class="zone-desc">significance and application</text>
+  
+  <!-- Caption -->
+  <text x="450" y="475" text-anchor="middle" class="caption">Within formal scope, verified outputs are correct—not probably correct, but correct.</text>
+  
+</svg>

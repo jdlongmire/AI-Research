@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <defs>
+    <style>
+      .title { font-family: 'Georgia', serif; font-size: 18px; font-weight: bold; fill: #222; }
+      .reg-title { font-family: 'Georgia', serif; font-size: 12px; font-weight: bold; }
+      .reg-desc { font-family: 'Georgia', serif; font-size: 9px; fill: #444; }
+      .tier-label { font-family: 'Georgia', serif; font-size: 11px; font-weight: bold; fill: #fff; }
+      .tier-box-label { font-family: 'Georgia', serif; font-size: 10px; font-weight: bold; }
+      .mapping-text { font-family: 'Georgia', serif; font-size: 9px; fill: #333; }
+      .caption { font-family: 'Georgia', serif; font-size: 11px; fill: #555; font-style: italic; }
+      .header { font-family: 'Georgia', serif; font-size: 11px; font-weight: bold; fill: #444; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="520" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="title">Figure 6. Regulatory Alignment: Minimum Tier Requirements</text>
+  
+  <!-- TIER LEGEND (top) -->
+  <rect x="200" y="55" width="500" height="35" fill="#fff" stroke="#ccc" stroke-width="1" rx="4"/>
+  
+  <rect x="215" y="62" width="50" height="20" fill="#f5f0f0" stroke="#8B0000" stroke-width="1.5" rx="3"/>
+  <text x="240" y="76" text-anchor="middle" class="tier-box-label" fill="#8B0000">UCAE</text>
+  
+  <rect x="280" y="62" width="50" height="20" fill="#e5eef5" stroke="#2E5090" stroke-width="1.5" rx="3"/>
+  <text x="305" y="76" text-anchor="middle" class="tier-box-label" fill="#2E5090">PCAE</text>
+  
+  <rect x="345" y="62" width="50" height="20" fill="#e8efe8" stroke="#2E7D32" stroke-width="1.5" rx="3"/>
+  <text x="370" y="76" text-anchor="middle" class="tier-box-label" fill="#2E7D32">ECAE</text>
+  
+  <rect x="410" y="62" width="50" height="20" fill="#f0ebe3" stroke="#8B4513" stroke-width="1.5" rx="3"/>
+  <text x="435" y="76" text-anchor="middle" class="tier-box-label" fill="#8B4513">SCAE</text>
+  
+  <text x="550" y="76" text-anchor="middle" class="reg-desc">Shading indicates minimum required tier</text>
+  
+  <!-- EU AI ACT ROW -->
+  <rect x="50" y="105" width="800" height="90" fill="#fff" stroke="#ddd" stroke-width="1" rx="4"/>
+  
+  <rect x="60" y="115" width="140" height="70" fill="#f0f4f8" rx="4"/>
+  <text x="130" y="138" text-anchor="middle" class="reg-title" fill="#1a365d">EU AI Act</text>
+  <text x="130" y="155" text-anchor="middle" class="reg-desc">Risk-based classification</text>
+  <text x="130" y="168" text-anchor="middle" class="reg-desc">Human oversight requirements</text>
+  
+  <text x="220" y="125" text-anchor="start" class="mapping-text" font-weight="bold">Minimal risk:</text>
+  <rect x="310" y="115" width="45" height="18" fill="#f5f0f0" stroke="#8B0000" stroke-width="1" rx="2"/>
+  <text x="332" y="128" text-anchor="middle" class="mapping-text">UCAE</text>
+  
+  <text x="220" y="148" text-anchor="start" class="mapping-text" font-weight="bold">Limited risk:</text>
+  <rect x="310" y="138" width="45" height="18" fill="#e5eef5" stroke="#2E5090" stroke-width="1" rx="2"/>
+  <text x="332" y="151" text-anchor="middle" class="mapping-text">PCAE</text>
+  <text x="365" y="151" text-anchor="start" class="mapping-text">+ transparency obligations</text>
+  
+  <text x="220" y="171" text-anchor="start" class="mapping-text" font-weight="bold">High risk:</text>
+  <rect x="310" y="161" width="45" height="18" fill="#e8efe8" stroke="#2E7D32" stroke-width="1" rx="2"/>
+  <text x="332" y="174" text-anchor="middle" class="mapping-text">ECAE</text>
+  <text x="365" y="174" text-anchor="start" class="mapping-text">+ documentation, accuracy, human oversight (Art. 14)</text>
+  
+  <text x="620" y="148" text-anchor="start" class="mapping-text" font-weight="bold">Safety components:</text>
+  <rect x="735" y="138" width="45" height="18" fill="#f0ebe3" stroke="#8B4513" stroke-width="1" rx="2"/>
+  <text x="757" y="151" text-anchor="middle" class="mapping-text">SCAE</text>
+  
+  <!-- FDA ROW -->
+  <rect x="50" y="205" width="800" height="90" fill="#fff" stroke="#ddd" stroke-width="1" rx="4"/>
+  
+  <rect x="60" y="215" width="140" height="70" fill="#f8f4f0" rx="4"/>
+  <text x="130" y="238" text-anchor="middle" class="reg-title" fill="#744210">FDA</text>
+  <text x="130" y="255" text-anchor="middle" class="reg-desc">Clinical Decision Support</text>
+  <text x="130" y="268" text-anchor="middle" class="reg-desc">Medical device regulation</text>
+  
+  <text x="220" y="230" text-anchor="start" class="mapping-text" font-weight="bold">Non-device CDS (meets 4 criteria):</text>
+  <rect x="400" y="220" width="45" height="18" fill="#e5eef5" stroke="#2E5090" stroke-width="1" rx="2"/>
+  <text x="422" y="233" text-anchor="middle" class="mapping-text">PCAE</text>
+  <text x="455" y="233" text-anchor="start" class="mapping-text">professional can review independently</text>
+  
+  <text x="220" y="255" text-anchor="start" class="mapping-text" font-weight="bold">Device CDS (regulated):</text>
+  <rect x="400" y="245" width="45" height="18" fill="#e8efe8" stroke="#2E7D32" stroke-width="1" rx="2"/>
+  <text x="422" y="258" text-anchor="middle" class="mapping-text">ECAE</text>
+  <text x="455" y="258" text-anchor="start" class="mapping-text">+ premarket review, QSR, postmarket surveillance</text>
+  
+  <text x="220" y="280" text-anchor="start" class="mapping-text" font-weight="bold">Safety-critical algorithms:</text>
+  <rect x="400" y="270" width="45" height="18" fill="#f0ebe3" stroke="#8B4513" stroke-width="1" rx="2"/>
+  <text x="422" y="283" text-anchor="middle" class="mapping-text">SCAE</text>
+  <text x="455" y="283" text-anchor="start" class="mapping-text">formal verification where feasible</text>
+  
+  <!-- SEC/FINRA ROW -->
+  <rect x="50" y="305" width="800" height="90" fill="#fff" stroke="#ddd" stroke-width="1" rx="4"/>
+  
+  <rect x="60" y="315" width="140" height="70" fill="#f0f8f4" rx="4"/>
+  <text x="130" y="338" text-anchor="middle" class="reg-title" fill="#1c4532">SEC / FINRA</text>
+  <text x="130" y="355" text-anchor="middle" class="reg-desc">Fiduciary duty</text>
+  <text x="130" y="368" text-anchor="middle" class="reg-desc">Algorithmic trading oversight</text>
+  
+  <text x="220" y="330" text-anchor="start" class="mapping-text" font-weight="bold">Robo-advice (retail):</text>
+  <rect x="370" y="320" width="45" height="18" fill="#e8efe8" stroke="#2E7D32" stroke-width="1" rx="2"/>
+  <text x="392" y="333" text-anchor="middle" class="mapping-text">ECAE</text>
+  <text x="425" y="333" text-anchor="start" class="mapping-text">fiduciary review before client delivery</text>
+  
+  <text x="220" y="355" text-anchor="start" class="mapping-text" font-weight="bold">Suitability determinations:</text>
+  <rect x="370" y="345" width="45" height="18" fill="#e8efe8" stroke="#2E7D32" stroke-width="1" rx="2"/>
+  <text x="392" y="358" text-anchor="middle" class="mapping-text">ECAE</text>
+  <text x="425" y="358" text-anchor="start" class="mapping-text">expert validation of client-specific factors</text>
+  
+  <text x="220" y="380" text-anchor="start" class="mapping-text" font-weight="bold">Execution algorithms:</text>
+  <rect x="370" y="370" width="45" height="18" fill="#f0ebe3" stroke="#8B4513" stroke-width="1" rx="2"/>
+  <text x="392" y="383" text-anchor="middle" class="mapping-text">SCAE</text>
+  <text x="425" y="383" text-anchor="start" class="mapping-text">formal verification for best execution compliance</text>
+  
+  <!-- FAA/EASA ROW -->
+  <rect x="50" y="405" width="800" height="90" fill="#fff" stroke="#ddd" stroke-width="1" rx="4"/>
+  
+  <rect x="60" y="415" width="140" height="70" fill="#f4f0f8" rx="4"/>
+  <text x="130" y="438" text-anchor="middle" class="reg-title" fill="#44337a">FAA / EASA</text>
+  <text x="130" y="455" text-anchor="middle" class="reg-desc">DO-178C</text>
+  <text x="130" y="468" text-anchor="middle" class="reg-desc">Design Assurance Levels</text>
+  
+  <text x="220" y="430" text-anchor="start" class="mapping-text" font-weight="bold">DAL D/E (minor/no effect):</text>
+  <rect x="380" y="420" width="45" height="18" fill="#e5eef5" stroke="#2E5090" stroke-width="1" rx="2"/>
+  <text x="402" y="433" text-anchor="middle" class="mapping-text">PCAE</text>
+  <text x="435" y="433" text-anchor="start" class="mapping-text">with appropriate documentation</text>
+  
+  <text x="220" y="455" text-anchor="start" class="mapping-text" font-weight="bold">DAL C (major):</text>
+  <rect x="380" y="445" width="45" height="18" fill="#e8efe8" stroke="#2E7D32" stroke-width="1" rx="2"/>
+  <text x="402" y="458" text-anchor="middle" class="mapping-text">ECAE</text>
+  <text x="435" y="458" text-anchor="start" class="mapping-text">structured validation protocols</text>
+  
+  <text x="220" y="480" text-anchor="start" class="mapping-text" font-weight="bold">DAL A/B (catastrophic/hazardous):</text>
+  <rect x="410" y="470" width="45" height="18" fill="#f0ebe3" stroke="#8B4513" stroke-width="1" rx="2"/>
+  <text x="432" y="483" text-anchor="middle" class="mapping-text">SCAE</text>
+  <text x="465" y="483" text-anchor="start" class="mapping-text">formal methods mandatory</text>
+  
+  <!-- Caption -->
+  <text x="450" y="515" text-anchor="middle" class="caption">Regulatory requirements establish minimum tiers; organizations may deploy higher tiers based on risk assessment.</text>
+  
+</svg>

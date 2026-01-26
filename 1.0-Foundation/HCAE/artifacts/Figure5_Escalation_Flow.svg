@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580">
+  <defs>
+    <style>
+      .title { font-family: 'Georgia', serif; font-size: 18px; font-weight: bold; fill: #222; }
+      .box-title { font-family: 'Georgia', serif; font-size: 11px; font-weight: bold; }
+      .box-content { font-family: 'Georgia', serif; font-size: 9px; fill: #444; }
+      .trigger-text { font-family: 'Georgia', serif; font-size: 9px; fill: #8B0000; }
+      .arrow-label { font-family: 'Georgia', serif; font-size: 9px; fill: #555; }
+      .caption { font-family: 'Georgia', serif; font-size: 11px; fill: #555; font-style: italic; }
+      .tier-label { font-family: 'Georgia', serif; font-size: 10px; font-weight: bold; }
+      .principle { font-family: 'Georgia', serif; font-size: 10px; fill: #2E5090; font-style: italic; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2E7D32"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8B0000"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="580" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="title">Figure 5. Escalation Flow in Hybrid Deployment</text>
+  
+  <!-- Principle box -->
+  <rect x="250" y="50" width="400" height="30" fill="#e5eef5" stroke="#2E5090" stroke-width="1" rx="4"/>
+  <text x="450" y="70" text-anchor="middle" class="principle">Principle: Epistemic authority must match epistemic demand</text>
+  
+  <!-- ENTRY: Query Enters -->
+  <rect x="60" y="120" width="120" height="50" fill="#f5f5f5" stroke="#555" stroke-width="2" rx="6"/>
+  <text x="120" y="142" text-anchor="middle" class="box-title" fill="#555">Query Enters</text>
+  <text x="120" y="158" text-anchor="middle" class="box-content">Task arrives for processing</text>
+  
+  <!-- Arrow to Initial Assessment -->
+  <line x1="180" y1="145" x2="230" y2="145" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- INITIAL ASSESSMENT -->
+  <rect x="235" y="110" width="140" height="70" fill="#fff" stroke="#2E5090" stroke-width="2" rx="6"/>
+  <text x="305" y="132" text-anchor="middle" class="box-title" fill="#2E5090">Initial Assessment</text>
+  <text x="305" y="148" text-anchor="middle" class="box-content">Consequence severity</text>
+  <text x="305" y="161" text-anchor="middle" class="box-content">Verifiability requirements</text>
+  <text x="305" y="174" text-anchor="middle" class="box-content">Expertise availability</text>
+  
+  <!-- Arrow to Tier Assignment -->
+  <line x1="375" y1="145" x2="425" y2="145" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- TIER ASSIGNMENT -->
+  <rect x="430" y="110" width="130" height="70" fill="#fff" stroke="#2E5090" stroke-width="2" rx="6"/>
+  <text x="495" y="132" text-anchor="middle" class="box-title" fill="#2E5090">Tier Assignment</text>
+  <text x="495" y="150" text-anchor="middle" class="box-content">UCAE / PCAE /</text>
+  <text x="495" y="163" text-anchor="middle" class="box-content">ECAE / SCAE</text>
+  <text x="495" y="176" text-anchor="middle" class="box-content">(based on assessment)</text>
+  
+  <!-- Arrow to Processing -->
+  <line x1="560" y1="145" x2="610" y2="145" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- PROCESSING -->
+  <rect x="615" y="110" width="130" height="70" fill="#fdf8f0" stroke="#8B4513" stroke-width="2" rx="6"/>
+  <text x="680" y="132" text-anchor="middle" class="box-title" fill="#8B4513">Processing</text>
+  <text x="680" y="150" text-anchor="middle" class="box-content">AI generates output</text>
+  <text x="680" y="163" text-anchor="middle" class="box-content">Tier-appropriate</text>
+  <text x="680" y="176" text-anchor="middle" class="box-content">validation applied</text>
+  
+  <!-- Arrow down to Trigger Check -->
+  <line x1="680" y1="180" x2="680" y2="220" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- ESCALATION TRIGGER CHECK -->
+  <rect x="580" y="225" width="200" height="100" fill="#fff" stroke="#8B0000" stroke-width="2" rx="6"/>
+  <text x="680" y="247" text-anchor="middle" class="box-title" fill="#8B0000">Escalation Triggers?</text>
+  <line x1="595" y1="255" x2="765" y2="255" stroke="#8B0000" stroke-width="1" opacity="0.3"/>
+  <text x="680" y="272" text-anchor="middle" class="trigger-text">• Consequence exceeds tier capacity</text>
+  <text x="680" y="286" text-anchor="middle" class="trigger-text">• Novel pattern not in training</text>
+  <text x="680" y="300" text-anchor="middle" class="trigger-text">• Conflicting signals in output</text>
+  <text x="680" y="314" text-anchor="middle" class="trigger-text">• High uncertainty flagged</text>
+  
+  <!-- NO path - continues to validation -->
+  <line x1="780" y1="275" x2="830" y2="275" stroke="#2E7D32" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="805" y="265" text-anchor="middle" class="arrow-label" fill="#2E7D32">No</text>
+  
+  <!-- VALIDATION COMPLETE -->
+  <rect x="770" y="360" width="110" height="60" fill="#e8f5e8" stroke="#2E7D32" stroke-width="2" rx="6"/>
+  <text x="825" y="385" text-anchor="middle" class="box-title" fill="#2E7D32">Validated</text>
+  <text x="825" y="402" text-anchor="middle" class="box-content">Output delivered</text>
+  
+  <!-- Arrow from No to Validated -->
+  <path d="M 840 275 L 840 355" stroke="#2E7D32" stroke-width="2" fill="none" marker-end="url(#arrow-green)"/>
+  
+  <!-- YES path - escalates -->
+  <line x1="680" y1="325" x2="680" y2="360" stroke="#8B0000" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <text x="695" y="345" text-anchor="start" class="arrow-label" fill="#8B0000">Yes</text>
+  
+  <!-- ESCALATION PROTOCOL -->
+  <rect x="580" y="365" width="160" height="90" fill="#fef8f8" stroke="#8B0000" stroke-width="2" rx="6"/>
+  <text x="660" y="387" text-anchor="middle" class="box-title" fill="#8B0000">Escalation Protocol</text>
+  <line x1="595" y1="395" x2="725" y2="395" stroke="#8B0000" stroke-width="1" opacity="0.3"/>
+  <text x="660" y="412" text-anchor="middle" class="box-content">1. Preserve context</text>
+  <text x="660" y="426" text-anchor="middle" class="box-content">2. Confirm authority available</text>
+  <text x="660" y="440" text-anchor="middle" class="box-content">3. Specify scope of escalation</text>
+  
+  <!-- Arrow to Higher Tier -->
+  <line x1="580" y1="410" x2="480" y2="410" stroke="#8B0000" stroke-width="2" marker-end="url(#arrow-red)"/>
+  
+  <!-- HIGHER TIER PROCESSING -->
+  <rect x="330" y="365" width="145" height="90" fill="#fff" stroke="#2E5090" stroke-width="2" rx="6"/>
+  <text x="402" y="387" text-anchor="middle" class="box-title" fill="#2E5090">Higher Tier Review</text>
+  <line x1="345" y1="395" x2="460" y2="395" stroke="#2E5090" stroke-width="1" opacity="0.3"/>
+  <text x="402" y="412" text-anchor="middle" class="box-content">Expert/Synthesis review</text>
+  <text x="402" y="426" text-anchor="middle" class="box-content">at appropriate level</text>
+  <text x="402" y="440" text-anchor="middle" class="box-content">for escalated concern</text>
+  
+  <!-- Arrow to Resolution -->
+  <line x1="330" y1="410" x2="270" y2="410" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- RESOLUTION -->
+  <rect x="120" y="365" width="145" height="90" fill="#fff" stroke="#555" stroke-width="2" rx="6"/>
+  <text x="192" y="387" text-anchor="middle" class="box-title" fill="#555">Resolution</text>
+  <line x1="135" y1="395" x2="250" y2="395" stroke="#555" stroke-width="1" opacity="0.3"/>
+  <text x="192" y="412" text-anchor="middle" class="box-content">Document decision</text>
+  <text x="192" y="426" text-anchor="middle" class="box-content">Update escalation patterns</text>
+  <text x="192" y="440" text-anchor="middle" class="box-content">Feed back to system</text>
+  
+  <!-- Arrow to Validated -->
+  <path d="M 192 455 L 192 490 L 825 490 L 825 425" stroke="#2E7D32" stroke-width="2" fill="none" marker-end="url(#arrow-green)"/>
+  
+  <!-- DE-ESCALATION NOTE -->
+  <rect x="60" y="225" width="180" height="100" fill="#f9f9f9" stroke="#999" stroke-width="1" rx="4"/>
+  <text x="150" y="248" text-anchor="middle" class="box-title" fill="#666">De-escalation Criteria</text>
+  <line x1="75" y1="258" x2="225" y2="258" stroke="#999" stroke-width="1" opacity="0.4"/>
+  <text x="150" y="278" text-anchor="middle" class="box-content">Query class previously validated</text>
+  <text x="150" y="293" text-anchor="middle" class="box-content">Consequences bounded</text>
+  <text x="150" y="308" text-anchor="middle" class="box-content">Recovery mechanisms exist</text>
+  
+  <!-- Dashed arrow showing de-escalation possibility -->
+  <path d="M 240 275 Q 280 275, 305 180" stroke="#999" stroke-width="1.5" fill="none" stroke-dasharray="4,2" marker-end="url(#arrow)"/>
+  <text x="285" y="230" text-anchor="middle" class="arrow-label">validated patterns</text>
+  <text x="285" y="242" text-anchor="middle" class="arrow-label">may de-escalate</text>
+  
+  <!-- Caption -->
+  <text x="450" y="540" text-anchor="middle" class="caption">Most real deployments operate across multiple tiers; escalation pathways make tier transitions explicit.</text>
+  <text x="450" y="558" text-anchor="middle" class="caption">Feedback from resolution improves future tier assignment accuracy.</text>
+  
+</svg>

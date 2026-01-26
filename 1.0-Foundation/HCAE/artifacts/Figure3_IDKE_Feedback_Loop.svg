@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 550">
+  <defs>
+    <style>
+      .title { font-family: 'Georgia', serif; font-size: 18px; font-weight: bold; fill: #222; }
+      .box-title { font-family: 'Georgia', serif; font-size: 13px; font-weight: bold; }
+      .box-content { font-family: 'Georgia', serif; font-size: 10px; fill: #444; }
+      .arrow-label { font-family: 'Georgia', serif; font-size: 10px; fill: #333; }
+      .step-num { font-family: 'Georgia', serif; font-size: 11px; font-weight: bold; fill: #fff; }
+      .caption { font-family: 'Georgia', serif; font-size: 11px; fill: #555; font-style: italic; }
+      .outcome { font-family: 'Georgia', serif; font-size: 11px; fill: #8B0000; font-weight: bold; }
+      .invisible-note { font-family: 'Georgia', serif; font-size: 10px; fill: #666; font-style: italic; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8B0000"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="850" height="550" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="425" y="35" text-anchor="middle" class="title">Figure 3. The Interactive Dunning-Kruger Effect (IDKE)</text>
+  
+  <!-- USER BOX (left) -->
+  <rect x="80" y="120" width="180" height="130" fill="#e5eef5" stroke="#2E5090" stroke-width="2" rx="6"/>
+  <text x="170" y="145" text-anchor="middle" class="box-title" fill="#2E5090">User</text>
+  <text x="170" y="165" text-anchor="middle" class="box-content">(with Human D-K)</text>
+  <line x1="100" y1="175" x2="240" y2="175" stroke="#2E5090" stroke-width="1" opacity="0.4"/>
+  <text x="170" y="195" text-anchor="middle" class="box-content">Limited domain expertise</text>
+  <text x="170" y="210" text-anchor="middle" class="box-content">Cannot evaluate correctness</text>
+  <text x="170" y="225" text-anchor="middle" class="box-content">Unaware of own limits</text>
+  
+  <!-- AI SYSTEM BOX (right) -->
+  <rect x="590" y="120" width="180" height="130" fill="#f5f0e8" stroke="#8B4513" stroke-width="2" rx="6"/>
+  <text x="680" y="145" text-anchor="middle" class="box-title" fill="#8B4513">AI System</text>
+  <text x="680" y="165" text-anchor="middle" class="box-content">(with AIDK)</text>
+  <line x1="610" y1="175" x2="750" y2="175" stroke="#8B4513" stroke-width="1" opacity="0.4"/>
+  <text x="680" y="195" text-anchor="middle" class="box-content">No access to truth conditions</text>
+  <text x="680" y="210" text-anchor="middle" class="box-content">Cannot signal unreliability</text>
+  <text x="680" y="225" text-anchor="middle" class="box-content">Uniform confidence output</text>
+  
+  <!-- STEP 1: Query arrow (User to AI) -->
+  <line x1="260" y1="155" x2="585" y2="155" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <circle cx="290" cy="155" r="12" fill="#555"/>
+  <text x="290" y="159" text-anchor="middle" class="step-num">1</text>
+  <text x="425" y="145" text-anchor="middle" class="arrow-label">User consults AI</text>
+  
+  <!-- STEP 2: Response arrow (AI to User) -->
+  <line x1="590" y1="210" x2="265" y2="210" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <circle cx="560" cy="210" r="12" fill="#555"/>
+  <text x="560" y="214" text-anchor="middle" class="step-num">2</text>
+  <text x="425" y="230" text-anchor="middle" class="arrow-label">AI produces confident-sounding output</text>
+  
+  <!-- INTERACTION ZONE (center) -->
+  <rect x="300" y="280" width="250" height="100" fill="#fff" stroke="#8B0000" stroke-width="2" stroke-dasharray="5,3" rx="6"/>
+  <text x="425" y="305" text-anchor="middle" class="box-title" fill="#8B0000">The Interaction</text>
+  <line x1="320" y1="315" x2="530" y2="315" stroke="#8B0000" stroke-width="1" opacity="0.3"/>
+  <text x="425" y="335" text-anchor="middle" class="box-content">User cannot evaluate ✗</text>
+  <text x="425" y="352" text-anchor="middle" class="box-content">AI cannot signal uncertainty ✗</text>
+  <text x="425" y="369" text-anchor="middle" class="box-content">No external check present ✗</text>
+  
+  <!-- Step 3 indicator -->
+  <circle cx="320" cy="330" r="12" fill="#8B0000"/>
+  <text x="320" y="334" text-anchor="middle" class="step-num">3</text>
+  
+  <!-- OUTCOME BOX (bottom) -->
+  <rect x="250" y="410" width="350" height="80" fill="#fdf0f0" stroke="#8B0000" stroke-width="2" rx="6"/>
+  <circle cx="280" cy="450" r="12" fill="#8B0000"/>
+  <text x="280" y="454" text-anchor="middle" class="step-num">4</text>
+  <text x="440" y="438" text-anchor="middle" class="outcome">Confidence Transfer</text>
+  <text x="440" y="458" text-anchor="middle" class="box-content">User's confidence increases without warrant</text>
+  <text x="440" y="475" text-anchor="middle" class="box-content">User now holds and acts on ungrounded belief</text>
+  
+  <!-- Arrow from interaction to outcome -->
+  <line x1="425" y1="380" x2="425" y2="405" stroke="#8B0000" stroke-width="2" marker-end="url(#arrow-red)"/>
+  
+  <!-- INVISIBILITY NOTE (right side) -->
+  <rect x="615" y="285" width="220" height="110" fill="#f9f9f9" stroke="#999" stroke-width="1" rx="4"/>
+  <text x="725" y="315" text-anchor="middle" class="box-title" fill="#666">Why Invisible</text>
+  <line x1="630" y1="328" x2="820" y2="328" stroke="#999" stroke-width="1" opacity="0.4"/>
+  <text x="725" y="355" text-anchor="middle" class="invisible-note">User doesn't know they don't know</text>
+  <text x="725" y="380" text-anchor="middle" class="invisible-note">AI doesn't know it doesn't know</text>
+  
+  <!-- PERSISTENCE NOTE (left side) -->
+  <rect x="15" y="285" width="220" height="110" fill="#f9f9f9" stroke="#999" stroke-width="1" rx="4"/>
+  <text x="125" y="315" text-anchor="middle" class="box-title" fill="#666">Why Persistent</text>
+  <line x1="30" y1="328" x2="220" y2="328" stroke="#999" stroke-width="1" opacity="0.4"/>
+  <text x="125" y="355" text-anchor="middle" class="invisible-note">Effect persists beyond interaction</text>
+  <text x="125" y="380" text-anchor="middle" class="invisible-note">Propagates into later decisions</text>
+  
+  <!-- HCAE Intervention indicator -->
+  <rect x="620" y="420" width="200" height="70" fill="#e8f5e8" stroke="#2E7D32" stroke-width="1.5" rx="4"/>
+  <text x="720" y="448" text-anchor="middle" class="box-title" fill="#2E7D32">HCAE Interrupts</text>
+  <text x="720" y="468" text-anchor="middle" class="box-content">Tier-appropriate deployment</text>
+  <text x="720" y="483" text-anchor="middle" class="box-content">breaks the cycle at Step 3</text>
+  
+  <!-- Arrow pointing to intervention -->
+  <path d="M 600 350 Q 580 385, 615 420" stroke="#2E7D32" stroke-width="1.5" fill="none" marker-end="url(#arrow-green)" stroke-dasharray="4,2"/>
+  <defs>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2E7D32"/>
+    </marker>
+  </defs>
+  
+  <!-- Caption -->
+  <text x="425" y="525" text-anchor="middle" class="caption">IDKE magnitude scales inversely with user expertise: those most vulnerable are most amplified.</text>
+  
+</svg>

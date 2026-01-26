@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <defs>
+    <style>
+      .title { font-family: 'Georgia', serif; font-size: 18px; font-weight: bold; fill: #222; }
+      .tier-name { font-family: 'Georgia', serif; font-size: 15px; font-weight: bold; }
+      .tier-full { font-family: 'Georgia', serif; font-size: 10px; fill: #555; }
+      .header { font-family: 'Georgia', serif; font-size: 11px; font-weight: bold; fill: #444; }
+      .content { font-family: 'Georgia', serif; font-size: 10px; fill: #333; }
+      .caption { font-family: 'Georgia', serif; font-size: 11px; fill: #555; font-style: italic; }
+      .assurance-label { font-family: 'Georgia', serif; font-size: 10px; fill: #666; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="650" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="title">Figure 2. The HCAE Tier Framework</text>
+  
+  <!-- Subtitle -->
+  <text x="450" y="55" text-anchor="middle" class="caption">Selection based on task requirements, not progression toward an ideal</text>
+  
+  <!-- Assurance arrow on left side -->
+  <line x1="45" y1="540" x2="45" y2="120" stroke="#999" stroke-width="1.5" marker-end="url(#arrowhead-gray)"/>
+  <defs>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    </marker>
+  </defs>
+  <text x="30" y="330" text-anchor="middle" class="assurance-label" transform="rotate(-90, 30, 330)">Epistemic Assurance</text>
+  
+  <!-- Column headers -->
+  <text x="150" y="90" text-anchor="middle" class="header">Tier</text>
+  <text x="310" y="90" text-anchor="middle" class="header">Validator</text>
+  <text x="470" y="90" text-anchor="middle" class="header">Grounding Mechanism</text>
+  <text x="630" y="90" text-anchor="middle" class="header">Primary Risk</text>
+  <text x="790" y="90" text-anchor="middle" class="header">Appropriate Use</text>
+  
+  <!-- Header underline -->
+  <line x1="70" y1="100" x2="870" y2="100" stroke="#ccc" stroke-width="1"/>
+  
+  <!-- SCAE ROW -->
+  <rect x="70" y="115" width="800" height="100" fill="#f0ebe3" rx="4"/>
+  
+  <text x="150" y="150" text-anchor="middle" class="tier-name" fill="#8B4513">SCAE</text>
+  <text x="150" y="165" text-anchor="middle" class="tier-full">Synthesis-Curated,</text>
+  <text x="150" y="178" text-anchor="middle" class="tier-full">AI-Enabled</text>
+  
+  <text x="310" y="150" text-anchor="middle" class="content">Expert +</text>
+  <text x="310" y="165" text-anchor="middle" class="content">Formal System</text>
+  <text x="310" y="180" text-anchor="middle" class="content">(proof assistant,</text>
+  <text x="310" y="195" text-anchor="middle" class="content">compiler, verifier)</text>
+  
+  <text x="470" y="150" text-anchor="middle" class="content">Mechanical verification</text>
+  <text x="470" y="165" text-anchor="middle" class="content">within formal scope;</text>
+  <text x="470" y="180" text-anchor="middle" class="content">expert interpretation</text>
+  <text x="470" y="195" text-anchor="middle" class="content">at boundaries</text>
+  
+  <text x="630" y="150" text-anchor="middle" class="content">Over-formalization;</text>
+  <text x="630" y="165" text-anchor="middle" class="content">scope confusion;</text>
+  <text x="630" y="180" text-anchor="middle" class="content">false confidence beyond</text>
+  <text x="630" y="195" text-anchor="middle" class="content">formal coverage</text>
+  
+  <text x="790" y="150" text-anchor="middle" class="content">Formalizable domains;</text>
+  <text x="790" y="165" text-anchor="middle" class="content">non-negotiable correctness;</text>
+  <text x="790" y="180" text-anchor="middle" class="content">mathematical proof;</text>
+  <text x="790" y="195" text-anchor="middle" class="content">safety-critical systems</text>
+  
+  <!-- ECAE ROW -->
+  <rect x="70" y="225" width="800" height="100" fill="#e8efe8" rx="4"/>
+  
+  <text x="150" y="260" text-anchor="middle" class="tier-name" fill="#2E7D32">ECAE</text>
+  <text x="150" y="275" text-anchor="middle" class="tier-full">Expert-Curated,</text>
+  <text x="150" y="288" text-anchor="middle" class="tier-full">AI-Enabled</text>
+  
+  <text x="310" y="260" text-anchor="middle" class="content">Domain Expert</text>
+  <text x="310" y="275" text-anchor="middle" class="content">(can independently</text>
+  <text x="310" y="290" text-anchor="middle" class="content">evaluate truth</text>
+  <text x="310" y="305" text-anchor="middle" class="content">conditions)</text>
+  
+  <text x="470" y="260" text-anchor="middle" class="content">Expert judgment;</text>
+  <text x="470" y="275" text-anchor="middle" class="content">deep teleological</text>
+  <text x="470" y="290" text-anchor="middle" class="content">and mereological</text>
+  <text x="470" y="305" text-anchor="middle" class="content">awareness</text>
+  
+  <text x="630" y="260" text-anchor="middle" class="content">Over-delegation;</text>
+  <text x="630" y="275" text-anchor="middle" class="content">expert fatigue;</text>
+  <text x="630" y="290" text-anchor="middle" class="content">automation bias;</text>
+  <text x="630" y="305" text-anchor="middle" class="content">vigilance erosion</text>
+  
+  <text x="790" y="260" text-anchor="middle" class="content">High-stakes analysis;</text>
+  <text x="790" y="275" text-anchor="middle" class="content">non-formalizable domains;</text>
+  <text x="790" y="290" text-anchor="middle" class="content">strategic judgment;</text>
+  <text x="790" y="305" text-anchor="middle" class="content">novel situations</text>
+  
+  <!-- PCAE ROW -->
+  <rect x="70" y="335" width="800" height="100" fill="#e5eef5" rx="4"/>
+  
+  <text x="150" y="370" text-anchor="middle" class="tier-name" fill="#2E5090">PCAE</text>
+  <text x="150" y="385" text-anchor="middle" class="tier-full">Professional-Curated,</text>
+  <text x="150" y="398" text-anchor="middle" class="tier-full">AI-Enabled</text>
+  
+  <text x="310" y="370" text-anchor="middle" class="content">Trained Professional</text>
+  <text x="310" y="385" text-anchor="middle" class="content">(domain training,</text>
+  <text x="310" y="400" text-anchor="middle" class="content">institutional context,</text>
+  <text x="310" y="415" text-anchor="middle" class="content">time constraints)</text>
+  
+  <text x="470" y="370" text-anchor="middle" class="content">Professional norms;</text>
+  <text x="470" y="385" text-anchor="middle" class="content">weak teleological</text>
+  <text x="470" y="400" text-anchor="middle" class="content">constraint; partial</text>
+  <text x="470" y="415" text-anchor="middle" class="content">mereological awareness</text>
+  
+  <text x="630" y="370" text-anchor="middle" class="content">Silent edge-case failure;</text>
+  <text x="630" y="385" text-anchor="middle" class="content">plausibility substituting</text>
+  <text x="630" y="400" text-anchor="middle" class="content">for correctness;</text>
+  <text x="630" y="415" text-anchor="middle" class="content">perfunctory review</text>
+  
+  <text x="790" y="370" text-anchor="middle" class="content">Routine professional work;</text>
+  <text x="790" y="385" text-anchor="middle" class="content">bounded consequences;</text>
+  <text x="790" y="400" text-anchor="middle" class="content">genuine review;</text>
+  <text x="790" y="415" text-anchor="middle" class="content">established patterns</text>
+  
+  <!-- UCAE ROW -->
+  <rect x="70" y="445" width="800" height="100" fill="#f5f0f0" rx="4"/>
+  
+  <text x="150" y="480" text-anchor="middle" class="tier-name" fill="#8B0000">UCAE</text>
+  <text x="150" y="495" text-anchor="middle" class="tier-full">User-Curated,</text>
+  <text x="150" y="508" text-anchor="middle" class="tier-full">AI-Enabled</text>
+  
+  <text x="310" y="480" text-anchor="middle" class="content">End User</text>
+  <text x="310" y="495" text-anchor="middle" class="content">(no domain expertise;</text>
+  <text x="310" y="510" text-anchor="middle" class="content">intuitive or stylistic</text>
+  <text x="310" y="525" text-anchor="middle" class="content">validation only)</text>
+  
+  <text x="470" y="480" text-anchor="middle" class="content">None;</text>
+  <text x="470" y="495" text-anchor="middle" class="content">user cannot supply</text>
+  <text x="470" y="510" text-anchor="middle" class="content">epistemic grounding</text>
+  
+  <text x="630" y="480" text-anchor="middle" class="content">Confidence laundering;</text>
+  <text x="630" y="495" text-anchor="middle" class="content">IDKE amplification;</text>
+  <text x="630" y="510" text-anchor="middle" class="content">unwarranted trust</text>
+  <text x="630" y="525" text-anchor="middle" class="content">in AI outputs</text>
+  
+  <text x="790" y="480" text-anchor="middle" class="content">Low-stakes drafting;</text>
+  <text x="790" y="495" text-anchor="middle" class="content">brainstorming; ideation;</text>
+  <text x="790" y="510" text-anchor="middle" class="content">entertainment;</text>
+  <text x="790" y="525" text-anchor="middle" class="content">outputs to be revised</text>
+  
+  <!-- Bottom note -->
+  <rect x="200" y="565" width="500" height="50" fill="#fff" stroke="#999" stroke-width="1" stroke-dasharray="4,2" rx="4"/>
+  <text x="450" y="587" text-anchor="middle" class="content" font-style="italic">Match tier to task. Higher is not better;</text>
+  <text x="450" y="602" text-anchor="middle" class="content" font-style="italic">appropriate is better. Over-deployment wastes; under-deployment harms.</text>
+  
+  <!-- Caption -->
+  <text x="450" y="640" text-anchor="middle" class="caption">Each tier provides a different mechanism for supplying the grounding AI systems structurally lack.</text>
+  
+</svg>

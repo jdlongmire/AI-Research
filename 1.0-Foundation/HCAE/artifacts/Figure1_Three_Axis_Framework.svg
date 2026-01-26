@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <style>
+      .axis-label { font-family: 'Georgia', serif; font-size: 16px; font-weight: bold; }
+      .axis-desc { font-family: 'Georgia', serif; font-size: 12px; fill: #555; }
+      .annotation { font-family: 'Georgia', serif; font-size: 11px; fill: #333; }
+      .emphasis { font-family: 'Georgia', serif; font-size: 11px; font-style: italic; fill: #666; }
+      .title { font-family: 'Georgia', serif; font-size: 18px; font-weight: bold; fill: #222; }
+      .arrow-label { font-family: 'Georgia', serif; font-size: 10px; fill: #8B0000; }
+    </style>
+    <!-- Arrowhead marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#444"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8B0000"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" class="title">Figure 1. The Three-Axis Framework</text>
+  
+  <!-- Origin point -->
+  <circle cx="200" cy="380" r="4" fill="#444"/>
+  
+  <!-- HORIZONTAL AXIS (pointing right) -->
+  <line x1="200" y1="380" x2="500" y2="380" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="510" y="385" class="axis-label" fill="#2E5090">Horizontal</text>
+  <text x="510" y="402" class="axis-desc">Infrastructure &amp; Data</text>
+  
+  <!-- Horizontal axis annotations -->
+  <text x="280" y="410" class="annotation">Scaling</text>
+  <text x="340" y="410" class="annotation">Retrieval</text>
+  <text x="410" y="410" class="annotation">Compute</text>
+  
+  <!-- Coverage indicator for horizontal -->
+  <rect x="230" y="365" width="240" height="6" fill="#2E5090" opacity="0.3" rx="2"/>
+  <text x="350" y="358" text-anchor="middle" class="emphasis">"Most AI discourse lives here"</text>
+  
+  <!-- VERTICAL AXIS (pointing up) -->
+  <line x1="200" y1="380" x2="200" y2="120" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="200" y="100" text-anchor="middle" class="axis-label" fill="#2E7D32">Vertical</text>
+  <text x="200" y="117" text-anchor="middle" class="axis-desc">Epistemology</text>
+  
+  <!-- Vertical axis annotations -->
+  <text x="155" y="320" text-anchor="end" class="annotation">Calibration</text>
+  <text x="155" y="270" text-anchor="end" class="annotation">Reasoning</text>
+  <text x="155" y="220" text-anchor="end" class="annotation">Hallucination</text>
+  
+  <!-- Coverage indicator for vertical -->
+  <rect x="185" y="200" width="6" height="150" fill="#2E7D32" opacity="0.3" rx="2"/>
+  <text x="175" y="175" text-anchor="end" class="emphasis">"Some touches"</text>
+  
+  <!-- GROUNDING AXIS (pointing out toward viewer - represented as diagonal) -->
+  <line x1="200" y1="380" x2="80" y2="500" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="55" y="520" text-anchor="middle" class="axis-label" fill="#8B4513">Grounding</text>
+  <text x="55" y="537" text-anchor="middle" class="axis-desc">Teleology &amp;</text>
+  <text x="55" y="552" text-anchor="middle" class="axis-desc">Mereology</text>
+  
+  <!-- Grounding axis annotations -->
+  <text x="115" y="475" text-anchor="end" class="annotation">Purpose</text>
+  <text x="85" y="505" text-anchor="end" class="annotation">Part-Whole</text>
+  
+  <!-- Coverage indicator for grounding - minimal -->
+  <rect x="170" y="400" width="5" height="30" fill="#8B4513" opacity="0.3" rx="2" transform="rotate(45, 175, 415)"/>
+  <text x="210" y="460" class="emphasis">"Almost none"</text>
+  
+  <!-- MISMATCH ILLUSTRATION BOX -->
+  <rect x="520" y="140" width="250" height="180" fill="#fff" stroke="#ccc" stroke-width="1" rx="4"/>
+  <text x="645" y="165" text-anchor="middle" class="axis-label" fill="#333">The Diagnostic</text>
+  
+  <!-- Problem arrow -->
+  <text x="540" y="195" class="annotation" fill="#8B4513">Problem lives here:</text>
+  <text x="540" y="212" class="annotation" fill="#8B4513" font-weight="bold">Grounding axis</text>
+  
+  <!-- Curved arrow showing mismatch -->
+  <path d="M 640 230 Q 680 260, 640 290" stroke="#8B0000" stroke-width="1.5" fill="none" stroke-dasharray="4,2"/>
+  <text x="690" y="265" class="arrow-label">mismatch</text>
+  
+  <!-- Solution arrow -->
+  <text x="540" y="285" class="annotation" fill="#2E5090">Solution attempted:</text>
+  <text x="540" y="302" class="annotation" fill="#2E5090" font-weight="bold">Horizontal axis</text>
+  
+  <!-- Result -->
+  <line x1="540" y1="312" x2="750" y2="312" stroke="#ddd" stroke-width="1"/>
+  <text x="645" y="330" text-anchor="middle" class="emphasis" fill="#8B0000">"Solution space and problem</text>
+  <text x="645" y="345" text-anchor="middle" class="emphasis" fill="#8B0000">space do not intersect"</text>
+  
+  <!-- HCAE indicator -->
+  <rect x="550" y="480" width="230" height="85" fill="#f5f5f0" stroke="#8B4513" stroke-width="1.5" rx="4"/>
+  <text x="665" y="502" text-anchor="middle" class="axis-label" fill="#8B4513">HCAE Framework</text>
+  <text x="665" y="522" text-anchor="middle" class="annotation">Grounding-axis intervention:</text>
+  <text x="665" y="539" text-anchor="middle" class="annotation">Human judgment supplies what</text>
+  <text x="665" y="556" text-anchor="middle" class="annotation">AI structurally lacks</text>
+  
+  <!-- Axis labels at origin -->
+  <text x="200" y="400" text-anchor="middle" class="emphasis">Origin</text>
+  
+  <!-- Caption -->
+  <text x="400" y="580" text-anchor="middle" class="axis-desc">AI reliability problems are primarily grounding-axis problems misdiagnosed as horizontal-axis problems.</text>
+  
+</svg>
