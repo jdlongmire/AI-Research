@@ -6,7 +6,7 @@
 
 ![Banner: AI neural network fragmenting at edges, representing epistemic uncertainty](openai-proves-aidk-right-banner.png)
 
-In January 2026, OpenAI published research formally proving that hallucinations in large language models are mathematically inevitable. This admission confirms what the AI Dunning-Kruger (AIDK) framework has argued since its inception: AI systems face structural epistemic limitations that cannot be engineered away. This article examines how OpenAI's findings align with AIDK predictions and what this means for responsible AI deployment.
+In January 2024, OpenAI researchers published a paper formally proving that hallucinations in large language models are mathematically inevitable ([arXiv:2401.11817](https://arxiv.org/abs/2401.11817)). This admission confirms what the AI Dunning-Kruger (AIDK) framework has argued since its inception: AI systems face structural epistemic limitations that cannot be engineered away. This article examines how OpenAI's findings align with AIDK predictions and what this means for responsible AI deployment.
 
 ## The Admission
 
@@ -20,12 +20,12 @@ This is not an engineering problem awaiting a clever fix. It is a structural lim
 
 ## What AIDK Predicted
 
-The AIDK framework distinguishes between two fundamentally different cognitive operations:
+The AIDK framework identifies a fundamental asymmetry between human and AI cognition:
 
-- **Origination**: Access to the infinite (I∞) and logical primitives (L₃) that enables genuine novel insight
-- **Derivation**: Transformation of prior inputs according to patterns, which is what AI systems perform
+- **Humans** can recognize uncertainty, exercise judgment about knowledge boundaries, and generate genuinely novel insights
+- **AI systems** transform training data according to statistical patterns, approximating outputs through correlation rather than understanding
 
-AI systems, regardless of scale or sophistication, operate exclusively in the derivation space. They transform training data according to statistical patterns. They do not access truth; they approximate it through correlation.
+AI systems, regardless of scale or sophistication, lack the epistemic grounding that humans possess. They do not access truth; they approximate it through pattern matching.
 
 The framework predicted that AI systems would:
 
@@ -83,7 +83,7 @@ The path forward is epistemic humility:
 
 OpenAI's admission that hallucinations are mathematically inevitable is a watershed moment. It forces a reckoning with claims that better engineering will produce systems free from epistemic failure.
 
-The AIDK framework has argued for years that these limitations are structural, not incidental. AI systems derive; they do not originate. They pattern-match; they do not understand. They correlate; they do not know.
+The AIDK framework has argued for years that these limitations are structural, not incidental. AI systems pattern-match; they do not understand. They correlate; they do not know.
 
 The appropriate response is not despair but recalibration. AI remains an extraordinarily powerful tool for amplifying human capability. But it is a tool, and tools require wielders who understand their limitations.
 
