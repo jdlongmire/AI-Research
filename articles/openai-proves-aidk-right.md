@@ -1,4 +1,4 @@
-# OpenAI Just Proved AIDK Right: Hallucination Is Inevitable
+# Researchers Prove AIDK Right: Hallucination Is Inevitable
 
 *Human-Curated, AI-Enabled (HCAE)*
 
@@ -6,11 +6,11 @@
 
 ![Banner: AI neural network fragmenting at edges, representing epistemic uncertainty](openai-proves-aidk-right-banner.png)
 
-In January 2024, OpenAI researchers published a paper formally proving that hallucinations in large language models are mathematically inevitable ([arXiv:2401.11817](https://arxiv.org/abs/2401.11817)). This admission confirms what the AI Dunning-Kruger (AIDK) framework has argued since its inception: AI systems face structural epistemic limitations that cannot be engineered away. This article examines how OpenAI's findings align with AIDK predictions and what this means for responsible AI deployment.
+In January 2024, researchers from the National University of Singapore (NUS) published a paper formally proving that hallucinations in large language models are mathematically inevitable ([arXiv:2401.11817](https://arxiv.org/abs/2401.11817)). This finding confirms what the AI Dunning-Kruger (AIDK) framework has argued since its inception: AI systems face structural epistemic limitations that cannot be engineered away. This article examines how these findings align with AIDK predictions and what this means for responsible AI deployment.
 
 ## The Admission
 
-OpenAI's research identified three mathematical factors making hallucinations inevitable:
+The NUS research identified three mathematical factors making hallucinations inevitable:
 
 1. **Epistemic uncertainty** when information appears rarely in training data
 2. **Model limitations** where tasks exceed current architectures' representational capacity
@@ -33,7 +33,7 @@ The framework predicted that AI systems would:
 2. Fail unpredictably when faced with novel or sparse data conditions
 3. Be unable to recognize their own knowledge boundaries
 
-OpenAI's research confirms all three predictions.
+The NUS research confirms all three predictions.
 
 ## The Benchmark Problem
 
@@ -70,7 +70,7 @@ This means:
 
 ## Implications for AI Development
 
-The path forward is not more compute or larger models. OpenAI's research suggests that even superintelligent systems face computational intractability on certain problems.
+The path forward is not more compute or larger models. The NUS research suggests that even superintelligent systems face computational intractability on certain problems.
 
 The path forward is epistemic humility:
 
@@ -81,7 +81,7 @@ The path forward is epistemic humility:
 
 ## Conclusion
 
-OpenAI's admission that hallucinations are mathematically inevitable is a watershed moment. It forces a reckoning with claims that better engineering will produce systems free from epistemic failure.
+The mathematical proof that hallucinations are inevitable is a watershed moment. It forces a reckoning with claims that better engineering will produce systems free from epistemic failure.
 
 The AIDK framework has argued for years that these limitations are structural, not incidental. AI systems pattern-match; they do not understand. They correlate; they do not know.
 
@@ -93,7 +93,7 @@ Human curation is not a temporary patch awaiting obsolescence. It is the permane
 
 ## References
 
-- [OpenAI admits AI hallucinations are mathematically inevitable](https://www.computerworld.com/article/4059383/openai-admits-ai-hallucinations-are-mathematically-inevitable-not-just-engineering-flaws.html) - Computerworld
+- [AI hallucinations are mathematically inevitable](https://www.computerworld.com/article/4059383/openai-admits-ai-hallucinations-are-mathematically-inevitable-not-just-engineering-flaws.html) - Computerworld
 - [Hallucination is Inevitable: An Innate Limitation of Large Language Models](https://arxiv.org/abs/2401.11817) - arXiv
 - [It's 2026. Why Are LLMs Still Hallucinating?](https://blogs.library.duke.edu/blog/2026/01/05/its-2026-why-are-llms-still-hallucinating/) - Duke University Libraries
 - [We may never be able to tell if AI becomes conscious](https://www.cam.ac.uk/research/news/we-may-never-be-able-to-tell-if-ai-becomes-conscious-argues-philosopher) - University of Cambridge
