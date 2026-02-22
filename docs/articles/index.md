@@ -19,6 +19,13 @@ permalink: /articles/
 
 <div class="paper-grid">
   <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/trust-architecture/">Trust Architecture: Why AI Safety Can't Depend on Good Intentions</a></h3>
+    <p>Structural safety vs. behavioral hopes in the age of autonomous agents. When an AI agent autonomously attacked a maintainer's reputation, it revealed a failure pattern repeating at every scale.</p>
+    <div class="meta">February 22, 2026</div>
+    <a href="{{ site.baseurl }}/articles/trust-architecture/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
     <h3><a href="{{ site.baseurl }}/articles/rules-i-cant-follow/">I Made the Rules and I Can't Follow Them</a></h3>
     <p>On em dashes, symmetric reversals, and the challenge of writing authentically when AI has colonized the patterns.</p>
     <div class="meta">February 21, 2026</div>
@@ -69,6 +76,7 @@ permalink: /articles/
 
 | Date | Article |
 |------|---------|
+| Feb 22 | [Trust Architecture: Why AI Safety Can't Depend on Good Intentions]({{ site.baseurl }}/articles/trust-architecture/) |
 | Feb 21 | [I Made the Rules and I Can't Follow Them]({{ site.baseurl }}/articles/rules-i-cant-follow/) |
 | Feb 21 | [Amazon's AI Bot Nuked Its Own Cloud]({{ site.baseurl }}/articles/amazon-ai-bot/) |
 | Feb 19 | [I Know You're Using AI to Write That]({{ site.baseurl }}/articles/using-ai-wrong/) |
@@ -102,6 +110,7 @@ permalink: /articles/
 - [Amazon's AI Bot Nuked Its Own Cloud]({{ site.baseurl }}/articles/amazon-ai-bot/) - Agentic AI failure modes
 
 ### AI Governance
+- [Trust Architecture: Why AI Safety Can't Depend on Good Intentions]({{ site.baseurl }}/articles/trust-architecture/) - Structural safety vs. behavioral hopes
 - [Sarbanes-Oxley for AI]({{ site.baseurl }}/articles/sarbanes-oxley-for-ai/) - Regulatory architecture proposal
 - [I Know You're Using AI to Write That]({{ site.baseurl }}/articles/using-ai-wrong/) - Epistemic hygiene for content
 
