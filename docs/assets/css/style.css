@@ -718,6 +718,28 @@ li {
   margin-bottom: 0;
 }
 
+/* Feedback form */
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.15);
+}
+
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.feedback-form button[type="submit"] {
+  transition: all 0.2s ease;
+}
+
+.feedback-form button[type="submit"]:hover {
+  background-color: var(--tech-bg-elevated);
+  border-color: var(--accent-primary);
+}
+
 /* Print styles */
 @media print {
   .site-header,
