@@ -11,8 +11,8 @@ description: "Structural safety vs. behavioral hopes in the age of autonomous ag
 
 <p class="meta">February 22, 2026</p>
 
-<div class="video-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OMb5oTlC_q0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-embed" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/OMb5oTlC_q0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 ---
