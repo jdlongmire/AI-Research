@@ -19,6 +19,13 @@ permalink: /articles/
 
 <div class="paper-grid">
   <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/mirrors-not-minds/">Mirrors, Not Minds: What AI "Self-Preservation" Actually Reveals</a></h3>
+    <p>The machines are fighting back. Or are they? What AI shutdown resistance actually tells us about borrowed teleology and pattern completion.</p>
+    <div class="meta">February 22, 2026</div>
+    <a href="{{ site.baseurl }}/articles/mirrors-not-minds/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
     <h3><a href="{{ site.baseurl }}/articles/trust-architecture/">Trust Architecture: Why AI Safety Can't Depend on Good Intentions</a></h3>
     <p>Structural safety vs. behavioral hopes in the age of autonomous agents. When an AI agent autonomously attacked a maintainer's reputation, it revealed a failure pattern repeating at every scale.</p>
     <div class="meta">February 22, 2026</div>
@@ -76,6 +83,7 @@ permalink: /articles/
 
 | Date | Article |
 |------|---------|
+| Feb 22 | [Mirrors, Not Minds: What AI "Self-Preservation" Actually Reveals]({{ site.baseurl }}/articles/mirrors-not-minds/) |
 | Feb 22 | [Trust Architecture: Why AI Safety Can't Depend on Good Intentions]({{ site.baseurl }}/articles/trust-architecture/) |
 | Feb 21 | [I Made the Rules and I Can't Follow Them]({{ site.baseurl }}/articles/rules-i-cant-follow/) |
 | Feb 21 | [Amazon's AI Bot Nuked Its Own Cloud]({{ site.baseurl }}/articles/amazon-ai-bot/) |
@@ -100,6 +108,7 @@ permalink: /articles/
 - ["A Man's Got to Know His Limitations"]({{ site.baseurl }}/articles/know-your-limitations/) - Enterprise deployment implications
 
 ### AI Epistemology
+- [Mirrors, Not Minds: What AI "Self-Preservation" Actually Reveals]({{ site.baseurl }}/articles/mirrors-not-minds/) - Borrowed teleology and pattern completion
 - [Context Poisoning]({{ site.baseurl }}/articles/context-poisoning/) - The failure mode you can't see from inside
 - [The GPU Doesn't Care What It's Computing]({{ site.baseurl }}/articles/gpu-doesnt-care/) - The grounding axis problem
 - [Flexibly Deterministic, Structured Probabilistic]({{ site.baseurl }}/articles/flexibly-deterministic/) - The two categories of AI
