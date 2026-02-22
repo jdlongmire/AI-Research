@@ -1,6 +1,7 @@
 ---
 layout: paper
 title: "AI Dunning-Kruger (AIDK) Framework"
+permalink: /framework/aidk/
 author: "James (JD) Longmire"
 date_published: 2026-01-15
 doi: "10.5281/zenodo.18316059"

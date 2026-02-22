@@ -1,6 +1,7 @@
 ---
 layout: paper
 title: "Real Work, Real Failure: What the Freelancer Test Reveals About AI"
+permalink: /articles/real-work-real-failure/
 author: "James (JD) Longmire"
 date_published: 2025-12-02
 keywords:

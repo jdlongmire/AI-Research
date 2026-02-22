@@ -1,6 +1,7 @@
 ---
 layout: paper
 title: "What Can AI Actually Do? A Framework for Understanding"
+permalink: /articles/what-can-ai-do/
 author: "James (JD) Longmire"
 date_published: 2025-12-02
 keywords:

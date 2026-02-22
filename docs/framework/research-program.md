@@ -1,6 +1,7 @@
 ---
 layout: paper
 title: "Research Program: AI Limitations and Opportunities"
+permalink: /framework/research-program/
 author: "James (JD) Longmire"
 date_published: 2025-12-01
 keywords:

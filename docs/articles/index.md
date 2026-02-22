@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Articles"
+permalink: /articles/
 ---
 
 <div class="hero-banner-wrapper">

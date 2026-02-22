@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Framework"
+permalink: /framework/
 ---
 
 <div class="hero-banner-wrapper">

@@ -1,6 +1,7 @@
 ---
 layout: paper
 title: "AI Cyber Risk: A Two-Front War"
+permalink: /articles/cyber-risk-two-front-war/
 author: "James (JD) Longmire"
 date_published: 2025-12-03
 keywords:

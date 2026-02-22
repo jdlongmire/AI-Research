@@ -1,6 +1,7 @@
 ---
 layout: paper
 title: "HCAE: Human-Curated, AI-Enabled Deployment Model"
+permalink: /framework/hcae/
 author: "James (JD) Longmire"
 date_published: 2026-01-15
 keywords:
