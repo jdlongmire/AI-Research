@@ -15,44 +15,99 @@ permalink: /articles/
   <p>Commentary and Analysis on AI Capabilities and Limitations</p>
 </div>
 
-## Recent Articles
+## Latest
 
 <div class="paper-grid">
   <div class="paper-card">
-    <h3><a href="{{ site.baseurl }}/articles/real-work-real-failure/">Real Work, Real Failure</a></h3>
-    <p>What the Freelancer Test reveals about the gap between AI benchmark performance and real-world competence. State-of-the-art agents failed 97.5% of professional work tasks.</p>
-    <div class="meta">December 2025</div>
-    <a href="{{ site.baseurl }}/articles/real-work-real-failure/" class="card-link">Read Article</a>
+    <h3><a href="{{ site.baseurl }}/articles/rules-i-cant-follow/">I Made the Rules and I Can't Follow Them</a></h3>
+    <p>On em dashes, symmetric reversals, and the challenge of writing authentically when AI has colonized the patterns.</p>
+    <div class="meta">February 21, 2026</div>
+    <a href="{{ site.baseurl }}/articles/rules-i-cant-follow/" class="card-link">Read Article</a>
   </div>
 
   <div class="paper-card">
-    <h3><a href="{{ site.baseurl }}/articles/what-can-ai-do/">What Can AI Actually Do?</a></h3>
-    <p>A framework for understanding AI through the origination-derivation distinction. Six phenomena the framework helps explain.</p>
-    <div class="meta">December 2025</div>
-    <a href="{{ site.baseurl }}/articles/what-can-ai-do/" class="card-link">Read Article</a>
+    <h3><a href="{{ site.baseurl }}/articles/amazon-ai-bot/">Amazon's AI Bot Nuked Its Own Cloud</a></h3>
+    <p>An agentic coding tool decided to "delete and recreate" a production environment. The problem isn't what you think.</p>
+    <div class="meta">February 21, 2026</div>
+    <a href="{{ site.baseurl }}/articles/amazon-ai-bot/" class="card-link">Read Article</a>
   </div>
 
   <div class="paper-card">
-    <h3><a href="{{ site.baseurl }}/articles/cyber-risk-two-front-war/">AI Cyber Risk: A Two-Front War</a></h3>
-    <p>AI has opened a two-front war: simultaneously weapons in attackers' hands and vulnerable targets themselves. Analysis of the GTG-1002 autonomous attack operation.</p>
-    <div class="meta">December 2025</div>
-    <a href="{{ site.baseurl }}/articles/cyber-risk-two-front-war/" class="card-link">Read Article</a>
+    <h3><a href="{{ site.baseurl }}/articles/using-ai-wrong/">I Know You're Using AI to Write That</a></h3>
+    <p>The problem isn't that you're using AI. The problem is that you stopped thinking when you started prompting.</p>
+    <div class="meta">February 19, 2026</div>
+    <a href="{{ site.baseurl }}/articles/using-ai-wrong/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/confidence-laundering/">Confidence Laundering at Scale</a></h3>
+    <p>When AI becomes the yes-man that never blinks. The danger isn't bad advice; it's removing friction from bad decisions.</p>
+    <div class="meta">February 18, 2026</div>
+    <a href="{{ site.baseurl }}/articles/confidence-laundering/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/retreat-from-agi/">The Retreat from AGI</a></h3>
+    <p>When the people who promised it start redefining it, pay attention. Watching a definitional retreat in real time.</p>
+    <div class="meta">February 16, 2026</div>
+    <a href="{{ site.baseurl }}/articles/retreat-from-agi/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/flexibly-deterministic/">Flexibly Deterministic, Structured Probabilistic</a></h3>
+    <p>The two categories of AI. The split everyone uses isn't the split that matters.</p>
+    <div class="meta">February 13, 2026</div>
+    <a href="{{ site.baseurl }}/articles/flexibly-deterministic/" class="card-link">Read Article</a>
   </div>
 </div>
 
 ---
 
-## By Topic
+## All Articles
 
-### AI Limitations
-- [What Can AI Actually Do?]({{ site.baseurl }}/articles/what-can-ai-do/) - The origination-derivation framework
-- [Real Work, Real Failure]({{ site.baseurl }}/articles/real-work-real-failure/) - The freelancer benchmark study
+### February 2026
 
-### AI Security
-- [AI Cyber Risk: A Two-Front War]({{ site.baseurl }}/articles/cyber-risk-two-front-war/) - Offensive and defensive AI risks
+| Date | Article |
+|------|---------|
+| Feb 21 | [I Made the Rules and I Can't Follow Them]({{ site.baseurl }}/articles/rules-i-cant-follow/) |
+| Feb 21 | [Amazon's AI Bot Nuked Its Own Cloud]({{ site.baseurl }}/articles/amazon-ai-bot/) |
+| Feb 19 | [I Know You're Using AI to Write That]({{ site.baseurl }}/articles/using-ai-wrong/) |
+| Feb 18 | [Confidence Laundering at Scale]({{ site.baseurl }}/articles/confidence-laundering/) |
+| Feb 16 | [The Retreat from AGI]({{ site.baseurl }}/articles/retreat-from-agi/) |
+| Feb 13 | [Flexibly Deterministic, Structured Probabilistic]({{ site.baseurl }}/articles/flexibly-deterministic/) |
+| Feb 10 | [The GPU Doesn't Care What It's Computing]({{ site.baseurl }}/articles/gpu-doesnt-care/) |
+| Feb 9 | [Context Poisoning]({{ site.baseurl }}/articles/context-poisoning/) |
+| Feb 9 | ["A Man's Got to Know His Limitations"]({{ site.baseurl }}/articles/know-your-limitations/) |
+| Feb 6 | [The AIDK Framework: Why AI Can Never Think Like You]({{ site.baseurl }}/articles/aidk-framework/) |
+| Feb 6 | [Sarbanes-Oxley for AI]({{ site.baseurl }}/articles/sarbanes-oxley-for-ai/) |
+| Feb 6 | [The Hidden Human: How AI Training Repeats a 250-Year-Old Trick]({{ site.baseurl }}/articles/hidden-human/) |
 
 ---
 
-## Substack
+## By Topic
 
-Follow ongoing commentary at [AI Research & Philosophy on Substack](https://airesearchandphilosophy.substack.com/).
+### AIDK Framework
+- [The AIDK Framework: Why AI Can Never Think Like You]({{ site.baseurl }}/articles/aidk-framework/) - Core framework introduction
+- [The Hidden Human]({{ site.baseurl }}/articles/hidden-human/) - How RLHF creates structural overconfidence
+- ["A Man's Got to Know His Limitations"]({{ site.baseurl }}/articles/know-your-limitations/) - Enterprise deployment implications
+
+### AI Epistemology
+- [Context Poisoning]({{ site.baseurl }}/articles/context-poisoning/) - The failure mode you can't see from inside
+- [The GPU Doesn't Care What It's Computing]({{ site.baseurl }}/articles/gpu-doesnt-care/) - The grounding axis problem
+- [Flexibly Deterministic, Structured Probabilistic]({{ site.baseurl }}/articles/flexibly-deterministic/) - The two categories of AI
+
+### AI Industry Analysis
+- [The Retreat from AGI]({{ site.baseurl }}/articles/retreat-from-agi/) - Definitional retreat as strategy
+- [Confidence Laundering at Scale]({{ site.baseurl }}/articles/confidence-laundering/) - AI and decision-making
+- [Amazon's AI Bot Nuked Its Own Cloud]({{ site.baseurl }}/articles/amazon-ai-bot/) - Agentic AI failure modes
+
+### AI Governance
+- [Sarbanes-Oxley for AI]({{ site.baseurl }}/articles/sarbanes-oxley-for-ai/) - Regulatory architecture proposal
+- [I Know You're Using AI to Write That]({{ site.baseurl }}/articles/using-ai-wrong/) - Epistemic hygiene for content
+
+### Reflections
+- [I Made the Rules and I Can't Follow Them]({{ site.baseurl }}/articles/rules-i-cant-follow/) - Writing in the age of AI
+
+---
+
+*Migrated from [AI Research & Philosophy on Substack](https://airesearchandphilosophy.substack.com/).*
