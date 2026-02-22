@@ -1,0 +1,43 @@
+# AI Research & Philosophy - Jekyll Configuration
+title: AI Research & Philosophy
+description: "Understanding AI Capabilities and Limitations Through the AIDK Framework"
+author: "James (JD) Longmire"
+email: jdlongmire@outlook.com
+url: "https://jdlongmire.github.io"
+baseurl: "/AI-Research"
+
+# Build settings
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Defaults - apply paper layout to framework directory
+defaults:
+  - scope:
+      path: "framework"
+    values:
+      layout: "paper"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+# SEO
+twitter:
+  username: null
+social:
+  name: "James (JD) Longmire"
+  links:
+    - "https://orcid.org/0009-0009-1383-7698"
+    - "https://github.com/jdlongmire"
+    - "https://zenodo.org/communities/ai-research-philosophy"
+    - "https://airesearchandphilosophy.substack.com/"
