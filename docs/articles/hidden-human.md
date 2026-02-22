@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "The Hidden Human: How AI Training Repeats a 250-Year-Old Trick"
 permalink: /articles/hidden-human/
 date: 2026-02-06

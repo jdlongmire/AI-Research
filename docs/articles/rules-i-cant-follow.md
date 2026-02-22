@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "I Made the Rules and I Can't Follow Them"
 permalink: /articles/rules-i-cant-follow/
 date: 2026-02-21

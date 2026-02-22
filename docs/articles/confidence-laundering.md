@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "Confidence Laundering at Scale"
 permalink: /articles/confidence-laundering/
 date: 2026-02-18

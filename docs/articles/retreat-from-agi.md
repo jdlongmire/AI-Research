@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "The Retreat from AGI"
 permalink: /articles/retreat-from-agi/
 date: 2026-02-16

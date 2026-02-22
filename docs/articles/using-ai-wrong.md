@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "I Know You're Using AI to Write That. Here's What You're Getting Wrong."
 permalink: /articles/using-ai-wrong/
 date: 2026-02-19

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "Amazon's AI Bot Nuked Its Own Cloud. The Problem Isn't What You Think."
 permalink: /articles/amazon-ai-bot/
 date: 2026-02-21

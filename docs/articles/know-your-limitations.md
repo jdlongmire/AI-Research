@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "A Man's Got to Know His Limitations"
 permalink: /articles/know-your-limitations/
 date: 2026-02-09

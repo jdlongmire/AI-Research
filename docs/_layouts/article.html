@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include header.html %}
+
+  <main class="container">
+    <article class="article-content">
+      {{ content }}
+    </article>
+
+    <!-- Giscus Comments -->
+    <section class="comments-section" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color, #e1e4e8);">
+      <h2 style="margin-bottom: 1.5rem;">Comments</h2>
+      <script src="https://giscus.app/client.js"
+              data-repo="jdlongmire/AI-Research"
+              data-repo-id="R_kgDOQhOl3Q"
+              data-category="General"
+              data-category-id="DIC_kwDOQhOl3c4C3ASM"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="top"
+              data-theme="preferred_color_scheme"
+              data-lang="en"
+              data-loading="lazy"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </section>
+  </main>
+
+  {% include footer.html %}
+
+  <!-- Lunr.js for client-side search -->
+  <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+  <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+</body>
+</html>

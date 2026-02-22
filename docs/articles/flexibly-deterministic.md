@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "Flexibly Deterministic, Structured Probabilistic: The Two Categories of AI"
 permalink: /articles/flexibly-deterministic/
 date: 2026-02-13

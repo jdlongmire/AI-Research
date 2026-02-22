@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "Context Poisoning: The AI Failure Mode You Can't See From Inside the Conversation"
 permalink: /articles/context-poisoning/
 date: 2026-02-09

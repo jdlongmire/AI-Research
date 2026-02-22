@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "Sarbanes-Oxley for AI: Why the Analogy Isn't a Stretch"
 permalink: /articles/sarbanes-oxley-for-ai/
 date: 2026-02-06

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "The AIDK Framework: Why AI Can Never Think Like You"
 permalink: /articles/aidk-framework/
 date: 2026-02-06

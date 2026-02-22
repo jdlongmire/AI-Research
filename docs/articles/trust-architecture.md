@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "Trust Architecture: Why AI Safety Can't Depend on Good Intentions"
 permalink: /articles/trust-architecture/
 date: 2026-02-22

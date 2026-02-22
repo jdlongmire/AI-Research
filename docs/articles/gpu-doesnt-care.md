@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "The GPU Doesn't Care What It's Computing"
 permalink: /articles/gpu-doesnt-care/
 date: 2026-02-10
