@@ -1,50 +1,47 @@
-/* Catppuccin Mocha Theme for Logic Realism Theory */
+/* Tech Theme - Blues, Greens, Silver for AI Research */
 
 :root {
-  /* Catppuccin Mocha Palette */
-  --ctp-rosewater: #f5e0dc;
-  --ctp-flamingo: #f2cdcd;
-  --ctp-pink: #f5c2e7;
-  --ctp-mauve: #cba6f7;
-  --ctp-red: #f38ba8;
-  --ctp-maroon: #eba0ac;
-  --ctp-peach: #fab387;
-  --ctp-yellow: #f9e2af;
-  --ctp-green: #a6e3a1;
-  --ctp-teal: #94e2d5;
-  --ctp-sky: #89dceb;
-  --ctp-sapphire: #74c7ec;
-  --ctp-blue: #89b4fa;
-  --ctp-lavender: #b4befe;
-  --ctp-text: #cdd6f4;
-  --ctp-subtext1: #bac2de;
-  --ctp-subtext0: #a6adc8;
-  --ctp-overlay2: #9399b2;
-  --ctp-overlay1: #7f849c;
-  --ctp-overlay0: #6c7086;
-  --ctp-surface2: #585b70;
-  --ctp-surface1: #45475a;
-  --ctp-surface0: #313244;
-  --ctp-base: #1e1e2e;
-  --ctp-mantle: #181825;
-  --ctp-crust: #11111b;
+  /* Tech Palette - Blues */
+  --tech-blue-bright: #00d4ff;
+  --tech-blue-primary: #0ea5e9;
+  --tech-blue-dark: #0284c7;
+  --tech-blue-deep: #0369a1;
+
+  /* Tech Palette - Greens */
+  --tech-green-bright: #00ff88;
+  --tech-green-primary: #22c55e;
+  --tech-green-dark: #16a34a;
+  --tech-green-teal: #14b8a6;
+
+  /* Tech Palette - Silvers/Grays */
+  --tech-silver-light: #e2e8f0;
+  --tech-silver: #94a3b8;
+  --tech-silver-dark: #64748b;
+  --tech-gray: #475569;
+  --tech-gray-dark: #334155;
+
+  /* Dark backgrounds with blue undertone */
+  --tech-bg-dark: #0a0f1a;
+  --tech-bg-darker: #060a12;
+  --tech-bg-surface: #111827;
+  --tech-bg-elevated: #1e293b;
 
   /* Semantic colors */
-  --bg-primary: var(--ctp-base);
-  --bg-secondary: var(--ctp-mantle);
-  --bg-tertiary: var(--ctp-surface0);
-  --text-primary: var(--ctp-text);
-  --text-secondary: var(--ctp-subtext1);
-  --text-muted: var(--ctp-overlay1);
-  --accent-primary: var(--ctp-mauve);
-  --accent-secondary: var(--ctp-lavender);
-  --link-color: var(--ctp-sapphire);
-  --link-hover: var(--ctp-sky);
-  --border-color: var(--ctp-surface1);
-  --code-bg: var(--ctp-surface0);
-  --success: var(--ctp-green);
-  --warning: var(--ctp-yellow);
-  --error: var(--ctp-red);
+  --bg-primary: var(--tech-bg-dark);
+  --bg-secondary: var(--tech-bg-darker);
+  --bg-tertiary: var(--tech-bg-surface);
+  --text-primary: var(--tech-silver-light);
+  --text-secondary: var(--tech-silver);
+  --text-muted: var(--tech-silver-dark);
+  --accent-primary: var(--tech-blue-bright);
+  --accent-secondary: var(--tech-green-bright);
+  --link-color: var(--tech-blue-primary);
+  --link-hover: var(--tech-blue-bright);
+  --border-color: var(--tech-gray-dark);
+  --code-bg: var(--tech-bg-surface);
+  --success: var(--tech-green-primary);
+  --warning: #fbbf24;
+  --error: #ef4444;
 }
 
 /* Reset and base */
@@ -75,7 +72,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
 }
 
-h1 { font-size: 2.5rem; color: var(--accent-primary); }
+h1 {
+  font-size: 2.5rem;
+  color: var(--accent-primary);
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
 h2 { font-size: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
 h3 { font-size: 1.5rem; }
 h4 { font-size: 1.25rem; }
@@ -207,13 +208,15 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: var(--accent-primary);
-  color: var(--bg-primary);
+  background: linear-gradient(135deg, var(--tech-blue-primary), var(--tech-blue-dark));
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 212, 255, 0.2);
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-secondary);
+  background: linear-gradient(135deg, var(--tech-blue-bright), var(--tech-blue-primary));
   text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
 }
 
 .btn-secondary {
@@ -223,14 +226,14 @@ a:hover {
 }
 
 .btn-secondary:hover {
-  background-color: var(--ctp-surface1);
+  background-color: var(--tech-bg-elevated);
   text-decoration: none;
 }
 
 /* Abstract box */
 .abstract {
   background-color: var(--bg-secondary);
-  border-left: 4px solid var(--accent-primary);
+  border-left: 4px solid var(--tech-green-teal);
   padding: 1.5rem;
   margin: 2rem 0;
   border-radius: 0 0.5rem 0.5rem 0;
@@ -283,7 +286,7 @@ pre code {
 
 /* Blockquotes */
 blockquote {
-  border-left: 4px solid var(--ctp-lavender);
+  border-left: 4px solid var(--tech-green-teal);
   margin: 1.5rem 0;
   padding: 0.5rem 1.5rem;
   background-color: var(--bg-secondary);
@@ -347,6 +350,7 @@ li {
 .paper-card:hover {
   border-color: var(--accent-primary);
   transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.15);
 }
 
 .paper-card h3 {
