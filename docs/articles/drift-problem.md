@@ -3,13 +3,15 @@ layout: article
 title: "The Drift Problem: Why Long-Running AI Agents Are Riskier Than You Think"
 permalink: /articles/drift-problem/
 date: 2026-02-26
-image: /assets/images/ai-research-banner.jpg
+image: /assets/images/articles/drift-problem-graphic.png
 description: "Everyone talks about hallucinations. But drift—the quiet degradation of fidelity within a single session—might matter more in practice."
 ---
 
 # The Drift Problem: Why Long-Running AI Agents Are Riskier Than You Think
 
 <p class="meta">February 26, 2026</p>
+
+<img src="/AI-Research/assets/images/articles/drift-problem-graphic.png" alt="The Drift Problem: Three panels showing objective defined, context expansion, and confidence persisting while fidelity degrades" class="article-hero" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
 
 Everyone talks about hallucinations. Fair enough. When your AI confidently fabricates a citation or invents a statistic, that gets attention. It should.
 
