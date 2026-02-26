@@ -162,8 +162,10 @@ a:hover {
 
 .site-header .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 0.75rem;
 }
 
 .site-title {
@@ -206,7 +208,16 @@ a:hover {
 
 .search-wrapper {
   position: relative;
-  margin-left: 0.5rem;
+  width: 100%;
+  order: 3;
+}
+
+@media (min-width: 769px) {
+  .search-wrapper {
+    width: auto;
+    order: 0;
+    margin-left: auto;
+  }
 }
 
 #site-search {
@@ -844,13 +855,31 @@ li {
   }
 
   .site-header .container {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .site-title {
+    width: 100%;
+    text-align: center;
   }
 
   .site-nav {
-    flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
+  }
+
+  .search-wrapper {
+    width: 100%;
+  }
+
+  #site-search {
+    width: 100%;
+  }
+
+  #site-search:focus {
+    width: 100%;
   }
 
   h1 { font-size: 1.75rem; }
