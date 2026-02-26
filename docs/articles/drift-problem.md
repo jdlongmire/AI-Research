@@ -61,4 +61,4 @@ The system will never know when it has drifted. Design accordingly.
 
 ---
 
-*JD Longmire is a Northrop Grumman Fellow, Chief Architect for Digital Ecosystems, and independent AI philosophy researcher. His work on the AIDK framework, HCAE deployment model, and three-axis diagnostic is available on Zenodo (ORCID: [0009-0009-1383-7698](https://orcid.org/0009-0009-1383-7698)) and at [airesearchandphilosophy.substack.com](https://airesearchandphilosophy.substack.com).*
+*JD Longmire is a Northrop Grumman Fellow, Chief Architect for Digital Ecosystems, and independent AI philosophy researcher. His work on the AIDK framework, HCAE deployment model, and three-axis diagnostic is available on Zenodo (ORCID: [0009-0009-1383-7698](https://orcid.org/0009-0009-1383-7698)).*
