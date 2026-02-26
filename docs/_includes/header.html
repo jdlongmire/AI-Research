@@ -9,6 +9,33 @@
         <input type="search" id="site-search" placeholder="Search..." aria-label="Search site">
         <div id="search-results" class="search-results"></div>
       </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <span id="theme-icon">&#9790;</span>
+      </button>
     </nav>
   </div>
 </header>
+
+<script>
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const icon = document.getElementById('theme-icon');
+  const root = document.documentElement;
+
+  // Check stored preference or system preference
+  const stored = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = stored || (prefersDark ? 'dark' : 'light');
+
+  root.setAttribute('data-theme', theme);
+  icon.textContent = theme === 'dark' ? '\u2600' : '\u263E';
+
+  toggle.addEventListener('click', function() {
+    const current = root.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    icon.textContent = next === 'dark' ? '\u2600' : '\u263E';
+  });
+})();
+</script>
