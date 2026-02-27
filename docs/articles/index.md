@@ -19,6 +19,13 @@ permalink: /articles/
 
 <div class="paper-grid">
   <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/agent-ecosystems/">Your Boss Is Right About AI Agents. The Industry Isn't Ready for What Comes Next.</a></h3>
+    <p>AI agents can boost productivity. But agent ecosystems create risks that traditional IT governance can't see.</p>
+    <div class="meta">February 26, 2026</div>
+    <a href="{{ site.baseurl }}/articles/agent-ecosystems/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
     <h3><a href="{{ site.baseurl }}/articles/drift-problem/">The Drift Problem: Why Long-Running AI Agents Are Riskier Than You Think</a></h3>
     <p>Everyone talks about hallucinations. But drift—the quiet degradation of fidelity within a single session—might matter more in practice.</p>
     <div class="meta">February 26, 2026</div>
@@ -90,6 +97,7 @@ permalink: /articles/
 
 | Date | Article |
 |------|---------|
+| Feb 26 | [Your Boss Is Right About AI Agents. The Industry Isn't Ready for What Comes Next.]({{ site.baseurl }}/articles/agent-ecosystems/) |
 | Feb 26 | [The Drift Problem: Why Long-Running AI Agents Are Riskier Than You Think]({{ site.baseurl }}/articles/drift-problem/) |
 | Feb 22 | [Mirrors, Not Minds: What AI "Self-Preservation" Actually Reveals]({{ site.baseurl }}/articles/mirrors-not-minds/) |
 | Feb 22 | [Trust Architecture: Why AI Safety Can't Depend on Good Intentions]({{ site.baseurl }}/articles/trust-architecture/) |
@@ -128,6 +136,7 @@ permalink: /articles/
 - [Amazon's AI Bot Nuked Its Own Cloud]({{ site.baseurl }}/articles/amazon-ai-bot/) - Agentic AI failure modes
 
 ### AI Governance
+- [Your Boss Is Right About AI Agents. The Industry Isn't Ready for What Comes Next.]({{ site.baseurl }}/articles/agent-ecosystems/) - Agent ecosystems and enterprise risk
 - [Trust Architecture: Why AI Safety Can't Depend on Good Intentions]({{ site.baseurl }}/articles/trust-architecture/) - Structural safety vs. behavioral hopes
 - [Sarbanes-Oxley for AI]({{ site.baseurl }}/articles/sarbanes-oxley-for-ai/) - Regulatory architecture proposal
 - [I Know You're Using AI to Write That]({{ site.baseurl }}/articles/using-ai-wrong/) - Epistemic hygiene for content
