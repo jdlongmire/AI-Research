@@ -3,8 +3,8 @@ title: AI Research & Philosophy
 description: "Understanding AI Capabilities and Limitations Through the AIDK Framework"
 author: "James (JD) Longmire"
 email: jdlongmire@outlook.com
-url: "https://jdlongmire.github.io"
-baseurl: "/AI-Research"
+url: "https://aithinkr.net"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
