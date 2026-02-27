@@ -3,13 +3,15 @@ layout: article
 title: "Your Boss Is Right About AI Agents. The Industry Isn't Ready for What Comes Next."
 permalink: /articles/agent-ecosystems/
 date: 2026-02-26
-image: /assets/images/ai-research-banner.jpg
+image: /images/agent-ecosystems-header.png
 description: "AI agents can boost productivity. But agent ecosystems create risks that traditional IT governance can't see."
 ---
 
 # Your Boss Is Right About AI Agents. The Industry Isn't Ready for What Comes Next.
 
 <p class="meta">February 26, 2026</p>
+
+<img src="/images/agent-ecosystems-header.png" alt="Agent ecosystem showing A→B→C cascade with error propagation" style="max-width: 100%; height: auto; margin-bottom: 1.5em;">
 
 Somewhere in your organization right now, a senior leader is telling everyone to start using AI agents. Find ways to be more productive. Automate what you can. Get ahead of the curve.
 
