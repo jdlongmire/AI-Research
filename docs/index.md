@@ -71,27 +71,18 @@ Human cognition has access to two coexistent primitives - Infinite Information S
 ## Recent Articles
 
 <div class="paper-grid">
+{% assign articles = site.pages | where_exp: "page", "page.path contains 'articles/'" | where_exp: "page", "page.layout == 'article'" | sort: "date" | reverse %}
+{% for article in articles limit: 6 %}
   <div class="paper-card">
-    <h3><a href="{{ site.baseurl }}/articles/real-work-real-failure/">Real Work, Real Failure</a></h3>
-    <p>What the Freelancer Test reveals about AI limitations in professional work contexts.</p>
-    <div class="meta">December 2025</div>
-    <a href="{{ site.baseurl }}/articles/real-work-real-failure/" class="card-link">Read Article</a>
+    <h3><a href="{{ article.url | relative_url }}">{{ article.title }}</a></h3>
+    <p>{{ article.description | default: "An article from AI Research & Philosophy." }}</p>
+    <div class="meta">{{ article.date | date: "%B %Y" }}</div>
+    <a href="{{ article.url | relative_url }}" class="card-link">Read Article</a>
   </div>
-
-  <div class="paper-card">
-    <h3><a href="{{ site.baseurl }}/articles/what-can-ai-do/">What Can AI Actually Do?</a></h3>
-    <p>A framework for understanding the genuine capabilities and limitations of AI systems.</p>
-    <div class="meta">December 2025</div>
-    <a href="{{ site.baseurl }}/articles/what-can-ai-do/" class="card-link">Read Article</a>
-  </div>
-
-  <div class="paper-card">
-    <h3><a href="{{ site.baseurl }}/articles/cyber-risk-two-front-war/">AI Cyber Risk: A Two-Front War</a></h3>
-    <p>Security implications of deploying AI systems with structural epistemic limitations.</p>
-    <div class="meta">December 2025</div>
-    <a href="{{ site.baseurl }}/articles/cyber-risk-two-front-war/" class="card-link">Read Article</a>
-  </div>
+{% endfor %}
 </div>
+
+<p style="text-align: center; margin-top: 1rem;"><a href="{{ site.baseurl }}/articles/">View All Articles →</a></p>
 
 ---
 
