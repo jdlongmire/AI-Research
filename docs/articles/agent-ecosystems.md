@@ -21,8 +21,6 @@ But there's a gap between "everyone should use agents" and "everyone should depl
 
 ---
 
-<img src="/images/agent-ecosystems-header.png" alt="Agent ecosystem showing A→B→C cascade with error propagation" style="max-width: 100%; height: auto; margin-bottom: 1.5em;">
-
 ## The Agent Isn't the Risk. The Ecosystem Is.
 
 A single agent doing a bounded task under expert supervision is manageable. It has a known scope. A human checks its work. When it's wrong, someone catches it.
