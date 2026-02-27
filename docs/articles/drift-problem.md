@@ -11,7 +11,7 @@ description: "Everyone talks about hallucinations. But drift—the quiet degrada
 
 <p class="meta">February 26, 2026</p>
 
-<img src="/AI-Research/assets/images/articles/drift-problem-graphic.png" alt="The Drift Problem: Three panels showing objective defined, context expansion, and confidence persisting while fidelity degrades" class="article-hero" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
+<img src="/assets/images/articles/drift-problem-graphic.png" alt="The Drift Problem: Three panels showing objective defined, context expansion, and confidence persisting while fidelity degrades" class="article-hero" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
 
 Everyone talks about hallucinations. Fair enough. When your AI confidently fabricates a citation or invents a statistic, that gets attention. It should.
 
