@@ -13,6 +13,7 @@ image: /assets/images/ai-research-banner.jpg
 <div class="topic-header">
   <h1>AI Research & Philosophy</h1>
   <p>Understanding AI Capabilities and Limitations Through the AIDK Framework</p>
+  <p><a href="{{ site.baseurl }}/articles/">Jump to Articles →</a></p>
 </div>
 
 ## The Core Thesis
