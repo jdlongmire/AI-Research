@@ -186,6 +186,8 @@ a:hover {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  flex: 1;
+  justify-content: center;
 }
 
 .site-nav a {
