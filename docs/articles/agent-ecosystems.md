@@ -11,8 +11,6 @@ description: "AI agents can boost productivity. But agent ecosystems create risk
 
 <p class="meta">February 26, 2026</p>
 
-<img src="/images/agent-ecosystems-header.png" alt="Agent ecosystem showing A→B→C cascade with error propagation" style="max-width: 100%; height: auto; margin-bottom: 1.5em;">
-
 Somewhere in your organization right now, a senior leader is telling everyone to start using AI agents. Find ways to be more productive. Automate what you can. Get ahead of the curve.
 
 That leader is right. AI agents genuinely can make people more productive, and organizations that figure out how to use them well will have real advantages over those that don't. The instinct is sound.
@@ -20,6 +18,8 @@ That leader is right. AI agents genuinely can make people more productive, and o
 But there's a gap between "everyone should use agents" and "everyone should deploy autonomous agents into enterprise workflows without a governance framework." That gap is where the interesting problems live. And almost nobody in the AI industry is talking about them clearly, because the incentive structure rewards enthusiasm over engineering discipline.
 
 ---
+
+<img src="/images/agent-ecosystems-header.png" alt="Agent ecosystem showing A→B→C cascade with error propagation" style="max-width: 100%; height: auto; margin-bottom: 1.5em;">
 
 ## The Agent Isn't the Risk. The Ecosystem Is.
 
