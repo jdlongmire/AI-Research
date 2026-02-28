@@ -12,64 +12,10 @@ image: /assets/images/ai-research-banner.jpg
 
 <div class="topic-header">
   <h1>AI Research & Philosophy</h1>
-  <p>Understanding AI Capabilities and Limitations Through the AIDK Framework</p>
-  <p><a href="{{ site.baseurl }}/articles/">Jump to Articles →</a></p>
+  <p>Commentary and Analysis on AI Capabilities and Limitations</p>
 </div>
 
-## The Core Thesis
-
-**AI Dunning-Kruger (AIDK)** describes the structural epistemic limitations of Large Language Models. This is not a correctable bug but an architectural condition: AI systems produce uniform confidence regardless of reliability, lack mechanisms for detecting competence boundaries, and cannot self-correct through encounter with reality.
-
-The framework distinguishes:
-
-- **Origination**: Retrieving configurations from Infinite Information Space not derived from prior inputs
-- **Derivation**: Transformation of prior inputs according to learned patterns
-
-Human cognition has access to two coexistent primitives - Infinite Information Space ($I_\infty$) and the three fundamental laws of logic ($L_3$). AI systems are categorically derivative, operating downstream of human-generated data and unable to access these primitives directly.
-
-> *More derivation does not become origination.*
-
----
-
-## Key Concepts
-
-| Concept | Definition |
-|---------|------------|
-| **AIDK** | AI Dunning-Kruger: structural epistemic limitation (architectural, not correctable) |
-| **IDKE** | Interactive Dunning-Kruger Effect: amplification when AI limitations meet human limitations |
-| **HCAE** | Human-Curated, AI-Enabled: deployment framework stratified by epistemic authority |
-| **MAPT** | Model Advanced Persistent Threat: security framing for AIDK |
-
----
-
-## Framework Papers
-
-<div class="paper-grid">
-  <div class="paper-card">
-    <h3><a href="{{ site.baseurl }}/framework/aidk/">AIDK Framework</a></h3>
-    <p>The complete theoretical framework establishing structural epistemic limitations in AI systems. Published on Zenodo with DOI.</p>
-    <div class="meta">January 2026 | Foundation Paper</div>
-    <a href="{{ site.baseurl }}/framework/aidk/" class="card-link">Read Framework</a>
-  </div>
-
-  <div class="paper-card">
-    <h3><a href="{{ site.baseurl }}/framework/hcae/">HCAE Deployment Model</a></h3>
-    <p>Human-Curated, AI-Enabled: A tiered approach to AI deployment based on epistemic authority requirements.</p>
-    <div class="meta">January 2026 | Deployment Framework</div>
-    <a href="{{ site.baseurl }}/framework/hcae/" class="card-link">Read Framework</a>
-  </div>
-
-  <div class="paper-card">
-    <h3><a href="{{ site.baseurl }}/framework/research-program/">Research Program</a></h3>
-    <p>The full theoretical program investigating AI through the origination-derivation lens.</p>
-    <div class="meta">December 2025 | Research Agenda</div>
-    <a href="{{ site.baseurl }}/framework/research-program/" class="card-link">Read Program</a>
-  </div>
-</div>
-
----
-
-## Recent Articles
+## Latest Articles
 
 <div class="paper-grid">
 {% assign articles = site.pages | where_exp: "page", "page.path contains 'articles/'" | where_exp: "page", "page.layout == 'article'" | sort: "date" | reverse %}
@@ -77,13 +23,27 @@ Human cognition has access to two coexistent primitives - Infinite Information S
   <div class="paper-card">
     <h3><a href="{{ article.url | relative_url }}">{{ article.title }}</a></h3>
     <p>{{ article.description | default: "An article from AI Research & Philosophy." }}</p>
-    <div class="meta">{{ article.date | date: "%B %Y" }}</div>
+    <div class="meta">{{ article.date | date: "%B %d, %Y" }}</div>
     <a href="{{ article.url | relative_url }}" class="card-link">Read Article</a>
   </div>
 {% endfor %}
 </div>
 
-<p style="text-align: center; margin-top: 1rem;"><a href="{{ site.baseurl }}/articles/">View All Articles →</a></p>
+---
+
+## All Articles
+
+{% assign articles_by_month = site.pages | where_exp: "page", "page.path contains 'articles/'" | where_exp: "page", "page.layout == 'article'" | sort: "date" | reverse | group_by_exp: "article", "article.date | date: '%B %Y'" %}
+
+{% for month in articles_by_month %}
+### {{ month.name }}
+
+| Date | Article |
+|------|---------|
+{% for article in month.items %}| {{ article.date | date: "%b %d" }} | [{{ article.title }}]({{ article.url | relative_url }}) |
+{% endfor %}
+
+{% endfor %}
 
 ---
 
