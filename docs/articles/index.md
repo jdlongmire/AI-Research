@@ -19,6 +19,20 @@ permalink: /articles/
 
 <div class="paper-grid">
   <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/supply-chain-risk/">When Your AI Vendor Becomes a Supply Chain Risk</a></h3>
+    <p>The question for most businesses isn't what they think about the Anthropic dispute. It's whether their cloud provider, their analytics platform, or their subcontractor's toolchain just became a compliance liability.</p>
+    <div class="meta">February 27, 2026</div>
+    <a href="{{ site.baseurl }}/articles/supply-chain-risk/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/probabilistic-morality/">Probabilistic Morality: Why Anthropic's Red Line on Weapons Exposes Everything Else</a></h3>
+    <p>Anthropic told the Pentagon no on autonomous weapons. The grounding problem they cite applies equally to healthcare, finance, and law.</p>
+    <div class="meta">February 27, 2026</div>
+    <a href="{{ site.baseurl }}/articles/probabilistic-morality/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
     <h3><a href="{{ site.baseurl }}/articles/agent-ecosystems/">Your Boss Is Right About AI Agents. The Industry Isn't Ready for What Comes Next.</a></h3>
     <p>AI agents can boost productivity. But agent ecosystems create risks that traditional IT governance can't see.</p>
     <div class="meta">February 26, 2026</div>
@@ -97,6 +111,8 @@ permalink: /articles/
 
 | Date | Article |
 |------|---------|
+| Feb 27 | [When Your AI Vendor Becomes a Supply Chain Risk]({{ site.baseurl }}/articles/supply-chain-risk/) |
+| Feb 27 | [Probabilistic Morality: Why Anthropic's Red Line on Weapons Exposes Everything Else]({{ site.baseurl }}/articles/probabilistic-morality/) |
 | Feb 26 | [Your Boss Is Right About AI Agents. The Industry Isn't Ready for What Comes Next.]({{ site.baseurl }}/articles/agent-ecosystems/) |
 | Feb 26 | [The Drift Problem: Why Long-Running AI Agents Are Riskier Than You Think]({{ site.baseurl }}/articles/drift-problem/) |
 | Feb 22 | [Mirrors, Not Minds: What AI "Self-Preservation" Actually Reveals]({{ site.baseurl }}/articles/mirrors-not-minds/) |
@@ -136,6 +152,8 @@ permalink: /articles/
 - [Amazon's AI Bot Nuked Its Own Cloud]({{ site.baseurl }}/articles/amazon-ai-bot/) - Agentic AI failure modes
 
 ### AI Governance
+- [When Your AI Vendor Becomes a Supply Chain Risk]({{ site.baseurl }}/articles/supply-chain-risk/) - Anthropic blacklist blast radius
+- [Probabilistic Morality: Why Anthropic's Red Line on Weapons Exposes Everything Else]({{ site.baseurl }}/articles/probabilistic-morality/) - If it's too dangerous for weapons, it's too dangerous for hospitals
 - [Your Boss Is Right About AI Agents. The Industry Isn't Ready for What Comes Next.]({{ site.baseurl }}/articles/agent-ecosystems/) - Agent ecosystems and enterprise risk
 - [Trust Architecture: Why AI Safety Can't Depend on Good Intentions]({{ site.baseurl }}/articles/trust-architecture/) - Structural safety vs. behavioral hopes
 - [Sarbanes-Oxley for AI]({{ site.baseurl }}/articles/sarbanes-oxley-for-ai/) - Regulatory architecture proposal
