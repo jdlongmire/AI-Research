@@ -1,0 +1,54 @@
+name: Publish Scheduled Articles
+
+on:
+  schedule:
+    # Run daily at 10 AM Central (16:00 UTC)
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+    # Allow manual trigger for force-publish
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check for scheduled articles
+        id: check
+        run: |
+          if [ -d "scheduler/scheduled" ] && [ "$(ls -A scheduler/scheduled 2>/dev/null)" ]; then
+            echo "has_articles=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_articles=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run publish script
+        if: steps.check.outputs.has_articles == 'true'
+        env:
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: |
+          python scheduler/publish.py
+
+      - name: Commit and push changes
+        if: steps.check.outputs.has_articles == 'true'
+        run: |
+          git config user.name "ThinxAI Scheduler"
+          git config user.email "thinxai.jdl@gmail.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Publish scheduled articles
+
+            Automated publish by ThinxAI Scheduler"
+            git push
+          fi
