@@ -15,6 +15,12 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from pathlib import Path
 
+try:
+    from PIL import Image
+    PIL_AVAILABLE = True
+except ImportError:
+    PIL_AVAILABLE = False
+
 # Configuration
 SCHEDULER_DIR = Path(__file__).parent
 SCHEDULED_DIR = SCHEDULER_DIR / "scheduled"
@@ -27,6 +33,10 @@ SMTP_PORT = 587
 SENDER_EMAIL = "thinxai.jdl@gmail.com"
 SENDER_PASSWORD = "tvkm jcxd ckqx xsnj"
 NOTIFY_EMAIL = "longmire.jd@gmail.com"
+
+# Image resizing configuration
+MAX_IMAGE_WIDTH = 800
+IMAGE_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.webp', '.gif'}
 
 
 def parse_frontmatter(content: str) -> dict:
@@ -81,6 +91,58 @@ def update_frontmatter(content: str, updates: dict) -> str:
         new_lines.append(f"{key}: {value}")
 
     return f"---\n{chr(10).join(new_lines)}\n---{parts[2]}"
+
+
+def resize_images(directory: Path) -> int:
+    """Resize all images in directory to max width for mobile-friendliness."""
+    if not PIL_AVAILABLE:
+        print("  Warning: Pillow not installed, skipping image resize")
+        return 0
+
+    resized_count = 0
+    for img_path in directory.iterdir():
+        if img_path.suffix.lower() not in IMAGE_EXTENSIONS:
+            continue
+        if img_path.suffix.lower() == '.gif':
+            # Skip GIFs to preserve animation
+            continue
+
+        try:
+            with Image.open(img_path) as img:
+                if img.width > MAX_IMAGE_WIDTH:
+                    # Calculate new height maintaining aspect ratio
+                    ratio = MAX_IMAGE_WIDTH / img.width
+                    new_height = int(img.height * ratio)
+
+                    # Resize with high-quality resampling
+                    resized = img.resize((MAX_IMAGE_WIDTH, new_height), Image.Resampling.LANCZOS)
+
+                    # Save (convert RGBA to RGB for JPEG)
+                    if img_path.suffix.lower() in {'.jpg', '.jpeg'} and resized.mode == 'RGBA':
+                        resized = resized.convert('RGB')
+
+                    resized.save(img_path, optimize=True, quality=85)
+                    print(f"  Resized: {img_path.name} ({img.width}x{img.height} → {MAX_IMAGE_WIDTH}x{new_height})")
+                    resized_count += 1
+        except Exception as e:
+            print(f"  Warning: Could not resize {img_path.name}: {e}")
+
+    return resized_count
+
+
+def make_images_responsive(content: str) -> str:
+    """Add responsive CSS to image tags in markdown content."""
+    # Pattern to find markdown images: ![alt](src)
+    # Add responsive style if not already present
+    pattern = r'!\[([^\]]*)\]\(([^)]+)\)'
+
+    def replace_image(match):
+        alt = match.group(1)
+        src = match.group(2)
+        # Return HTML img tag with responsive styling
+        return f'<img src="{src}" alt="{alt}" style="max-width: 100%; height: auto;">'
+
+    return re.sub(pattern, replace_image, content)
 
 
 def send_notification(title: str, slug: str, url: str) -> bool:
@@ -144,16 +206,22 @@ def publish_article(article_path: Path) -> bool:
         # Copy all files from the directory
         for item in article_path.iterdir():
             if item.name == "index.md":
-                # Update frontmatter (add permalink, remove publish_date/draft)
+                # Update frontmatter and make images responsive
                 updated_content = update_frontmatter(content, updates)
+                updated_content = make_images_responsive(updated_content)
                 (dest_dir / "index.md").write_text(updated_content)
             else:
                 shutil.copy2(item, dest_dir / item.name)
+
+        # Resize images for mobile-friendliness
+        resize_images(dest_dir)
+
         # Remove source directory
         shutil.rmtree(article_path)
     else:
-        # Single file - update and move
+        # Single file - update, make images responsive, and move
         updated_content = update_frontmatter(content, updates)
+        updated_content = make_images_responsive(updated_content)
         (dest_dir / "index.md").write_text(updated_content)
         article_path.unlink()
 
