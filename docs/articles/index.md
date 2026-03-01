@@ -19,6 +19,13 @@ permalink: /articles/
 
 <div class="paper-grid">
   <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/questions-nobody-asked/">The Questions Nobody Asked Before Deploying AI Into Defense</a></h3>
+    <p>Every question the defense ecosystem is now scrambling to answer is a question that should have been asked before the contracts were signed.</p>
+    <div class="meta">February 28, 2026</div>
+    <a href="{{ site.baseurl }}/articles/questions-nobody-asked/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
     <h3><a href="{{ site.baseurl }}/articles/supply-chain-risk/">When Your AI Vendor Becomes a Supply Chain Risk</a></h3>
     <p>The question for most businesses isn't what they think about the Anthropic dispute. It's whether their cloud provider, their analytics platform, or their subcontractor's toolchain just became a compliance liability.</p>
     <div class="meta">February 27, 2026</div>
@@ -111,6 +118,7 @@ permalink: /articles/
 
 | Date | Article |
 |------|---------|
+| Feb 28 | [The Questions Nobody Asked Before Deploying AI Into Defense]({{ site.baseurl }}/articles/questions-nobody-asked/) |
 | Feb 27 | [When Your AI Vendor Becomes a Supply Chain Risk]({{ site.baseurl }}/articles/supply-chain-risk/) |
 | Feb 27 | [Probabilistic Morality: Why Anthropic's Red Line on Weapons Exposes Everything Else]({{ site.baseurl }}/articles/probabilistic-morality/) |
 | Feb 26 | [Your Boss Is Right About AI Agents. The Industry Isn't Ready for What Comes Next.]({{ site.baseurl }}/articles/agent-ecosystems/) |
@@ -152,6 +160,7 @@ permalink: /articles/
 - [Amazon's AI Bot Nuked Its Own Cloud]({{ site.baseurl }}/articles/amazon-ai-bot/) - Agentic AI failure modes
 
 ### AI Governance
+- [The Questions Nobody Asked Before Deploying AI Into Defense]({{ site.baseurl }}/articles/questions-nobody-asked/) - Why governance questions weren't asked before contracts
 - [When Your AI Vendor Becomes a Supply Chain Risk]({{ site.baseurl }}/articles/supply-chain-risk/) - Anthropic blacklist blast radius
 - [Probabilistic Morality: Why Anthropic's Red Line on Weapons Exposes Everything Else]({{ site.baseurl }}/articles/probabilistic-morality/) - If it's too dangerous for weapons, it's too dangerous for hospitals
 - [Your Boss Is Right About AI Agents. The Industry Isn't Ready for What Comes Next.]({{ site.baseurl }}/articles/agent-ecosystems/) - Agent ecosystems and enterprise risk

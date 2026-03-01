@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "The Questions Nobody Asked Before Deploying AI Into Defense"
+permalink: /articles/questions-nobody-asked/
 date: 2026-02-28
 author: JD Longmire
 description: "Every question the defense ecosystem is now scrambling to answer is a question that should have been asked before the contracts were signed."
