@@ -17,7 +17,7 @@ This one answers the harder question: why are you in this position?
 
 ---
 
-![AI vendor governance decisions](header.png)
+<img src="header.png" alt="AI vendor governance decisions" style="max-width: 100%; height: auto;">
 
 The answer is embarrassingly simple. Nobody treated AI vendor selection as a governance decision.
 
