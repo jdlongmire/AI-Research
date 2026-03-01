@@ -134,12 +134,18 @@ def publish_article(article_path: Path) -> bool:
     dest_dir = ARTICLES_DIR / slug
     dest_dir.mkdir(parents=True, exist_ok=True)
 
+    # Build permalink if not already present
+    permalink = f"/articles/{slug}/"
+    updates = {}
+    if "permalink" not in frontmatter:
+        updates["permalink"] = permalink
+
     if article_path.is_dir():
         # Copy all files from the directory
         for item in article_path.iterdir():
             if item.name == "index.md":
-                # Update frontmatter and write
-                updated_content = update_frontmatter(content, {})
+                # Update frontmatter (add permalink, remove publish_date/draft)
+                updated_content = update_frontmatter(content, updates)
                 (dest_dir / "index.md").write_text(updated_content)
             else:
                 shutil.copy2(item, dest_dir / item.name)
@@ -147,7 +153,7 @@ def publish_article(article_path: Path) -> bool:
         shutil.rmtree(article_path)
     else:
         # Single file - update and move
-        updated_content = update_frontmatter(content, {})
+        updated_content = update_frontmatter(content, updates)
         (dest_dir / "index.md").write_text(updated_content)
         article_path.unlink()
 
