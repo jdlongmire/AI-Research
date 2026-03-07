@@ -24,6 +24,7 @@ See [AI-Research-Program.md](AI-Research-Program.md) for the full theoretical pr
 
 ## Recent Articles
 
+- [The Anthropic Red Line: A Stress Test for AI Ethics and Power](articles/20260306_anthropic-pentagon-red-line.md)
 - [Real Work, Real Failure: What the Freelancer Test Reveals About AI](articles/20251202_02_v1_Real_Work_Real_Failure.md)
 - [What Can AI Actually Do? A Framework for Understanding](articles/20251202_01_v1_What_can_AI_do.md)
 

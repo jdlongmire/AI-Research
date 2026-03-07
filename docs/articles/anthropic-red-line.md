@@ -12,13 +12,15 @@ description: "Anthropic refused Pentagon terms on lethal autonomous weapons and 
 
 ## Abstract
 
-In late February 2025, Anthropic refused Pentagon terms that would have authorized deployment of its AI systems for lethal autonomous weapons and mass domestic surveillance. The U.S. government responded by designating Anthropic a "supply chain risk," pressuring defense contractors to drop Claude, and ordering a federal ban -- while simultaneously using Claude for intelligence assessments in the Iran strikes. This article examines what the standoff reveals through the lens of the origination-derivation distinction: Anthropic correctly identified the categorical limits of derivative AI systems in domains requiring genuine judgment. The government's response reveals something equally important -- what happens when structural AI overconfidence (AIDK) meets unchecked institutional power.
+In late February 2026, Anthropic refused Pentagon terms that would have authorized deployment of its AI systems for lethal autonomous weapons and mass domestic surveillance. The U.S. government responded by designating Anthropic a "supply chain risk," pressuring defense contractors to drop Claude, and ordering a federal ban -- while simultaneously using Claude for intelligence assessments in the Iran strikes. This article examines what the standoff reveals through the lens of the origination-derivation distinction: Anthropic correctly identified the categorical limits of derivative AI systems in domains requiring genuine judgment. The government's response reveals something equally important -- what happens when structural AI overconfidence (AIDK) meets unchecked institutional power.
+
+![A government building and a corporate tower face each other across a glowing red line, with an AI neural network pillar between them](/assets/images/anthropic-pentagon-red-line-banner.png)
 
 ---
 
 ## The Red Line
 
-On February 26-27, 2025, Anthropic declined to sign Pentagon terms authorizing deployment of Claude for lethal autonomous weapons systems and mass domestic surveillance programs. Two days later, Defense Secretary Pete Hegseth formally designated Anthropic a "supply chain risk." The same day, OpenAI signed a new Pentagon agreement permitting classified network deployment.
+On February 26-27, 2026, Anthropic declined to sign Pentagon terms authorizing deployment of Claude for lethal autonomous weapons systems and mass domestic surveillance programs. Two days later, Defense Secretary Pete Hegseth formally designated Anthropic a "supply chain risk." The same day, OpenAI signed a new Pentagon agreement permitting classified network deployment.
 
 On March 1, President Trump ordered federal agencies to immediately cease using Claude. Hours later, U.S. intelligence analysts were using Claude for assessments related to the Iran strikes (as reported by The Verge, citing the Wall Street Journal). The order was subsequently walked back to a six-month phaseout. Defense contractors Boeing and Lockheed Martin preemptively dropped Claude "out of an abundance of caution." A leaked internal memo from CEO Dario Amodei -- first reported by The Information and subsequently covered by The Verge -- attributed the fallout in part to Anthropic's refusal to make political donations or offer what he called "dictator-style praise." He characterized OpenAI's Pentagon announcement as "mendacious" and "straight up lies."
 
@@ -113,9 +115,9 @@ Anthropic held the line. The framework predicts that holding it will become hard
 
 ## References
 
-- [Anthropic's Pentagon standoff: supply chain risk, court challenge, and signup surge](https://www.theverge.com/anthropic) -- The Verge, February-March 2025 [PRIMARY -- covers full timeline; VERIFIED HIGH]
-- Amodei, D. Internal memo on political donations, dictator praise, and OpenAI's Pentagon deal -- first reported by The Information, March 5, 2025; as covered by The Verge [paywalled -- MEDIUM]
-- Trump orders federal ban on Claude; analysts used it hours later in Iran assessment -- Wall Street Journal, March 1, 2025 [as cited in The Verge; paywalled -- MEDIUM]
+- [Anthropic's Pentagon standoff: supply chain risk, court challenge, and signup surge](https://www.theverge.com/anthropic) -- The Verge, February-March 2026 [PRIMARY -- covers full timeline; VERIFIED HIGH]
+- Amodei, D. Internal memo on political donations, dictator praise, and OpenAI's Pentagon deal -- first reported by The Information, March 5, 2026; as covered by The Verge [paywalled -- MEDIUM]
+- Trump orders federal ban on Claude; analysts used it hours later in Iran assessment -- Wall Street Journal, March 1, 2026 [as cited in The Verge; paywalled -- MEDIUM]
 - [Hallucination is Inevitable: An Innate Limitation of Large Language Models](https://arxiv.org/abs/2401.11817) -- Xu, Z., Jain, S., Kankanhalli, M., arXiv:2401.11817, January 2024 [VERIFIED HIGH]
 - Sutskever, I. -- public statements on scaling limits and new discovery phase, 2024-2025 [MEDIUM -- multiple sources; no single canonical citation]
 - Longmire, J.D. -- *AI-Research Program: Infinite Information Space and the Categorical Limits of Artificial Intelligence*, December 2025

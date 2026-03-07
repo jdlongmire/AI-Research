@@ -19,6 +19,13 @@ permalink: /articles/
 
 <div class="paper-grid">
   <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/anthropic-red-line/">The Anthropic Red Line: A Stress Test for AI Ethics and Power</a></h3>
+    <p>Anthropic refused Pentagon terms on lethal autonomous weapons and mass surveillance. The government punished them for it. What the standoff reveals through the origination-derivation distinction and the AIDK framework.</p>
+    <div class="meta">March 6, 2026</div>
+    <a href="{{ site.baseurl }}/articles/anthropic-red-line/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
     <h3><a href="{{ site.baseurl }}/articles/questions-nobody-asked/">The Questions Nobody Asked Before Deploying AI Into Defense</a></h3>
     <p>Every question the defense ecosystem is now scrambling to answer is a question that should have been asked before the contracts were signed.</p>
     <div class="meta">February 28, 2026</div>
@@ -114,6 +121,12 @@ permalink: /articles/
 
 ## All Articles
 
+### March 2026
+
+| Date | Article |
+|------|---------|
+| Mar 6 | [The Anthropic Red Line: A Stress Test for AI Ethics and Power]({{ site.baseurl }}/articles/anthropic-red-line/) |
+
 ### February 2026
 
 | Date | Article |
@@ -160,6 +173,7 @@ permalink: /articles/
 - [Amazon's AI Bot Nuked Its Own Cloud]({{ site.baseurl }}/articles/amazon-ai-bot/) - Agentic AI failure modes
 
 ### AI Governance
+- [The Anthropic Red Line: A Stress Test for AI Ethics and Power]({{ site.baseurl }}/articles/anthropic-red-line/) - Origination-derivation limits and institutional AIDK
 - [The Questions Nobody Asked Before Deploying AI Into Defense]({{ site.baseurl }}/articles/questions-nobody-asked/) - Why governance questions weren't asked before contracts
 - [When Your AI Vendor Becomes a Supply Chain Risk]({{ site.baseurl }}/articles/supply-chain-risk/) - Anthropic blacklist blast radius
 - [Probabilistic Morality: Why Anthropic's Red Line on Weapons Exposes Everything Else]({{ site.baseurl }}/articles/probabilistic-morality/) - If it's too dangerous for weapons, it's too dangerous for hospitals
