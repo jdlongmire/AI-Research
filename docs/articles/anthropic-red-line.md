@@ -14,7 +14,7 @@ description: "Anthropic refused Pentagon terms on lethal autonomous weapons and 
 
 In late February 2026, Anthropic refused Pentagon terms that would have authorized deployment of its AI systems for lethal autonomous weapons and mass domestic surveillance. The U.S. government responded by designating Anthropic a "supply chain risk," pressuring defense contractors to drop Claude, and ordering a federal ban -- while simultaneously using Claude for intelligence assessments in the Iran strikes. This article examines what the standoff reveals through the lens of the origination-derivation distinction: Anthropic correctly identified the categorical limits of derivative AI systems in domains requiring genuine judgment. The government's response reveals something equally important -- what happens when structural AI overconfidence (AIDK) meets unchecked institutional power.
 
-![A government building and a corporate tower face each other across a glowing red line, with an AI neural network pillar between them](/assets/images/anthropic-pentagon-red-line-banner.png)
+<img src="/assets/images/anthropic-pentagon-red-line-banner.png" alt="A government building and a corporate tower face each other across a glowing red line, with an AI neural network pillar between them" class="article-hero">
 
 ---
 
