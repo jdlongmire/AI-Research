@@ -2,15 +2,13 @@
 layout: article
 title: "The Transcendental Argument for Logic Realism"
 permalink: /articles/transcendental-argument-for-logic-realism/
-publish_date: 2026-03-09
-draft: false
 description: "Why the laws of logic cannot be merely conventional, cognitive, or optional. A transcendental argument showing that Identity, Non-Contradiction, and Excluded Middle are conditions for the possibility of physical distinguishability itself."
 featured_image: featured.svg
 ---
 
 # The Transcendental Argument for Logic Realism
 
-<p class="meta">March 10, 2026 &nbsp;|&nbsp; James D. Longmire &nbsp;|&nbsp; ORCID: <a href="https://orcid.org/0009-0009-1383-7698">0009-0009-1383-7698</a></p>
+<p class="meta">March 9, 2026 &nbsp;|&nbsp; James D. Longmire &nbsp;|&nbsp; ORCID: <a href="https://orcid.org/0009-0009-1383-7698">0009-0009-1383-7698</a></p>
 
 ![Featured graphic illustrating the relationship between logical laws and physical distinguishability](featured.svg)
 
