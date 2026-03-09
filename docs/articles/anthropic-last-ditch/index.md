@@ -2,8 +2,8 @@
 layout: article
 title: "Last-Ditch Talks and Trust Demands: The Anthropic Standoff Continues"
 permalink: /articles/anthropic-last-ditch/
-publish_date: 2026-03-10
-draft: true
+publish_date: 2026-03-09
+draft: false
 description: "Anthropic and Pentagon back at negotiating table while OpenAI claims matching red lines. The latest developments reveal the gap between stated principles and contractual reality in AI military deployment."
 ---
 
