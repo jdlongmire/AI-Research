@@ -2,7 +2,7 @@
 """
 Article Scheduler for AI-Research GitHub Pages
 Moves scheduled articles to docs/articles/ when publish_date arrives.
-Sends email notification on publish.
+Generates featured images using Gemini, sends email notification on publish.
 """
 
 import os
@@ -10,6 +10,7 @@ import sys
 import shutil
 import smtplib
 import re
+import uuid
 from datetime import datetime, date
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -21,6 +22,13 @@ try:
 except ImportError:
     PIL_AVAILABLE = False
 
+try:
+    from google import genai
+    from google.genai import types
+    GEMINI_AVAILABLE = True
+except ImportError:
+    GEMINI_AVAILABLE = False
+
 # Configuration
 SCHEDULER_DIR = Path(__file__).parent
 SCHEDULED_DIR = SCHEDULER_DIR / "scheduled"
@@ -31,12 +39,16 @@ SITE_URL = "https://aithinkr.net"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 SENDER_EMAIL = "thinxai.jdl@gmail.com"
-SENDER_PASSWORD = "tvkm jcxd ckqx xsnj"
+SENDER_PASSWORD = os.getenv("GMAIL_APP_PASSWORD", "tzxnuricxncoufzv")
 NOTIFY_EMAIL = "longmire.jd@gmail.com"
 
 # Image resizing configuration
 MAX_IMAGE_WIDTH = 800
 IMAGE_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.webp', '.gif'}
+
+# Gemini image generation configuration
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyD3WDLcoWA2Ip7Trg96hT_mdCmkZ-PKpIQ")
+GEMINI_IMAGE_MODEL = "gemini-2.0-flash-exp-image-generation"
 
 
 def parse_frontmatter(content: str) -> dict:
@@ -145,6 +157,62 @@ def make_images_responsive(content: str) -> str:
     return re.sub(pattern, replace_image, content)
 
 
+def generate_featured_image(title: str, description: str, output_dir: Path) -> str | None:
+    """Generate a featured image using Gemini based on article title and description.
+
+    Returns the filename if successful, None otherwise.
+    """
+    if not GEMINI_AVAILABLE:
+        print("  Warning: google-genai not installed, skipping image generation")
+        return None
+
+    # Build a prompt for the featured image
+    prompt = f"""Create a professional, visually striking featured image for a blog article.
+
+Article title: {title}
+Article topic: {description}
+
+Style guidelines:
+- Modern, clean design suitable for a tech/AI research blog
+- Abstract or conceptual representation of the topic
+- Professional color palette (blues, purples, teals work well)
+- Avoid text in the image
+- 16:9 aspect ratio for blog header
+
+Generate an image that would work well as a blog post header/featured image."""
+
+    try:
+        client = genai.Client(api_key=GEMINI_API_KEY)
+
+        response = client.models.generate_content(
+            model=GEMINI_IMAGE_MODEL,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_modalities=['TEXT', 'IMAGE'],
+            ),
+        )
+
+        for part in response.candidates[0].content.parts:
+            if part.inline_data is not None:
+                ext = 'png'
+                if 'jpeg' in (part.inline_data.mime_type or ''):
+                    ext = 'jpg'
+
+                filename = f'featured.{ext}'
+                filepath = output_dir / filename
+                filepath.write_bytes(part.inline_data.data)
+
+                print(f"  Generated featured image: {filename}")
+                return filename
+
+        print("  Warning: Gemini returned no image data")
+        return None
+
+    except Exception as e:
+        print(f"  Warning: Failed to generate featured image: {e}")
+        return None
+
+
 def send_notification(title: str, slug: str, url: str) -> bool:
     """Send email notification when article publishes."""
     try:
@@ -191,16 +259,25 @@ def publish_article(article_path: Path) -> bool:
 
     frontmatter = parse_frontmatter(content)
     title = frontmatter.get("title", slug)
+    description = frontmatter.get("description", title)
 
     # Create destination
     dest_dir = ARTICLES_DIR / slug
     dest_dir.mkdir(parents=True, exist_ok=True)
+
+    # Generate featured image using Gemini
+    print(f"  Generating featured image for: {title}")
+    featured_filename = generate_featured_image(title, description, dest_dir)
 
     # Build permalink if not already present
     permalink = f"/articles/{slug}/"
     updates = {}
     if "permalink" not in frontmatter:
         updates["permalink"] = permalink
+
+    # Add featured_image to frontmatter if generated
+    if featured_filename:
+        updates["featured_image"] = featured_filename
 
     if article_path.is_dir():
         # Copy all files from the directory
