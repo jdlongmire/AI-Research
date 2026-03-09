@@ -5,7 +5,7 @@ subtitle: "Why Google's latest agent architecture ditches vector databases for c
 author: "James (JD) Longmire"
 date: 2026-03-09
 categories: [AI Architecture, Agent Systems, AIDK]
-image: "always-on-memory.png"
+image: "always-on-memory-agent.png"
 description: "Google's Always-On Memory Agent represents a shift from passive retrieval to active consolidation. Here's why it matters for AI systems that need to learn continuously."
 featured: true
 ---
@@ -15,6 +15,11 @@ The AI industry has spent the last few years building retrieval-augmented genera
 Google's latest open-source release, the **Always-On Memory Agent**, takes a different approach. Instead of passive retrieval, it uses active consolidation. Instead of vector databases, it uses SQLite and scheduled LLM inference. Instead of frozen embeddings, it builds understanding over time.
 
 The shift matters because AI agents increasingly need to operate autonomously over long timescales. DevOps systems troubleshooting recurring incidents. Customer support agents tracking context across weeks. Research assistants synthesizing findings from hundreds of papers. These aren't one-shot queries. They require memory that evolves.
+
+---
+
+<img src="always-on-memory-agent.png" alt="The Case for Always-On AI Memory"
+     style="max-width: 100%; height: auto; display: block; margin: 2rem auto;">
 
 ---
 
