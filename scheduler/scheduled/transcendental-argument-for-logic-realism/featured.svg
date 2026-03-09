@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2942;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="logicGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="physicsGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid pattern -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <line x1="0" y1="75" x2="800" y2="75"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="225" x2="800" y2="225"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+    <line x1="100" y1="0" x2="100" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="450"/>
+    <line x1="300" y1="0" x2="300" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="500" y1="0" x2="500" y2="450"/>
+    <line x1="600" y1="0" x2="600" y2="450"/>
+    <line x1="700" y1="0" x2="700" y2="450"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="45" font-family="Georgia, serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">The Transcendental Argument</text>
+  <text x="400" y="72" font-family="Georgia, serif" font-size="14" fill="#94a3b8" text-anchor="middle" font-style="italic">Logic constrains reality, not merely cognition</text>
+
+  <!-- Left side: Three Fundamental Laws box -->
+  <rect x="40" y="110" width="220" height="250" rx="8" fill="#0f172a" stroke="url(#logicGrad)" stroke-width="2"/>
+  <text x="150" y="140" font-family="Arial, sans-serif" font-size="14" fill="#3b82f6" text-anchor="middle" font-weight="bold">THREE FUNDAMENTAL LAWS</text>
+
+  <!-- Law 1: Identity -->
+  <g transform="translate(60, 165)">
+    <rect width="180" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="90" y="22" font-family="Georgia, serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">Identity</text>
+    <text x="90" y="40" font-family="'Courier New', monospace" font-size="14" fill="#60a5fa" text-anchor="middle">A = A</text>
+  </g>
+
+  <!-- Law 2: Non-Contradiction -->
+  <g transform="translate(60, 225)">
+    <rect width="180" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="90" y="22" font-family="Georgia, serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">Non-Contradiction</text>
+    <text x="90" y="40" font-family="'Courier New', monospace" font-size="14" fill="#60a5fa" text-anchor="middle">~(A & ~A)</text>
+  </g>
+
+  <!-- Law 3: Excluded Middle -->
+  <g transform="translate(60, 285)">
+    <rect width="180" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="90" y="22" font-family="Georgia, serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">Excluded Middle</text>
+    <text x="90" y="40" font-family="'Courier New', monospace" font-size="14" fill="#60a5fa" text-anchor="middle">A v ~A</text>
+  </g>
+
+  <!-- Central arrow with label -->
+  <g filter="url(#glow)">
+    <path d="M 280 235 L 370 235" stroke="url(#arrowGrad)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <polygon points="380,235 365,225 365,245" fill="#f59e0b"/>
+  </g>
+  <text x="325" y="210" font-family="Arial, sans-serif" font-size="11" fill="#f59e0b" text-anchor="middle" font-weight="bold">CONSTITUTES</text>
+
+  <!-- Middle: Distinguishability -->
+  <g transform="translate(390, 160)">
+    <ellipse cx="80" cy="75" rx="75" ry="60" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+    <text x="80" y="65" font-family="Georgia, serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">PHYSICAL</text>
+    <text x="80" y="85" font-family="Georgia, serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">DISTINGUISHABILITY</text>
+  </g>
+
+  <!-- Right arrow -->
+  <g filter="url(#glow)">
+    <path d="M 555 235 L 545 235" stroke="url(#arrowGrad)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <polygon points="560,235 545,225 545,245" fill="#f59e0b"/>
+  </g>
+  <text x="540" y="210" font-family="Arial, sans-serif" font-size="11" fill="#f59e0b" text-anchor="middle" font-weight="bold">ENABLES</text>
+
+  <!-- Right side: Physical Outcomes box -->
+  <rect x="570" y="110" width="190" height="250" rx="8" fill="#0f172a" stroke="url(#physicsGrad)" stroke-width="2"/>
+  <text x="665" y="140" font-family="Arial, sans-serif" font-size="14" fill="#10b981" text-anchor="middle" font-weight="bold">PHYSICAL OUTCOMES</text>
+
+  <!-- Outcome items -->
+  <g transform="translate(590, 160)">
+    <circle cx="12" cy="12" r="8" fill="#10b981" opacity="0.8"/>
+    <text x="30" y="17" font-family="Georgia, serif" font-size="12" fill="#ffffff">Determinate results</text>
+  </g>
+
+  <g transform="translate(590, 195)">
+    <circle cx="12" cy="12" r="8" fill="#10b981" opacity="0.8"/>
+    <text x="30" y="17" font-family="Georgia, serif" font-size="12" fill="#ffffff">One outcome per</text>
+    <text x="30" y="32" font-family="Georgia, serif" font-size="12" fill="#ffffff">measurement</text>
+  </g>
+
+  <g transform="translate(590, 245)">
+    <circle cx="12" cy="12" r="8" fill="#10b981" opacity="0.8"/>
+    <text x="30" y="17" font-family="Georgia, serif" font-size="12" fill="#ffffff">No contradictions</text>
+    <text x="30" y="32" font-family="Georgia, serif" font-size="12" fill="#ffffff">ever observed</text>
+  </g>
+
+  <g transform="translate(590, 295)">
+    <circle cx="12" cy="12" r="8" fill="#10b981" opacity="0.8"/>
+    <text x="30" y="17" font-family="Georgia, serif" font-size="12" fill="#ffffff">Classical actuality</text>
+  </g>
+
+  <!-- Bottom: Key insight box -->
+  <rect x="100" y="380" width="600" height="55" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="400" y="402" font-family="Georgia, serif" font-size="13" fill="#cbd5e1" text-anchor="middle" font-style="italic">The Core Asymmetry:</text>
+  <text x="400" y="422" font-family="Georgia, serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">We can conceive of logical violations, but reality never produces them.</text>
+
+  <!-- Decorative corner elements -->
+  <g stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.4">
+    <path d="M 20 20 L 20 50 M 20 20 L 50 20"/>
+    <path d="M 780 20 L 780 50 M 780 20 L 750 20"/>
+    <path d="M 20 430 L 20 400 M 20 430 L 50 430"/>
+    <path d="M 780 430 L 780 400 M 780 430 L 750 430"/>
+  </g>
+</svg>
