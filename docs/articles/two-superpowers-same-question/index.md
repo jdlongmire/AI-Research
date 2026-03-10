@@ -2,6 +2,7 @@
 layout: article
 title: "Two Superpowers, Same Question"
 permalink: /articles/two-superpowers-same-question/
+date: 2026-03-10
 publish_date: 2026-03-10
 draft: false
 description: "Western tech coverage obsesses over benchmarks. The real fight is about who decides what AI systems can and can't do. Both democracies and authoritarian states are colliding over the same question."

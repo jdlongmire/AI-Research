@@ -2,6 +2,7 @@
 layout: article
 title: "The Transcendental Argument for Logic Realism"
 permalink: /articles/transcendental-argument-for-logic-realism/
+date: 2026-03-09
 description: "Why the laws of logic cannot be merely conventional, cognitive, or optional. A transcendental argument showing that Identity, Non-Contradiction, and Excluded Middle are conditions for the possibility of physical distinguishability itself."
 featured_image: featured.svg
 ---
