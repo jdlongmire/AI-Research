@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f1e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="redGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff4444;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#cc0000;stop-opacity:0.4" />
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4488ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0044cc;stop-opacity:0.4" />
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffcc00;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#cc9900;stop-opacity:0.5" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid suggesting global structure -->
+  <g opacity="0.08">
+    <line x1="0" y1="157.5" x2="1200" y2="157.5" stroke="#ffffff" stroke-width="1"/>
+    <line x1="0" y1="315" x2="1200" y2="315" stroke="#ffffff" stroke-width="1"/>
+    <line x1="0" y1="472.5" x2="1200" y2="472.5" stroke="#ffffff" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="630" stroke="#ffffff" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#ffffff" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="630" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <!-- US side (left) - red/blue stripes suggesting flag -->
+  <g>
+    <!-- Abstract flag stripes -->
+    <rect x="80" y="180" width="200" height="12" fill="url(#redGlow)" opacity="0.7"/>
+    <rect x="80" y="200" width="200" height="12" fill="#ffffff" opacity="0.3"/>
+    <rect x="80" y="220" width="200" height="12" fill="url(#redGlow)" opacity="0.7"/>
+    <rect x="80" y="240" width="200" height="12" fill="#ffffff" opacity="0.3"/>
+    <rect x="80" y="260" width="200" height="12" fill="url(#redGlow)" opacity="0.7"/>
+
+    <!-- Blue canton with stars abstraction -->
+    <rect x="80" y="180" width="80" height="92" fill="url(#blueGlow)" opacity="0.8"/>
+    <circle cx="100" cy="200" r="3" fill="#ffffff" opacity="0.8"/>
+    <circle cx="120" cy="200" r="3" fill="#ffffff" opacity="0.8"/>
+    <circle cx="140" cy="200" r="3" fill="#ffffff" opacity="0.8"/>
+    <circle cx="110" cy="220" r="3" fill="#ffffff" opacity="0.8"/>
+    <circle cx="130" cy="220" r="3" fill="#ffffff" opacity="0.8"/>
+    <circle cx="100" cy="240" r="3" fill="#ffffff" opacity="0.8"/>
+    <circle cx="120" cy="240" r="3" fill="#ffffff" opacity="0.8"/>
+    <circle cx="140" cy="240" r="3" fill="#ffffff" opacity="0.8"/>
+
+    <!-- Pentagon symbol -->
+    <polygon points="180,340 203,357 195,385 165,385 157,357"
+             fill="none" stroke="#4488ff" stroke-width="2.5" filter="url(#glow)"/>
+
+    <!-- Label -->
+    <text x="180" y="420" font-family="Arial, sans-serif" font-size="16" fill="#6699ff" text-anchor="middle" font-weight="bold">
+      REPUBLIC
+    </text>
+    <text x="180" y="442" font-family="Arial, sans-serif" font-size="14" fill="#888" text-anchor="middle">
+      elected government
+    </text>
+    <text x="180" y="460" font-family="Arial, sans-serif" font-size="14" fill="#888" text-anchor="middle">
+      civilian oversight
+    </text>
+  </g>
+
+  <!-- China side (right) - red/gold suggesting flag -->
+  <g>
+    <!-- Abstract flag -->
+    <rect x="920" y="180" width="200" height="92" fill="url(#redGlow)" opacity="0.8"/>
+
+    <!-- Large star -->
+    <polygon points="1020,200 1026,218 1045,218 1030,230 1036,248 1020,238 1004,248 1010,230 995,218 1014,218"
+             fill="url(#goldGlow)" filter="url(#glow)"/>
+
+    <!-- Small stars -->
+    <polygon points="1055,195 1058,202 1066,202 1060,207 1062,215 1055,211 1048,215 1050,207 1044,202 1052,202"
+             fill="url(#goldGlow)" opacity="0.8"/>
+    <polygon points="1070,210 1073,217 1081,217 1075,222 1077,230 1070,226 1063,230 1065,222 1059,217 1067,217"
+             fill="url(#goldGlow)" opacity="0.8"/>
+    <polygon points="1070,235 1073,242 1081,242 1075,247 1077,255 1070,251 1063,255 1065,247 1059,242 1067,242"
+             fill="url(#goldGlow)" opacity="0.8"/>
+    <polygon points="1055,250 1058,257 1066,257 1060,262 1062,270 1055,266 1048,270 1050,262 1044,257 1052,257"
+             fill="url(#goldGlow)" opacity="0.8"/>
+
+    <!-- Hammer and sickle abstraction (simplified) -->
+    <g transform="translate(1020, 355)">
+      <path d="M -15 -10 L -15 20 L -10 20 L -10 -5 L 15 -5 L 15 -10 Z"
+            fill="url(#goldGlow)" opacity="0.7"/>
+      <path d="M 0 -20 Q 20 -10 15 10 Q 10 5 5 8 Q 15 -5 0 -15 Z"
+            fill="url(#goldGlow)" opacity="0.7"/>
+    </g>
+
+    <!-- Label -->
+    <text x="1020" y="420" font-family="Arial, sans-serif" font-size="16" fill="#ffcc66" text-anchor="middle" font-weight="bold">
+      PARTY
+    </text>
+    <text x="1020" y="442" font-family="Arial, sans-serif" font-size="14" fill="#888" text-anchor="middle">
+      unified authority
+    </text>
+    <text x="1020" y="460" font-family="Arial, sans-serif" font-size="14" fill="#888" text-anchor="middle">
+      explicit compliance
+    </text>
+  </g>
+
+  <!-- Central convergence point - AI governance question -->
+  <g>
+    <!-- Converging lines from both sides -->
+    <line x1="280" y1="240" x2="540" y2="315" stroke="#4488ff" stroke-width="2" opacity="0.6" stroke-dasharray="8,4"/>
+    <line x1="280" y1="380" x2="540" y2="315" stroke="#4488ff" stroke-width="2" opacity="0.6" stroke-dasharray="8,4"/>
+    <line x1="920" y1="240" x2="660" y2="315" stroke="#ffcc00" stroke-width="2" opacity="0.6" stroke-dasharray="8,4"/>
+    <line x1="920" y1="380" x2="660" y2="315" stroke="#ffcc00" stroke-width="2" opacity="0.6" stroke-dasharray="8,4"/>
+
+    <!-- Central question mark / AI symbol -->
+    <circle cx="600" cy="315" r="60" fill="none" stroke="#ffffff" stroke-width="3" filter="url(#strongGlow)"/>
+    <text x="600" y="295" font-family="Arial, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">
+      AI
+    </text>
+    <text x="600" y="345" font-family="Arial, sans-serif" font-size="36" fill="#ffffff" text-anchor="middle" font-weight="bold">
+      ?
+    </text>
+
+    <!-- Question text below -->
+    <text x="600" y="410" font-family="Arial, sans-serif" font-size="18" fill="#cccccc" text-anchor="middle" font-style="italic">
+      WHO DECIDES
+    </text>
+    <text x="600" y="432" font-family="Arial, sans-serif" font-size="18" fill="#cccccc" text-anchor="middle" font-style="italic">
+      what AI can do?
+    </text>
+  </g>
+
+  <!-- Bottom parallel track (same destination) -->
+  <g>
+    <line x1="100" y1="520" x2="1100" y2="520" stroke="#666" stroke-width="2"/>
+    <line x1="100" y1="540" x2="1100" y2="540" stroke="#666" stroke-width="2"/>
+
+    <!-- Arrow heads pointing to center -->
+    <polygon points="350,530 320,515 320,545" fill="#4488ff" opacity="0.6"/>
+    <polygon points="850,530 880,515 880,545" fill="#ffcc00" opacity="0.6"/>
+
+    <text x="600" y="580" font-family="Arial, sans-serif" font-size="16" fill="#aaa" text-anchor="middle" font-style="italic">
+      Different sources of legitimacy, same destination: companies comply
+    </text>
+  </g>
+
+  <!-- Title at top -->
+  <text x="600" y="50" font-family="Arial, sans-serif" font-size="36" fill="#ffffff" text-anchor="middle" font-weight="bold">
+    Two Superpowers, Same Question
+  </text>
+  <text x="600" y="85" font-family="Arial, sans-serif" font-size="20" fill="#cccccc" text-anchor="middle">
+    Democracy and Authoritarianism Converge on AI Governance
+  </text>
+
+  <!-- Corner citations -->
+  <text x="40" y="610" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    aithinkr.net | March 2026
+  </text>
+</svg>
