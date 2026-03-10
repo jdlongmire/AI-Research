@@ -2,19 +2,14 @@
 layout: article
 title: "Two Superpowers, Same Question"
 permalink: /articles/two-superpowers-same-question/
-date: 2026-03-10
-publish_date: 2026-03-10
-draft: false
-description: "Western tech coverage obsesses over benchmarks. The real fight is about who decides what AI systems can and can't do. Both democracies and authoritarian states are colliding over the same question."
-categories: ["AI Governance", "Policy"]
-featured_image: featured.svg
+description: "Everyone's tracking the wrong scoreboard. The real fight isn't about who builds the best AI. It's about who decides what AI systems can and can't do."
+categories: [AI Policy, Governance, Ethics]
+featured_image: /articles/two-superpowers-same-question/featured.svg
 ---
 
 # Two Superpowers, Same Question
 
 <p class="meta">March 10, 2026 &nbsp;|&nbsp; James D. Longmire &nbsp;|&nbsp; ORCID: <a href="https://orcid.org/0009-0009-1383-7698">0009-0009-1383-7698</a></p>
-
-![Featured graphic showing US and China converging on AI governance question](featured.svg)
 
 Everyone's tracking the wrong scoreboard.
 
