@@ -70,4 +70,4 @@ Where it hurts: anything requiring genuine novel reasoning, complex multi-step a
 
 My instinct: use open models for what they're good at now, and keep pressure on the frontier access problem for use cases where the gap actually matters.
 
-Don't pretend Llama is Claude. But don't pretend every problem needs Claude either.
+Don't pretend Llama is ChatGPT. But don't pretend every problem needs ChatGPT either.
