@@ -8,6 +8,11 @@
 
   <main class="container">
     <article class="article-content">
+      {% if page.featured_image %}
+      <div class="article-featured-image" style="margin-bottom: 2rem;">
+        <img src="{{ page.featured_image }}" alt="{{ page.title }}" style="width: 100%; max-width: 800px; border-radius: 0.5rem;">
+      </div>
+      {% endif %}
       {{ content }}
     </article>
 

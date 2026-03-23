@@ -19,6 +19,13 @@ permalink: /articles/
 
 <div class="paper-grid">
   <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/frontier-closed-defense/">The Frontier Is Closed – And That's a Problem for National Defense</a></h3>
+    <p>The U.S. Defense Industrial Base has access to frontier AI. More access than most people realize. But cleared cloud access and sovereign, self-hosted AI are not the same thing.</p>
+    <div class="meta">March 23, 2026</div>
+    <a href="{{ site.baseurl }}/articles/frontier-closed-defense/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
     <h3><a href="{{ site.baseurl }}/articles/anthropic-red-line/">The Anthropic Red Line: A Stress Test for AI Ethics and Power</a></h3>
     <p>Anthropic refused Pentagon terms on lethal autonomous weapons and mass surveillance. The government punished them for it. What the standoff reveals through the origination-derivation distinction and the AIDK framework.</p>
     <div class="meta">March 6, 2026</div>
@@ -125,6 +132,7 @@ permalink: /articles/
 
 | Date | Article |
 |------|---------|
+| Mar 23 | [The Frontier Is Closed – And That's a Problem for National Defense]({{ site.baseurl }}/articles/frontier-closed-defense/) |
 | Mar 6 | [The Anthropic Red Line: A Stress Test for AI Ethics and Power]({{ site.baseurl }}/articles/anthropic-red-line/) |
 
 ### February 2026
@@ -173,6 +181,7 @@ permalink: /articles/
 - [Amazon's AI Bot Nuked Its Own Cloud]({{ site.baseurl }}/articles/amazon-ai-bot/) - Agentic AI failure modes
 
 ### AI Governance
+- [The Frontier Is Closed – And That's a Problem for National Defense]({{ site.baseurl }}/articles/frontier-closed-defense/) - IP sovereignty, air gaps, and the structural unavailability of frontier AI for demanding defense use cases
 - [The Anthropic Red Line: A Stress Test for AI Ethics and Power]({{ site.baseurl }}/articles/anthropic-red-line/) - Origination-derivation limits and institutional AIDK
 - [The Questions Nobody Asked Before Deploying AI Into Defense]({{ site.baseurl }}/articles/questions-nobody-asked/) - Why governance questions weren't asked before contracts
 - [When Your AI Vendor Becomes a Supply Chain Risk]({{ site.baseurl }}/articles/supply-chain-risk/) - Anthropic blacklist blast radius
