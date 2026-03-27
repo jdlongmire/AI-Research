@@ -2,12 +2,11 @@
 layout: article
 title: "Overtake AI, or It Will Surely Overtake You"
 date: 2026-03-27
-publish_date: 2026-03-27
 author: JD Longmire
-draft: true
 description: "The future of knowledge work belongs to people who integrate AI into their expertise. The rest will watch from the sidelines."
 categories: [AI Governance]
 tags: [knowledge-work, ai-adoption, domain-expertise, workforce]
+permalink: /articles/overtake-ai/
 ---
 
 I watched a senior analyst spend three days last week doing something I did in forty minutes.
