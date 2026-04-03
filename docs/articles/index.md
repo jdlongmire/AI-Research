@@ -19,6 +19,13 @@ permalink: /articles/
 
 <div class="paper-grid">
   <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/token-cliff/">The Token Cliff: Why the AI Vendor Era Is Already Ending</a></h3>
+    <p>You're not buying AI. You're renting cognition by the syllable. And the meter is always running.</p>
+    <div class="meta">April 2, 2026</div>
+    <a href="{{ site.baseurl }}/articles/token-cliff/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
     <h3><a href="{{ site.baseurl }}/articles/frontier-closed-defense/">The Frontier Is Closed – And That's a Problem for National Defense</a></h3>
     <p>The U.S. Defense Industrial Base has access to frontier AI. More access than most people realize. But cleared cloud access and sovereign, self-hosted AI are not the same thing.</p>
     <div class="meta">March 23, 2026</div>
@@ -128,6 +135,12 @@ permalink: /articles/
 
 ## All Articles
 
+### April 2026
+
+| Date | Article |
+|------|---------|
+| Apr 2 | [The Token Cliff: Why the AI Vendor Era Is Already Ending]({{ site.baseurl }}/articles/token-cliff/) |
+
 ### March 2026
 
 | Date | Article |
@@ -176,6 +189,7 @@ permalink: /articles/
 - [Flexibly Deterministic, Structured Probabilistic]({{ site.baseurl }}/articles/flexibly-deterministic/) - The two categories of AI
 
 ### AI Industry Analysis
+- [The Token Cliff: Why the AI Vendor Era Is Already Ending]({{ site.baseurl }}/articles/token-cliff/) - Vendor dependency, token economics, and the architecture moat
 - [The Retreat from AGI]({{ site.baseurl }}/articles/retreat-from-agi/) - Definitional retreat as strategy
 - [Confidence Laundering at Scale]({{ site.baseurl }}/articles/confidence-laundering/) - AI and decision-making
 - [Amazon's AI Bot Nuked Its Own Cloud]({{ site.baseurl }}/articles/amazon-ai-bot/) - Agentic AI failure modes
