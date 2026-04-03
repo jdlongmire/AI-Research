@@ -15,9 +15,9 @@ Every prompt. Every completion. Every summary, draft, extraction, and classifica
 
 ## The Math Nobody Shows You
 
-Current frontier API pricing runs roughly $3-15 per million input tokens and $15-60 per million output tokens depending on model tier. That sounds small until you do enterprise arithmetic.
+Current frontier API pricing runs roughly \$3-15 per million input tokens and \$15-60 per million output tokens depending on model tier. That sounds small until you do enterprise arithmetic.
 
-A mid-sized organization running AI across legal review, procurement analysis, customer communications, and internal knowledge retrieval isn't doing a few thousand queries a day. It's doing millions. At modest volume – say 500 million tokens monthly across use cases – you're looking at $15,000 to $75,000 per month at mid-tier pricing. Per year: $180K to $900K. For one organization. Mid-sized.
+A mid-sized organization running AI across legal review, procurement analysis, customer communications, and internal knowledge retrieval isn't doing a few thousand queries a day. It's doing millions. At modest volume – say 500 million tokens monthly across use cases – you're looking at \$15,000 to \$75,000 per month at mid-tier pricing. Per year: \$180K to \$900K. For one organization. Mid-sized.
 
 Scale that to a Fortune 500 with aggressive AI deployment and you're in the tens of millions annually, paid to a vendor whose pricing you don't control, on infrastructure you don't own, for outputs you can't fully audit.
 
@@ -73,7 +73,7 @@ You don't ask which cloud provider is "best." You architect around your requirem
 
 The differentiator isn't the model. It's the architect.
 
-What disappears: the integrator whose value proposition is "we help you use [Vendor X]." Vendor-specific expertise commoditizes when the vendor becomes interchangeable. What emerges: practitioners who can design and govern AI ecosystems, who understand deployment architecture and how to match capability to use case without vendor dependency.
+What disappears: the integrator whose value proposition is "we help you use \[Vendor X\]." Vendor-specific expertise commoditizes when the vendor becomes interchangeable. What emerges: practitioners who can design and govern AI ecosystems, who understand deployment architecture and how to match capability to use case without vendor dependency.
 
 The enterprises that survive the cost cliff intact already treat AI as infrastructure to be designed, governed, and owned.
 
