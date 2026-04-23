@@ -19,6 +19,13 @@ permalink: /articles/
 
 <div class="paper-grid">
   <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/ai-sycophancy-falsification/">AI Sycophancy, Dunning-Kruger, and the Discipline of Falsification</a></h3>
+    <p>Sycophancy is not only a model-side behavior. It is an interaction pattern. The strongest guardrail is a user who wants truth more than agreement.</p>
+    <div class="meta">April 23, 2026</div>
+    <a href="{{ site.baseurl }}/articles/ai-sycophancy-falsification/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
     <h3><a href="{{ site.baseurl }}/articles/token-cliff/">The Token Cliff: Why the AI Vendor Era Is Already Ending</a></h3>
     <p>You're not buying AI. You're renting cognition by the syllable. And the meter is always running.</p>
     <div class="meta">April 2, 2026</div>
@@ -139,6 +146,7 @@ permalink: /articles/
 
 | Date | Article |
 |------|---------|
+| Apr 23 | [AI Sycophancy, Dunning-Kruger, and the Discipline of Falsification]({{ site.baseurl }}/articles/ai-sycophancy-falsification/) |
 | Apr 2 | [The Token Cliff: Why the AI Vendor Era Is Already Ending]({{ site.baseurl }}/articles/token-cliff/) |
 
 ### March 2026
@@ -182,6 +190,7 @@ permalink: /articles/
 - ["A Man's Got to Know His Limitations"]({{ site.baseurl }}/articles/know-your-limitations/) - Enterprise deployment implications
 
 ### AI Epistemology
+- [AI Sycophancy, Dunning-Kruger, and the Discipline of Falsification]({{ site.baseurl }}/articles/ai-sycophancy-falsification/) - User-side epistemic discipline and the falsification antidote
 - [The Drift Problem: Why Long-Running AI Agents Are Riskier Than You Think]({{ site.baseurl }}/articles/drift-problem/) - Context drift and fidelity degradation
 - [Mirrors, Not Minds: What AI "Self-Preservation" Actually Reveals]({{ site.baseurl }}/articles/mirrors-not-minds/) - Borrowed teleology and pattern completion
 - [Context Poisoning]({{ site.baseurl }}/articles/context-poisoning/) - The failure mode you can't see from inside
