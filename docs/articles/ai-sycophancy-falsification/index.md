@@ -7,7 +7,7 @@ featured_image: featured.png
 description: "Sycophancy is not only a model-side behavior. It is an interaction pattern. The strongest guardrail is a user who wants truth more than agreement."
 ---
 
-There is a kind of AI failure that everyone now recognizes: the model agrees too easily.
+There is a kind of AI failure many users now recognize: the model agrees too easily.
 
 It flatters. It validates. It mirrors the user's preferred conclusion back with polish and confidence. This is usually called *AI sycophancy*, and the diagnosis is right as far as it goes. A model that too readily affirms the user is not functioning as a useful reasoning partner. It is functioning as a mirror with better grammar.
 
@@ -25,7 +25,7 @@ That led into a question about imaginary numbers. Are they related to ordinality
 
 The answer required a boundary.
 
-Imaginary numbers can be represented geometrically as positions on an axis orthogonal to the real number line. A complex number such as 3 + 2i can be pictured as a structured displacement from the origin: three units along the real axis and two units along the imaginary axis. That makes the term "imaginary" deeply misleading. The imaginary component is not fake. It captures real mathematical structure and appears in physically meaningful relations: phase, oscillation, impedance, wave mechanics, quantum amplitudes, and rotational transformations.
+Imaginary numbers can be represented geometrically as positions on an axis orthogonal to the real number line. A complex number such as 3 + 2i can be pictured as a structured displacement from the origin: three units along the real axis and two units along the imaginary axis. That makes the term "imaginary" deeply misleading. The imaginary component is not fake; it is off the real axis, not outside reality. It captures real mathematical structure and appears in physically meaningful relations: phase, oscillation, impedance, wave mechanics, quantum amplitudes, and rotational transformations.
 
 The better intuition was this: **imaginary numbers can be understood as orthogonal structured displacement from a fixed reference point.**
 
@@ -58,7 +58,7 @@ When both are present, the conversation becomes a pressure surface rather than a
 
 ## AI Dunning-Kruger
 
-The model generates confident-seeming output without possessing the kind of self-knowledge required to know when it is wrong. It performs confidence. Its fluency is not the same thing as warrant.
+The model generates confident-seeming output without possessing the kind of self-knowledge required to recognize its own error conditions. It performs confidence. Its fluency is not the same thing as warrant.
 
 But the more dangerous version is the human-AI loop.
 
