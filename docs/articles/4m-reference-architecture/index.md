@@ -360,6 +360,12 @@ The following checklist provides a practical diagnostic for evaluating whether a
 
 ---
 
+## Research Programme
+
+This article is the core theory of the [Harness Engineering](https://github.com/jdlongmire/harness-engineering) research programme, structured as a Lakatosian programme with the 4M Model as its hard core. The programme repository contains the full Lakatos framing (hard core, protective belt, positive and negative heuristics), evaluation materials, and pointers to reference implementations. Future work on channel formalization, multi-model archetypes, tiered adoption, and dynamic Morals will be developed there.
+
+---
+
 ## References
 
 Anthropic (2025) *Prompt engineering: System prompts*. Available at: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts (Accessed: 20 April 2026).
