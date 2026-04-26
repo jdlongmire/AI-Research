@@ -19,6 +19,13 @@ permalink: /articles/
 
 <div class="paper-grid">
   <div class="paper-card">
+    <h3><a href="{{ site.baseurl }}/articles/4m-reference-architecture/">The 4M Model: A Reference Architecture for LLM Harness Engineering</a></h3>
+    <p>A principled reference architecture organising LLM harness concerns into four modules with separated concerns and explicit coupling channels: Mission, Mind, Morals, and Memory.</p>
+    <div class="meta">April 26, 2026</div>
+    <a href="{{ site.baseurl }}/articles/4m-reference-architecture/" class="card-link">Read Article</a>
+  </div>
+
+  <div class="paper-card">
     <h3><a href="{{ site.baseurl }}/articles/ai-sycophancy-falsification/">AI Sycophancy, Dunning-Kruger, and the Discipline of Falsification</a></h3>
     <p>Sycophancy is not only a model-side behavior. It is an interaction pattern. The strongest guardrail is a user who wants truth more than agreement.</p>
     <div class="meta">April 23, 2026</div>
@@ -146,6 +153,7 @@ permalink: /articles/
 
 | Date | Article |
 |------|---------|
+| Apr 26 | [The 4M Model: A Reference Architecture for LLM Harness Engineering]({{ site.baseurl }}/articles/4m-reference-architecture/) |
 | Apr 23 | [AI Sycophancy, Dunning-Kruger, and the Discipline of Falsification]({{ site.baseurl }}/articles/ai-sycophancy-falsification/) |
 | Apr 2 | [The Token Cliff: Why the AI Vendor Era Is Already Ending]({{ site.baseurl }}/articles/token-cliff/) |
 
@@ -202,6 +210,9 @@ permalink: /articles/
 - [The Retreat from AGI]({{ site.baseurl }}/articles/retreat-from-agi/) - Definitional retreat as strategy
 - [Confidence Laundering at Scale]({{ site.baseurl }}/articles/confidence-laundering/) - AI and decision-making
 - [Amazon's AI Bot Nuked Its Own Cloud]({{ site.baseurl }}/articles/amazon-ai-bot/) - Agentic AI failure modes
+
+### AI Architecture
+- [The 4M Model: A Reference Architecture for LLM Harness Engineering]({{ site.baseurl }}/articles/4m-reference-architecture/) - Four-module reference architecture for LLM harness engineering
 
 ### AI Governance
 - [The Frontier Is Closed – And That's a Problem for National Defense]({{ site.baseurl }}/articles/frontier-closed-defense/) - IP sovereignty, air gaps, and the structural unavailability of frontier AI for demanding defense use cases
