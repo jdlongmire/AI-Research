@@ -17,7 +17,7 @@ description: "A principled reference architecture organising LLM harness concern
 
 ## Abstract
 
-Large language model applications increasingly depend on the orchestration layer that surrounds the model itself. This article introduces the **4M Model**, a generic reference architecture that decomposes LLM harness engineering into four modules with separated concerns and explicit coupling channels, each grounded in a distinct philosophical domain: **Mission** (telos and mereology), **Mind** (ontic and epistemic grounding, with deductive, inductive, and abductive inference modes unified by a Bayesian belief-revision framework), **Morals** (deontic constraints), and **Memory** (temporal continuity). The architecture specifies a hybrid interaction model combining a layered inference pipeline with explicit cross-cutting channels, and distinguishes the cognitive architecture (4M) from the execution substrate (**Means**) through a separate interface contract. The result is a system whose concerns are independently testable, composable, and portable across model providers and deployment modes. A reference implementation in the nemo-harness project demonstrates each module in a self-hosted deployment context.
+Large language model applications increasingly depend on the orchestration layer that surrounds the model itself. This article introduces the **4M Model**, a generic reference architecture that decomposes LLM harness engineering into four modules with separated concerns and explicit coupling channels, each grounded in a distinct philosophical domain: **Mission** (telos and mereology), **Mind** (ontic and epistemic grounding, with deductive, inductive, and abductive inference modes unified by a Bayesian belief-revision framework), **Morals** (deontic constraints), and **Memory** (temporal continuity). The architecture specifies a hybrid interaction model combining a layered inference pipeline with explicit cross-cutting channels, and distinguishes the cognitive architecture (4M) from the execution substrate (**Means**) through a separate interface contract. The result is a system whose concerns are independently testable, composable, and portable across model providers and deployment modes. A reference implementation in the ThinxS project demonstrates each module in a self-hosted deployment context.
 
 ## 1. Introduction
 
@@ -242,25 +242,25 @@ Each category of state has exactly one authoritative store. Persistent memory li
 
 Every module boundary and cross-cutting channel is an interface that can be tested in isolation. Mission can be tested by verifying that a given intent produces the expected guide fragments and tool subsets. Mind can be tested by evaluating reasoning quality on benchmark prompts. Morals can be tested by submitting known-dangerous inputs and verifying rejection. Memory can be tested by asserting round-trip consistency of stored and retrieved entries. Cross-cutting channels can be tested by simulating their trigger conditions and verifying the expected payload and downstream effect.
 
-## 6. Reference Implementation: nemo-harness
+## 6. Reference Implementation: ThinxS
 
-The nemo-harness project implements the 4M Model for a self-hosted LLM deployment. The following sections map each module to its concrete realisation, demonstrating that the abstract architecture accommodates the engineering constraints of a real system.
+The ThinxS project implements the 4M Model for a self-hosted LLM deployment. The following sections map each module to its concrete realisation, demonstrating that the abstract architecture accommodates the engineering constraints of a real system.
 
-### 6.1 Mission in nemo-harness
+### 6.1 Mission in ThinxS
 
-**Base mission** is defined in the mode header: a static identity block ("You are Nemo, the ThinxAI assistant") combined with a capabilities declaration and default behavioural tone. Four named modes (default, technical, creative, research) provide variant base missions with distinct temperature and token budget parameters.
+**Base mission** is defined in the mode header: a static identity block ("You are ThinxS, the ThinxAI assistant") combined with a capabilities declaration and default behavioural tone. Four named modes (default, technical, creative, research) provide variant base missions with distinct temperature and token budget parameters.
 
 **Sub-missions** are driven by a Tier 1 deterministic intent classifier (`tools/context_sensor.py`). The classifier scores incoming messages against keyword sets for six intent categories (coding, document, research, planning, git, conversation) and applies hysteresis requiring two consecutive matching signals before switching the active intent. This design achieves sub-millisecond classification latency at zero inference cost, a critical property for self-hosted deployments where the inference endpoint is a shared resource.
 
 Each intent maps to a subset of guide fragments (`INTENT_GUIDES`) and tool definitions (`INTENT_TOOLS`), reducing context noise by presenting only mission-relevant information to the model. The `conversation` intent serves as a fallback that includes all guides and tools.
 
-### 6.2 Mind in nemo-harness
+### 6.2 Mind in ThinxS
 
 Cognitive instruction is distributed across guide fragments selected by Mission. The `behavioral_core` guide encodes metacognitive calibration: distinguish computation from pattern-matching, flag confidence levels, acknowledge knowledge boundaries, prefer accuracy over approval. Mode-specific footers adjust reasoning priorities (technical mode prioritises precision; creative mode encourages varied expression; research mode demands evidence-inference distinction).
 
 The tool-calling loop (`_process_chat_job()`) implements a ReAct-style reasoning cycle with a maximum of ten iterations. The model selects tools, observes results, and decides whether to continue or produce a final response. This iterative process is the runtime expression of Mind: the model is reasoning about how to accomplish the Mission using available tools, subject to Morals constraints on those tools.
 
-### 6.3 Morals in nemo-harness
+### 6.3 Morals in ThinxS
 
 Constraint enforcement operates through four independent layers, implementing defence in depth:
 
@@ -274,7 +274,7 @@ Constraint enforcement operates through four independent layers, implementing de
 
 The system prompt contributes a fifth, non-executable layer: behavioural guidance that shapes the model's intent (truth over satisfaction, source citation requirements, confidence flagging). This layer belongs to Mind in the 4M taxonomy but complements the executable Morals layers by reducing the frequency of constraint violations that the runtime gates must catch.
 
-### 6.4 Memory in nemo-harness
+### 6.4 Memory in ThinxS
 
 **Session memory** implements a three-zone token budget model:
 
@@ -292,7 +292,7 @@ Running summaries are generated via LLM-based summarisation of evicted turns (wi
 
 A flat-file projection (`memory.md`) is regenerated after every write operation, providing a human-readable view of the persistent store. This file is explicitly read-only; the system prompt instructs the model to use structured action tags (`[ACTION:remember\lvert...\rvert]`) for memory writes, ensuring all mutations flow through the SQLite store.
 
-### 6.5 Cross-Cutting Channels in nemo-harness
+### 6.5 Cross-Cutting Channels in ThinxS
 
 **Memory to Mind**: Persistent memory is injected into the system prompt at the start of each inference call (`get_effective_system_prompt()`). Mid-conversation recall is supported through the `/recall` command and `semantic_search` tool, which query the SQLite store and inject results into the conversation as tool results.
 
@@ -344,7 +344,7 @@ The philosophical grounding is not incidental. It gives each module a non-overla
 
 The model is deliberately generic. It does not prescribe programming languages, databases, model providers, or ethical frameworks. It does prescribe that the four concerns be separated, that their boundaries be testable, that constraint enforcement be executable rather than merely advisory, that state management follow single-source-of-truth principles, and that the Morals module be grounded in an explicit ethical framework rather than an ad hoc rule list. These prescriptions are informed by the engineering reality that LLM harnesses are software systems, and software systems benefit from separation of concerns.
 
-The nemo-harness reference implementation demonstrates that these prescriptions are practical. A self-hosted deployment with deterministic intent classification, four-layer constraint enforcement, token-aware context management, and SQLite-backed persistent memory implements all four modules and all four cross-cutting channels within a single-server architecture. The 4M Model did not require exotic infrastructure; it required clarity about which code serves which concern.
+The ThinxS reference implementation demonstrates that these prescriptions are practical. A self-hosted deployment with deterministic intent classification, four-layer constraint enforcement, token-aware context management, and SQLite-backed persistent memory implements all four modules and all four cross-cutting channels within a single-server architecture. The 4M Model did not require exotic infrastructure; it required clarity about which code serves which concern.
 
 ## Appendix: 4M Conformance Checklist
 
